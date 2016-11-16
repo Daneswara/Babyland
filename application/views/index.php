@@ -3,7 +3,7 @@
 
 <html lang="en" class="no-js">
     <head>
-        <title>Copper</title>
+        <title>Baby Land</title>
 
         <meta charset="utf-8">
 
