@@ -13,31 +13,31 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">	
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/bootstrap.css" media="screen">	
         <!-- REVOLUTION BANNER CSS SETTINGS -->
-        <link rel="stylesheet" type="text/css" href="css/fullwidth.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="css/settings.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/fullwidth.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/settings.css" media="screen" />
 
-        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="css/animate.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/magnific-popup.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/font-awesome.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/animate.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/style.css" media="screen">
 
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.migrate.js"></script>
-        <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-        <script type="text/javascript" src="js/jquery.appear.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
-        <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-        <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-        <script type="text/javascript" src="js/plugins-scroll.js"></script>
-        <script type="text/javascript" src="js/waypoint.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.migrate.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.appear.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.imagesloaded.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/retina-1.1.0.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/plugins-scroll.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
 
         <!-- jQuery KenBurn Slider  -->
-        <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-        <script type="text/javascript" src="js/jquery.countTo.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.countTo.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
 
     </head>
     <body>
@@ -106,30 +106,11 @@
                                         <li><a href="testimonials.html">Testimonials</a></li>
                                         <li><a href="blank.html">Blank Page</a></li>
                                         <li><a href="error.html">Error 404</a></li>
-                                        <li><a class="log-in-popup" href="#log-in-popup">Log in</a></li>
+                                        <li><a href="<?php echo base_url('index.php/login/index')?>">Log in</a></li>
                                     </ul>
                                 </li>
-                                <li class="logo"><a href="index-2.html"><img alt="" src="images/logo.png"></a></li>
-                                <li class="drop"><a href="blog.html">Masuk</a>
-                                    <ul class="drop-down">
-                                        <li><a href="blog-fullwidth.html">Fullwidth</a></li>
-                                        <li><a href="blog-leftsidebar.html">Blog left sidebar</a></li>
-                                        <li><a href="blog-rightsidebar.html">Blog right sidebar</a></li>
-                                        <li class="drop"><a href="blog2-leftsidebar.html">Blog version2</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="blog2-leftsidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog2-rightsidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="blog-masonry.html">blog Masonry</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="blog-masonry.html">No Sidebar</a></li>
-                                                <li><a href="blog-masonry-lsidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog-masonry-rsidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="single-post.html">Single post</a></li>
-                                    </ul>
+                                <li class="logo"><a href="index-2.html"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
                                 </li>
                                 <li><a href="portfolio-3col.html">Daftar</a>
                                     <ul class="drop-down">
@@ -190,7 +171,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -210,7 +191,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -230,7 +211,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -250,7 +231,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -270,7 +251,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -290,7 +271,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="images/alatbayi.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -316,7 +297,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="upload/product2.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/upload/product2.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -336,34 +317,7 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="upload/product4.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <span class="rate">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </span>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="upload/product1.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/upload/product4.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
@@ -390,7 +344,34 @@
                                             <div class="col-md-3 col-sm-6 col-xs-6">
                                                 <div class="product-post">
                                                     <div class="product-gal">
-                                                        <img alt="" src="upload/product3.jpg">
+                                                        <img alt="" src="<?php echo base_url() ?>/upload/product1.jpg">
+                                                        <div class="hover-product">
+                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <h3>Great Shoes</h3>
+                                                        <span class="rate">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star-o"></i>
+                                                        </span>
+                                                        <p class="price">Rp.  250.00</p>
+                                                    </div>
+                                                    <ul class="product-post-list">
+                                                        <li><a href="#"><i class=""></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                        <li><a href="#"><i class=""></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                                <div class="product-post">
+                                                    <div class="product-gal">
+                                                        <img alt="" src="<?php echo base_url() ?>/upload/product3.jpg">
                                                         <div class="hover-product">
                                                             <a href="single-shop.html"><i class="fa fa-search"></i></a>
                                                         </div>
