@@ -112,36 +112,8 @@
                                 <li class="logo"><a href="index-2.html"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
                                 </li>
-                                <li><a href="portfolio-3col.html">Daftar</a>
-                                    <ul class="drop-down">
-                                        <li class="drop"><a href="portfolio-1col.html">Portfolio 1col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-1col.html">Version 1</a></li>
-                                                <li><a href="portfolio-1col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-2col.html">Portfolio 2col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-2col.html">Version 1</a></li>
-                                                <li><a href="portfolio-2col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-3col.html">Portfolio 3col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-3col.html">Version 1</a></li>
-                                                <li><a href="portfolio-3col-vers2.html">Version 2</a></li>
-                                                <li><a href="portfolio-3col-vers3.html">Version 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-4col.html">Portfolio 4col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-4col.html">Version 1</a></li>
-                                                <li><a href="portfolio-4col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="single-project.html">Single Project</a></li>
-                                        <li><a href="single-project2.html">Single Project 2</a></li>
-                                    </ul>
+                                <li><a href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>
+                                   
                                 </li>
                             </ul>
                         </div>
