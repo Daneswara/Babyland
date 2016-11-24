@@ -76,7 +76,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="index-2.html">Sewa</a>
                                 </li>
-                                <li class="drop"><a href="#">Profil</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/profil/index')?>">Profil</a>
                                 </li>
                                 <li class="logo"><a class="active" href="<?php echo base_url()?>"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
