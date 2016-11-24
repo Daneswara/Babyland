@@ -75,41 +75,10 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="index-2.html">Sewa</a>
-                                    <ul class="drop-down">
-                                        <li><a href="index-2.html">Home 1</a></li>
-                                        <li><a href="home2.html">Home 2</a></li>
-                                        <li><a href="home3.html">Home 3</a></li>
-                                        <li><a href="home4.html">Home 4</a></li>
-                                        <li><a href="home5.html">Home 5</a></li>
-                                        <li><a href="home6.html">Home 6</a></li>
-                                    </ul>
                                 </li>
                                 <li class="drop"><a href="#">Profil</a>
-                                    <ul class="drop-down">
-                                        <li class="drop"><a href="about.html">About</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="about.html">About 1</a></li>
-                                                <li><a href="about2.html">About 2</a></li>
-                                                <li><a href="about3.html">About 3</a></li>
-                                                <li><a href="about-me.html">About Me</a></li>
-                                                <li><a href="about-me2.html">About Me 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="services.html">Services</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="services.html">Services 1</a></li>
-                                                <li><a href="services2.html">Services 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="pricing.html">Pricing Tables</a></li>
-                                        <li><a href="careers.html">Careers</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="blank.html">Blank Page</a></li>
-                                        <li><a href="error.html">Error 404</a></li>
-                                        <li><a href="<?php echo base_url('index.php/login/index')?>">Log in</a></li>
-                                    </ul>
                                 </li>
-                                <li class="logo"><a href="index-2.html"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
+                                <li class="logo"><a class="active" href="<?php echo base_url()?>"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>

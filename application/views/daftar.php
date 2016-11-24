@@ -74,93 +74,15 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a class="active" href="index-2.html">Sewa</a>
-                                    <ul class="drop-down">
-                                        <li><a href="index-2.html">Home 1</a></li>
-                                        <li><a href="home2.html">Home 2</a></li>
-                                        <li><a href="home3.html">Home 3</a></li>
-                                        <li><a href="home4.html">Home 4</a></li>
-                                        <li><a href="home5.html">Home 5</a></li>
-                                        <li><a href="home6.html">Home 6</a></li>
-                                    </ul>
+                                <li class="drop"><a href="index-2.html">Sewa</a>
                                 </li>
                                 <li class="drop"><a href="#">Profil</a>
-                                    <ul class="drop-down">
-                                        <li class="drop"><a href="about.html">About</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="about.html">About 1</a></li>
-                                                <li><a href="about2.html">About 2</a></li>
-                                                <li><a href="about3.html">About 3</a></li>
-                                                <li><a href="about-me.html">About Me</a></li>
-                                                <li><a href="about-me2.html">About Me 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="services.html">Services</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="services.html">Services 1</a></li>
-                                                <li><a href="services2.html">Services 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="pricing.html">Pricing Tables</a></li>
-                                        <li><a href="careers.html">Careers</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="blank.html">Blank Page</a></li>
-                                        <li><a href="error.html">Error 404</a></li>
-                                        <li><a href="<?php echo base_url('login') ?>">Log in</a></li>
-                                    </ul>
                                 </li>
-                                <li class="logo"><a href="index-2.html"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
-                                <li class="drop"><a href="blog.html">Masuk</a>
-                                    <ul class="drop-down">
-                                        <li><a href="blog-fullwidth.html">Fullwidth</a></li>
-                                        <li><a href="blog-leftsidebar.html">Blog left sidebar</a></li>
-                                        <li><a href="blog-rightsidebar.html">Blog right sidebar</a></li>
-                                        <li class="drop"><a href="blog2-leftsidebar.html">Blog version2</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="blog2-leftsidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog2-rightsidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="blog-masonry.html">blog Masonry</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="blog-masonry.html">No Sidebar</a></li>
-                                                <li><a href="blog-masonry-lsidebar.html">Left Sidebar</a></li>
-                                                <li><a href="blog-masonry-rsidebar.html">Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="single-post.html">Single post</a></li>
-                                    </ul>
+                                <li class="logo"><a href="<?php echo base_url()?>"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
                                 </li>
-                                <li><a href="portfolio-3col.html">Daftar</a>
-                                    <ul class="drop-down">
-                                        <li class="drop"><a href="portfolio-1col.html">Portfolio 1col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-1col.html">Version 1</a></li>
-                                                <li><a href="portfolio-1col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-2col.html">Portfolio 2col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-2col.html">Version 1</a></li>
-                                                <li><a href="portfolio-2col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-3col.html">Portfolio 3col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-3col.html">Version 1</a></li>
-                                                <li><a href="portfolio-3col-vers2.html">Version 2</a></li>
-                                                <li><a href="portfolio-3col-vers3.html">Version 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="portfolio-4col.html">Portfolio 4col</a>
-                                            <ul class="drop-down level3">
-                                                <li><a href="portfolio-4col.html">Version 1</a></li>
-                                                <li><a href="portfolio-4col-vers2.html">Version 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="single-project.html">Single Project</a></li>
-                                        <li><a href="single-project2.html">Single Project 2</a></li>
-                                    </ul>
+                                <li><a class="active" href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>
+                                   
                                 </li>
                             </ul>
                         </div>
@@ -170,17 +92,42 @@
             <!-- End Header -->
             <body>
                 <div id="container">
-                    <form class="log-in-form">
-                        <h1>Log in Details</h1>
-                        <label>E-mail*</label>
-                        <input type="text" name="mail" placeholder="email"/>
-                        <label>Password*</label>
-                        <input type="password" name="password" placeholder="password"/>
-                        <input type="checkbox"/> <span>Stay signed in</span>
-                        <input type="submit" value="Sign in"/>
-                        <p>You forgot your password</p>
-                        <a href="#">Recover Password</a>
-                    </form>
+                    <div class="section-content contact-section">
+
+                    <div class="container">
+
+                        <div class="animated-area">
+                            <form id="contact-form">
+                                <div class="inner-contact-form">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <input name="email" id="email" type="text" placeholder="Email">
+                                            <input name="password" id="password" type="text" placeholder="Password">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="submit-area">
+                                        <button type="submit" name="contact-submit" id="submit_contact">
+                                            <i class="fa fa-user"></i> Masuk
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="msg-error" class="message">
+                                    <h1>UPPSSS! Whe have an Error</h1>
+                                    <p>All fields are required. Also type a valid email address</p>
+                                    <a href="#" class="type-again button-optional">Try again</a>
+                                </div>
+                                <div id="msg-success" class="message">
+                                    <h1>Great!</h1>
+                                    <p>Your message has been sent.</p>
+                                    <a href="#" class="type-again button-optional">Send another message</a>
+                                </div>
+                            </form>						
+                        </div>
+
+                    </div>
+                </div>
                 </div>
             </body>
 
