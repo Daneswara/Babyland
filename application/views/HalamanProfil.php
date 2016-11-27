@@ -74,16 +74,17 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a href="#">Home</a> </li>
-                                <li class="drop"><a class="active" href="index-2.html">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a> </li>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
                             </li>
-                            <li class="drop"><a href="#">Profil</a> </li>
+                            <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a> </li>
                         <li class="logo"><a href="<?php echo base_url('index.php')?>"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
-                        <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
+                        <li class="drop"><a href="<?php echo base_url('index.php/Login/index')?>">Masuk</a>
                     </li>
-                    <li><a href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>
+                    <li><a href="<?php echo base_url('index.php/Daftar/index')?>">Daftar</a>
                     
-                </li>
+                    </li>
+                    <li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
             </ul>
         </div>
     </div>

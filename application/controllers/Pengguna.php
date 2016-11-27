@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Page extends CI_Controller {
+class Pengguna extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -20,7 +20,7 @@ class Page extends CI_Controller {
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
     public function index() {
-        $this->load->view('HalamanDetailAlatBayi');
+        $this->load->view('HalamanPengguna');
     }
 
     

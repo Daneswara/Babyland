@@ -63,7 +63,7 @@
 									<li><a href="home6.html">Home 6</a></li>
 								</ul>
 							</li>
-							<li class="drop"><a href="#">Sewa</a>
+							<li class="drop"><a href="<?php base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
 							<ul class="drop-down">
 								<li class="drop"><a href="about.html">About</a>
 								<ul class="drop-down level3">
@@ -90,11 +90,11 @@
 				</li>
 				<li class="drop"><a class="active" href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a></li>
 				<li class="logo"><a href="<?php echo base_url('index.php'); ?>"><img alt="" src="<?php echo base_url()?>/images/logo.png"></a></li>
-				<li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
+				<li class="drop"><a href="<?php echo base_url('index.php/Login/index')?>">Masuk</a>
 			</li>
-			<li><a href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>
-		</li>
-		<li><a href="contact.html">Contact</a></li>
+			<li><a href="<?php echo base_url('index.php/Daftar/index')?>">Daftar</a>
+			</li>
+			<li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
 	</ul>
 </div>
 </div>

@@ -39,12 +39,17 @@
                 <div class="navbar navbar-default navbar-static-top">
                     <div class="top-line">
                         <div class="container">
+                            <ul class="top-menu">
+                                <li><a href="#"><i class="fa fa-envelope"></i>yudistira96@gmail.com </a></li>
+                                <li><a href="#"><i class="fa fa-phone-square"></i>085746921137</a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i>blablablabla</a></li>
+                            </ul>
                             <ul class="top-list">
                                 <li>
                                     <form style="margin-right: 20px"> 
-                                        <input type="search" placeholder="Search..."/ style="width: 500px">
+                                        <input type="search" placeholder="Search..."/ style="width: 400px">
                                         <span>
-                                              <i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i>
+                                              <a href="<?php echo base_url('index.php/Pencarian/index') ?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
                                         </span>
                                          
                                     </form>
@@ -63,17 +68,12 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a class="active" href="index-2.html">Sewa</a>
-                                    <ul class="drop-down">
-                                        <li><a href="index-2.html">Home 1</a></li>
-                                        <li><a href="home2.html">Home 2</a></li>
-                                        <li><a href="home3.html">Home 3</a></li>
-                                        <li><a href="home4.html">Home 4</a></li>
-                                        <li><a href="home5.html">Home 5</a></li>
-                                        <li><a href="home6.html">Home 6</a></li>
-                                    </ul>
+                                <li><a href="<?php echo base_url('index.php')?>">Home</a>
+                                   
                                 </li>
-                                <li class="drop"><a href="#">Profil</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
+                                </li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a>
                                     <ul class="drop-down">
                                         <li class="drop"><a href="about.html">About</a>
                                             <ul class="drop-down level3">
@@ -95,15 +95,16 @@
                                         <li><a href="testimonials.html">Testimonials</a></li>
                                         <li><a href="blank.html">Blank Page</a></li>
                                         <li><a href="error.html">Error 404</a></li>
-                                        <li><a href="<?php echo base_url('index.php/login/index')?>">Log in</a></li>
+                                        <li><a href="<?php echo base_url('index.php/Login/index')?>">Log in</a></li>
                                     </ul>
                                 </li>
                                 <li class="logo"><a href="<?php echo base_url('index.php')?>"><img alt="" src="<?php echo base_url() ?>/images/logo.png"></a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/login/index')?>">Masuk</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Login/index')?>">Masuk</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/daftar/index')?>">Daftar</a>
+                                <li><a href="<?php echo base_url('index.php/Daftar/index')?>">Daftar</a>
                                    
                                 </li>
+                                <li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
                             </ul>
                         </div>
                     </div>
