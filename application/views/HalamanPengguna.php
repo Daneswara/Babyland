@@ -67,7 +67,7 @@
                                     <form style="margin-right: 20px"> 
                                         <input type="search" placeholder="Search..."/ style="width: 400px">
                                         <span>
-                                              <a href="<?php echo base_url('index.php/Pencarian/php') ?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
+                                              <a href="<?php echo base_url('index.php/Pencarian/index') ?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
                                         </span>
                                          
                                     </form>

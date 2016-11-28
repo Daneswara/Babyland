@@ -108,17 +108,17 @@
             <div id="content">
                 <div class="testbox" style="height: 350px;">
                     <h1>Login</h1>
-                     <form action="">
+                     <form action="<?php echo base_url('index.php/Login/prosesMasuk') ?>" method="post">
                         <hr>
                         <label id="icon" for="name"><i class="icon-envelope "></i></label>
-                        <input type="text" name="name" id="name" placeholder="Email" required/>
-                        <label id="icon" for="name"><i class="icon-shield"></i></label>
-                        <input type="password" name="name" id="name" placeholder="Password" required/>
+                        <input type="email" name="email" id="email" placeholder="Email" required/>
+                        <label id="icon" for="password"><i class="icon-shield"></i></label>
+                        <input type="password" name="password" id="password" placeholder="Password" required/>
                         <br>
                         <div style="margin-top: 10px">
                             <input type="checkbox" style="margin-left: 18px"/> <span>Stay signed in</span>
                             <p style="font-size: 14px"><a href="#">Forgot password</a>.</p>
-                            <a href="#" class="button">Login</a>
+                            <input type="submit" value="Login">
                         </div>
                      </form>
                 </div>

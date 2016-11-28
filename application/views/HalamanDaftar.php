@@ -84,10 +84,10 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a href="<?php base_url('index.php') ?>">Home</a></li>
-                                 <li class="drop"><a href="<?php base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
+                                 <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a></li>
                                 </li>
-                                <li class="drop"><a href="#">Profil</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a>
                                     <ul class="drop-down">
                                         <li class="drop"><a href="about.html">About</a>
                                             <ul class="drop-down level3">
@@ -132,25 +132,20 @@
             <div id="content">
                 <div class="testbox">
                     <h1>Registration</h1>
-                     <form action="">
+                     <form action="<?php echo base_url('index.php/Daftar/menambahPengguna')?>" method="post">
                         <hr>
-                        <label id="icon" for="name"><i class="icon-envelope "></i></label>
-                        <input type="text" name="name" id="name" placeholder="Email" required/>
+                        <label id="icon" for="email"><i class="icon-envelope "></i></label>
+                        <input type="email" name="email" id="email" placeholder="Email" required/>
                         <label id="icon" for="name"><i class="icon-user"></i></label>
                         <input type="text" name="name" id="name" placeholder="Name" required/>
-                        <label id="icon" for="name"><i class="icon-shield"></i></label>
-                        <input type="password" name="name" id="name" placeholder="Password" required/>
-                        <label id="icon" for="name"><i class="icon-home"></i></label>
-                        <input type="text" name="name" id="name" placeholder="Alamat" required/>
-                        <label id="icon" for="name"><i class="icon-phone"></i></label>
-                        <input type="text" name="name" id="name" placeholder="nomor telepon" required/>
-                        <label id="icon" for="name"><i class="icon-shield"></i></label>
-                        <select name="" id="" style="padding: 8.5px;margin-left: -5px;width: 200px">
-                            <option value="">Pengguna</option>
-                            <option value="">Anggota</option>
-                        </select>
+                        <label id="icon" for="password"><i class="icon-shield"></i></label>
+                        <input type="password" name="password" id="password" placeholder="Password" required/>
+                        <label id="icon" for="alamat"><i class="icon-home"></i></label>
+                        <input type="text" name="alamat" id="alamat" placeholder="Alamat" required/>
+                        <label id="icon" for="notelp"><i class="icon-phone"></i></label>
+                        <input type="text" name="notelp" id="notelp" placeholder="nomor telepon" required/>
                         <p>dengan menekan daftar, kamu telah setuju dengan <a href="#">syarat dan kondisi kami</a>.</p>
-                        <a href="#" class="button">Daftar</a>
+                        <input type="submit" value="daftar">
                      </form>
                 </div>
             </div>

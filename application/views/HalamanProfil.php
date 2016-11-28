@@ -55,7 +55,7 @@
                                     <form style="margin-right: 20px">
                                         <input type="search" placeholder="Search..."/ style="width: 400px">
                                         <span>
-                                            <i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i>
+                                            <a href="<?php echo base_url('index.php/Pencarian/index')?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
                                         </span>
                                         
                                     </form>
@@ -91,7 +91,6 @@
 </div>
 </header>
 <!-- End Header -->
-
 <div class="container">
 <div class="row profile">
     <div class="col-md-3">
