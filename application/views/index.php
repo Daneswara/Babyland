@@ -80,7 +80,7 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a class="active" href="<?php base_url('index.php') ?>">Home</a></li>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
 
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
@@ -139,7 +139,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -157,7 +157,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -175,7 +175,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -193,7 +193,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -211,7 +211,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
