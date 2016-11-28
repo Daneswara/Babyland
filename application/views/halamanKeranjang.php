@@ -105,12 +105,12 @@
                             <table class="table table-filter">
                                 <thead>
                                     <tr>
-                                        <td><h4>Jumlah</h4></td>
-                                        <td><h4>Nama Barang</h4></td>
-                                        <td><h4>Lama Menyewa(Minggu)</h4></td>
-                                        <td><h4>Harga</h4></td>
-                                        <td><h4>Total</h4></td>
-                                        <td><h4>Delete</h4></td>
+                                        <td width="5%"><h4>Jumlah</h4></td>
+                                        <td width="30%"><h4>Nama Alat Bayi</h4></td>
+                                        <td width="20%"><h4>Waktu Sewa</h4></td>
+                                        <td width="20%"><h4>Harga</h4></td>
+                                        <td width="20%"><h4>Total</h4></td>
+                                        <td width="5%"><h4>Delete</h4></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -131,7 +131,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>2</td>
+                                        <td>2 Minggu</td>
                                         <td>Rp 50.000</td>
                                         <td>Rp 200.000</td>
                                         <td>
@@ -156,7 +156,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>2</td>
+                                        <td>2 Minggu</td>
                                         <td>Rp 50.000</td>
                                         <td>Rp 200.000</td>
                                         <td>
@@ -181,7 +181,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>2</td>
+                                        <td>4 Minggu</td>
                                         <td>Rp 50.000</td>
                                         <td>Rp 200.000</td>
                                         <td>
@@ -206,7 +206,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>2</td>
+                                        <td>2 Minggu</td>
                                         <td>Rp 50.000</td>
                                         <td>Rp 200.000</td>
                                         <td>
@@ -231,7 +231,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>2</td>
+                                        <td>2 Minggu</td>
                                         <td>Rp 50.000</td>
                                         <td>Rp 200.000</td>
                                         <td>   

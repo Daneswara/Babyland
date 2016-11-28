@@ -104,47 +104,24 @@
                 <thead>
                   <tr>
                     <th class="hidden-xs">ID</th>
-                    <th>Tanggal</th>
-                    <th>Pesanan</th>
+                    <th width="200px">Tanggal</th>
+                    <th width="200px">Pesanan</th>
                     <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="hidden-xs">1</td>
-                    <td>yudis</td>
-                    <td>yudistira96@gmail.com</td>
-                    <td>blablablablabla</td>
+                    <td>29 November 2016</td>
+                    <td>BABYLAND-201</td>
+                    <td>Proses Pengiriman</td>
                   </tr>
+                  
                   <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>blablablablabla</td>
+                    <td class="hidden-xs">2</td>
+                    <td>29 November 2016</td>
+                    <td>BABYLAND-202</td>
+                    <td>Menunggu Pembayaran</td>
                   </tr>
                 </tbody>
               </table>

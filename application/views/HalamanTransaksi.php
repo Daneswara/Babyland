@@ -104,61 +104,37 @@
                 <thead>
                   <tr>
                     <th class="hidden-xs">ID</th>
-                    <th>Tanggal</th>
-                    <th>Pesanan</th>
-                    <th>Nama Barang</th>
-                    <th>Harga</th>
+                    <th width="180px" >Pesanan</th>
+                    <th width="180px">Tanggal Sewa</th>
+                    <th width="150px">Waktu Sewa</th>
+                    <th width="150px">Harga</th>
                     <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="hidden-xs">1</td>
-                    <td>yudis</td>
-                    <td>yudistira96@gmail.com</td>
-                    <td>Jalan Gajayana 1 No 782</td>
-                    <td>083848872189</td>
-                    <td>blablablablabla</td>
+                    <td>BABYLAND-201</td>
+                    <td>29 November 2016</td>
+                    <td>2 Minggu</td>
+                    <td>Rp. 100.000</td>
+                    <td>Selesai</td>
                   </tr>
                   <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>Jalan Gajayana 4 No 582</td>
-                    <td>085746921137</td>
-                    <td>blablablablabla</td>
+                    <td class="hidden-xs">2</td>
+                    <td>BABYLAND-202</td>
+                    <td>29 November 2016</td>
+                    <td>2 Minggu</td>
+                    <td>Rp. 100.000</td>
+                    <td>Berjalan 1 Minggu</td>
                   </tr>
                   <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>Jalan Gajayana 4 No 582</td>
-                    <td>085746921137</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>Jalan Gajayana 4 No 582</td>
-                    <td>085746921137</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>Jalan Gajayana 4 No 582</td>
-                    <td>085746921137</td>
-                    <td>blablablablabla</td>
-                  </tr>
-                  <tr>
-                    <td class="hidden-xs">1</td>
-                    <td>bondan</td>
-                    <td>sugandi031@gmail.com</td>
-                    <td>Jalan Gajayana 4 No 582</td>
-                    <td>085746921137</td>
-                    <td>blablablablabla</td>
+                    <td class="hidden-xs">3</td>
+                    <td>BABYLAND-203</td>
+                    <td>29 November 2016</td>
+                    <td>2 Minggu</td>
+                    <td>Rp. 100.000</td>
+                    <td>Menunggu Pembayaran</td>
                   </tr>
                 </tbody>
               </table>
