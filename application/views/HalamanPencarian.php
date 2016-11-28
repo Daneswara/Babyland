@@ -129,9 +129,7 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -149,9 +147,7 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -169,9 +165,7 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -189,9 +183,7 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class=""></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -200,10 +192,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
                 </div>
 

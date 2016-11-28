@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-roboto.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
 
@@ -81,15 +81,15 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="<?php base_url('index.php') ?>">Home</a></li>
-                                
+
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
+                                <li><a href="<?php echo base_url('index.php') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
                                 </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Login/index')?>">Masuk</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Login/index') ?>">Masuk</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/Daftar/index')?>">Daftar</a>
+                                <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
                                 </li>
                             </ul>
                         </div>
@@ -110,143 +110,131 @@
                         <div class="shop-row">
                             <h1>Produk</h1>
 
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
 
-                                    <div class="item active">
-                                        <div class="row">
+                                <div class="item active">
+                                    <div class="row">
 
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="<?php echo base_url('index.php/Page/index')?>"><i class="fa fa-search"></i></a>
-                                                        </div>
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
                                                 </div>
-                                            </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
                                                 </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
                                             </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="product-post">
-                                                    <div class="product-gal">
-                                                        <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                        <div class="hover-product">
-                                                            <a href="single-shop.html"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h3>Great Shoes</h3>
-                                                        <p class="price">Rp.  250.00</p>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#"><i class=""></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
                                         </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
+                                                </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
+                                                </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
+                                                </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
+                                                </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6 col-xs-6">
+                                            <div class="product-post">
+                                                <div class="product-gal">
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <div class="hover-product">
+                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <h3>Great Shoes</h3>
+                                                    <p class="price">Rp.  250.00</p>
+                                                </div>
+                                                <ul class="product-post-list">
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
                                     </div>
-
-
                                 </div>
 
-                                
+
+                            </div>
+
+
                         </div>
 
 
-                        
+
 
                     </div>
                 </div>
@@ -257,13 +245,13 @@
             <!-- footer 
                     ================================================== -->
             <footer>
-            <div class="footer-line">
-                <div class="container">
-                    <p><span class="span-one">BABYLAND 2016.</span></p>
+                <div class="footer-line">
+                    <div class="container">
+                        <p><span class="span-one">BABYLAND 2016.</span></p>
+                    </div>
                 </div>
-            </div>
 
-        </footer>
+            </footer>
             <!-- End footer -->
         </div>
         <!-- End Container -->

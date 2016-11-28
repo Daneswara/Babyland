@@ -4503,7 +4503,7 @@ ul.strategy-list li:nth-child(3) .strategy-title:after {
 }
 .shop-row .product-post ul.product-post-list li {
   float: left;
-  width: 33.33%;
+  width: 100%;
   border-left: 1px solid #f4f4f4;
   list-style: none;
 }
