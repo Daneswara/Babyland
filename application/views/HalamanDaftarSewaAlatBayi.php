@@ -80,11 +80,11 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/SewaAlatBayi/index'); ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
+                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
                                 </li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Login/index') ?>">Masuk</a>
@@ -107,8 +107,8 @@
                 <div class="section-content shop-section">
                     <div class="container">
 
-                        <div class="shop-row">
-                            <h1>Pencarian : Mainan</h1>
+                        <div class="sewa-row">
+                            <h1>Daftar Alat Bayi Yang Disewakan</h1>
 
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
@@ -129,7 +129,8 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-ban"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -139,7 +140,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -147,7 +148,8 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-ban"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -157,7 +159,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -165,7 +167,8 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-ban"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -175,7 +178,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -183,15 +186,23 @@
                                                     <p class="price">Rp.  250.00</p>
                                                 </div>
                                                 <ul class="product-post-list">
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-ban"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
+
+
                             </div>
+
+
                         </div>
+
+
+
+
                     </div>
                 </div>
 
