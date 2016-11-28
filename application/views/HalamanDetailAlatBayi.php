@@ -63,7 +63,7 @@
 									<li><a href="home6.html">Home 6</a></li>
 								</ul>
 							</li>
-							<li class="drop"><a href="<?php base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
+							<li class="drop"><a href="<?php base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
 							<ul class="drop-down">
 								<li class="drop"><a href="about.html">About</a>
 								<ul class="drop-down level3">
