@@ -94,7 +94,7 @@
 			</li>
 			<li><a href="<?php echo base_url('index.php/Daftar/index')?>">Daftar</a>
 			</li>
-			<li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
+			<li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
 	</ul>
 </div>
 </div>

@@ -83,8 +83,8 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a> </li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a> </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
+                                <li><a class="active" href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>
                         </div>
                     </div>
@@ -106,6 +106,8 @@
                     <th class="hidden-xs">ID</th>
                     <th>Tanggal</th>
                     <th>Pesanan</th>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
                     <th>Status</th>
                   </tr>
                 </thead>
@@ -114,36 +116,48 @@
                     <td class="hidden-xs">1</td>
                     <td>yudis</td>
                     <td>yudistira96@gmail.com</td>
+                    <td>Jalan Gajayana 1 No 782</td>
+                    <td>083848872189</td>
                     <td>blablablablabla</td>
                   </tr>
                   <tr>
                     <td class="hidden-xs">1</td>
                     <td>bondan</td>
                     <td>sugandi031@gmail.com</td>
+                    <td>Jalan Gajayana 4 No 582</td>
+                    <td>085746921137</td>
                     <td>blablablablabla</td>
                   </tr>
                   <tr>
                     <td class="hidden-xs">1</td>
                     <td>bondan</td>
                     <td>sugandi031@gmail.com</td>
+                    <td>Jalan Gajayana 4 No 582</td>
+                    <td>085746921137</td>
                     <td>blablablablabla</td>
                   </tr>
                   <tr>
                     <td class="hidden-xs">1</td>
                     <td>bondan</td>
                     <td>sugandi031@gmail.com</td>
+                    <td>Jalan Gajayana 4 No 582</td>
+                    <td>085746921137</td>
                     <td>blablablablabla</td>
                   </tr>
                   <tr>
                     <td class="hidden-xs">1</td>
                     <td>bondan</td>
                     <td>sugandi031@gmail.com</td>
+                    <td>Jalan Gajayana 4 No 582</td>
+                    <td>085746921137</td>
                     <td>blablablablabla</td>
                   </tr>
                   <tr>
                     <td class="hidden-xs">1</td>
                     <td>bondan</td>
                     <td>sugandi031@gmail.com</td>
+                    <td>Jalan Gajayana 4 No 582</td>
+                    <td>085746921137</td>
                     <td>blablablablabla</td>
                   </tr>
                 </tbody>

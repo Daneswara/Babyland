@@ -83,7 +83,7 @@
                                 <li><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php') ?>">Transaksi</a></li>
+                                <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
                                 </li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Login/index') ?>">Masuk</a>
