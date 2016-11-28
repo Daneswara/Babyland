@@ -10,13 +10,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://yourwebsite.com/style.css">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/fonts/font-roboto.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/fonts/font-opensans.css">
         
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/bootstrap.css" media="screen">  
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css"> 
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/register.css" media="screen">    
         <!-- REVOLUTION BANNER CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/fullwidth.css" media="screen" />
