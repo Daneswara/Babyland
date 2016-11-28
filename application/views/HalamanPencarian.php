@@ -80,8 +80,7 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a class="active" href="<?php base_url('index.php') ?>">Home</a></li>
-
+                                <li><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php') ?>">Transaksi</a></li>
