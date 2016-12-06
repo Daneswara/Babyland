@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #95a5a6;
+  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png);
+  font-family: 'Helvetica Neue', Arial, Sans-Serif;
+}
+html .login-wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #333;
+  padding: 15px;
+}
+html .login-wrap h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2em;
+  margin-top: 10px;
+  color: #34495e;
+}
+html .login-wrap form, ul li.search form {
+  padding-top: 20px;
+  margin: 0 auto;
+}
+html .login-wrap form input[type="text"],
+html .login-wrap form input[type="number"],
+html .login-wrap form input[type="password"],
+html .login-wrap form input[type="submit"],html .login-wrap form input[type="email"],ul.top-list li form div.inputan input {
+  width: 90%;
+  margin-left: -1px;
+  margin-bottom: 25px;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+  outline: 0;
+  -moz-outline-style: none;
+}
+html .login-wrap form input[type="text"],
+html .login-wrap form input[type="number"],
+html .login-wrap form input[type="password"],ul.top-list li form div.inputan input {
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 0 0 0 10px;
+  font-size: 14px;
+
+}
+html .login-wrap form input[type="text"]:focus,
+html .login-wrap form input[type="number"],:focus,
+html .login-wrap form input[type="password"]:focus,html .login-wrap form input[type="email"]:focus,ul.toplist li form div.inputan input:focus {
+  border: 1px solid #3498db;
+}
+html .login-wrap form a {
+  text-align: center;
+  font-size: 10px;
+  color: #3498db;
+}
+html .login-wrap form a p {
+  padding-bottom: 10px;
+}
+html .login-wrap form input[type="submit"] {
+  background: #2f3133;
+  opacity: 0.7;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+  margin-left: 28px;
+  border-radius: 5px;
+}
+html .login-wrap form input[type="submit"]:hover {
+  box-shadow: 1px 1px 5px #555;
+}
+html .login-wrap form input[type="submit"]:active {
+  box-shadow: 1px 1px 7px #222;
+}
+html .login-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(left,  #1D4350 0%,  #1D4350 20%,  #1D4350 20%,  #1D4350 40%,  #A43931 40%,  #A43931 60%,  #A43931 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  background: -moz-linear-gradient(left,  #1D4350 0%,  #1D4350 20%,  #1D4350 20%,  #1D4350 40%,  #A43931 40%,  #A43931 60%,  #A43931 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+}
+.icon-case {
+  width: 33px;
+  float: left;
+  border-radius: 5px 0px 0px 5px;
+  background: #e7e7e7;
+  opacity: 0.7;
+  height:40px;
+  position: relative;
+  text-align: center;
+  line-height:40px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-right: 1px solid transparent
+}
+img.img{
+width: 200px;min-height: 200px;border-radius: 100%;
+margin:0 20px 20px 0;
+}
+div.profile{
+  float: left;
+}
+i {
+  color: #2f3133;
+}
+.inputan{
+  margin-left: 20px;
+}
+
+ul li a.nav-bar{
+  padding: 25px!important;
+}
+li{
+  margin-left:-4px;
+}
+.top-list{
+  padding-right: -30px;
+}
+ul.social-icons li{
+  float: left;
+  list-style-type: none;
+  margin: 13px 0 0 5px;
+}
+ul.social-icons li a i{
+  padding: 13px;
+  border: 1px solid black;
+  font-size: 20px
+}
+ul.social-icons li .facebook i{
+  color: #3b5998;
+  border: 1px solid #3b5998;
+  padding: 13px 17px;
+  transition: 0.17s linear;
+}
+ul.social-icons li .facebook i:hover{
+  background: #3b5998;
+  color: white;
+  border-radius: 100%;
+}
+ul.social-icons li .twitter i{
+  color: #00a0d1;
+  border: 1px solid #00a0d1;
+  transition: 0.17s linear;
+}
+ul.social-icons li .twitter i:hover{
+  background: #00a0d1;
+  color: white;
+  border-radius: 100%;
+}
+ul.social-icons li .google i{
+  color: #db4a39;
+  border: 1px solid #db4a39;
+  transition: 0.17s linear;
+}
+ul.social-icons li .google i:hover{
+  background: #db4a39;
+  color: white;
+  border-radius: 100%;
+}
+ul li.search form input[type="text"]{
+  width:0;
+}
+div span.addalatbayi{
+  background: black!important;
+  border-radius: 6px;
+}
+
+/*upload photo*/
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 -40px!important;    
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;  
+    padding: 9px!important;
+}
+.image-preview-input input[type=file] {
+ position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+.image-preview-filename{
+  border-right: 1px solid transparent!important;
+  margin: 0!important;
+  border-radius: 5px 0 0 5px!important;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
