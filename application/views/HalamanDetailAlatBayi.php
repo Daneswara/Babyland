@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/komen.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/bootstrap.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/login.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/magnific-popup.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/font-awesome.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/animate.css" media="screen">
@@ -22,22 +23,15 @@
             <header class="clearfix">
                 <!-- Static navbar -->
                 <div class="navbar navbar-default navbar-static-top">
-                    <div class="top-line">
+                     <div class="top-line" style="padding:0;margin:0;">
                         <div class="container">
-                            <ul class="top-menu">
+                            <ul class="top-menu" style="margin-left: -30px">
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
-                            <ul class="top-list">
-                                <li>
-                                    <form style="margin-right: 20px">
-                                        <input type="search" placeholder="Search..."/ style="width: 400px">
-                                               <span>
-                                            <a href="<?php echo base_url('index.php/Pencarian/index') ?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
-                                        </span>
-
-                                    </form>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                            <ul class="top-list" style="margin-right:-60px;">
+                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="" class="nav-bar">Welcome, yudistira</a></li>
+                                <li><a href="" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -58,7 +52,7 @@
                                 <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
                                 </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Login/index') ?>">Masuk</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
                                 </li>
@@ -133,11 +127,16 @@
                                                                         </div>
                                                                         <span><p style="margin-left: 5px">Minggu</p></span>
                                                                     </div>
-                                                                    <div class="right-section">
+                                                                     <div class="right-section">
                                                                         <ul class="product-post-list">
                                                                             <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a></li>
                                                                         </ul>
                                                                     </div>
+                                                                    <div class="left-section">
+                                                                        <span>tanggal mulai:</span>
+                                                                        <input type="text" id="datepicker" name="date"  style="width: 60%"/>
+                                                                    </div>
+                                                                   
 
                                                                 </div>
                                                                 <div class="vertical-tabs-box triggerAnimation animated" data-animate="bounceIn">
@@ -252,9 +251,16 @@
             <!-- End footer -->
         </div>
         <!-- End Container -->
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.min.js"></script>
+        
+         <!-- datetimepicker -->
+         <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>/js/datetimepicker.js"></script>
+        <!--  end-->
         <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
     </body>
 </html>

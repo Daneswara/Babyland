@@ -80,14 +80,14 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
+                                <li><a href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
                                 </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Login/index') ?>">Masuk</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
                                 </li>
@@ -139,7 +139,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/page/index'); ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -157,7 +157,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/page/index'); ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
@@ -175,7 +175,7 @@
                                                 <div class="product-gal">
                                                     <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
                                                     <div class="hover-product">
-                                                        <a href="single-shop.html"><i class="fa fa-search"></i></a>
+                                                        <a href="<?php echo base_url('index.php/page/index'); ?>"><i class="fa fa-search"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">

@@ -18,18 +18,21 @@ class Daftar extends CI_Controller {
        $this->load->view('HalamanDaftar');
     }
     public function menambahPengguna(){
-
+        $username = $this->input->post('username');
+        $nama = $this->input->post('nama');
         $email = $this->input->post('email');
-        $nama = $this->input->post('name');
+        $notelp = $this->input->post('notelp');
         $password = $this->input->post('password');
         $alamat = $this->input->post('alamat');
-        $notelp = $this->input->post('notelp');
+        $kota = $this->input->post('kota');
         $data = array(
-            'email' => $email,
+            'username'=> $username,
             'nama' => $nama,
+            'email' => $email,
+            'notelp' => $notelp,
             'password' => md5($password),
             'alamat' => $alamat,
-            'notelp' => $notelp
+            'kota' => $kota
             );
         $this->pengguna->input_data($data,'pengguna');
         redirect('Daftar/menampilkan');
