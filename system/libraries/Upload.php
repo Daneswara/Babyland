@@ -989,30 +989,30 @@ class CI_Upload {
 	public function validate_upload_path()
 	{
 		if ($this->upload_path === '')
-		{	echo 'satu';
+		{	
 			$this->set_error('upload_no_filepath', 'error');
 			return FALSE;
 		}
 
 		if (realpath($this->upload_path) !== FALSE)
 		{
-			echo 'dua';
+			
 			$this->upload_path = str_replace('\\', '/', realpath($this->upload_path));
 		}
 
 		if ( ! is_dir($this->upload_path))
-		{echo 'tiga';
+		{
 			$this->set_error('upload_no_filepath', 'error');
 			return FALSE;
 		}
 
 		if ( ! is_really_writable($this->upload_path))
-		{echo 'empat';
+		{
 			$this->set_error('upload_not_writable', 'error');
 			return FALSE;
 		}
 
-		$this->upload_path = preg_replace('/(.+?)\/*$/', '\\1/',  $this->upload_path);
+		$this->upload_path = preg_replace('/(.+?)\/*$/', '\\1/',  $this->upload_path);echo
 		return TRUE;
 	}
 
