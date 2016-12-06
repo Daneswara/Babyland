@@ -3,7 +3,7 @@
 
 <html lang="en" class="no-js">
     <head>
-        <title>BABYLAND</title>
+        <title>BABYLAND - Halaman Depan</title>
 
         <meta charset="utf-8">
 
