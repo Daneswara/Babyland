@@ -61,7 +61,7 @@
                                     </form>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, yudistira</a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Keluar/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -80,7 +80,7 @@
                                 
                                 <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
                             </li>
-                            <?php if($this->session->userdata('nama')=="admin@gmail.com"){?>
+                            <?php if($this->session->userdata('username')=="admin"){?>
                             <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index'); ?>">Pengguna</a>
                         </li>
                         <?php } else{?>
@@ -112,23 +112,7 @@
     <div class="carousel-inner">
         <div class="item active">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+        
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="product-post">
                         <div class="product-gal">

@@ -7,12 +7,11 @@ class Daftar extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->model('pengguna');
+        $this->load->model('model_pengguna');
     }
     public function menampilkan() {
         
-        $data['pengguna'] = $this->pengguna->tampil_data()->result();
-        $this->load->view('index',$data);
+        $this->load->view('HalamanDepan');
     }
     public function index(){
        $this->load->view('HalamanDaftar');
@@ -34,10 +33,8 @@ class Daftar extends CI_Controller {
             'alamat' => $alamat,
             'kota' => $kota
             );
-        $this->pengguna->input_data($data,'pengguna');
-        redirect('Daftar/menampilkan');
-
-
+        $this->model_pengguna->input_data($data,'pengguna');
+            redirect(base_url('index.php/Controller_Masuk/index'));
 
     }
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" style="height: 100%;">
     <head>
         <title>BABYLAND</title>
         <meta charset="utf-8">
@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/bootstrap.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/login.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/settinggambar.css" media="screen">
         <!-- REVOLUTION BANNER CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fullwidth.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/settings.css" media="screen" />
@@ -31,9 +32,9 @@
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.countTo.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>js/script.js"></script>
     </head>
-    <body>
+    <body style="position: relative;padding:0;min-height: 100%">
         <!-- Container -->
-        <div id="container">
+        <div id="container" >
             <!-- Header
             ================================================== -->
             <header class="clearfix">
@@ -56,7 +57,7 @@
                                     </form>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, yudistira</a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -104,78 +105,27 @@
         <div class="carousel-inner">
             <div class="item active">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-6">
+                <?php foreach($user as $data){ ?>
+                    <div class="col-sm-4" >
                         <div class="product-post">
-                            <div class="product-gal">
-                                <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                            <div class="product-gal item-image">
+                                <img alt="" src="<?php echo base_url().'uploads/thumbs/'.$data->foto ;?>"/>
                                 <div class="hover-product">
                                     <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
                                 </div>
                             </div>
-                            <div class="product-content">
-                                <h3>Great Shoes</h3>
-                                <p class="price">Rp.  250.00</p>
+                            <div class="product-content item-content">
+                                <h3><?php echo $data->nama_alat; ?></h3>
+                                <p class="price">Rp.  <?php echo $data->harga; ?></p>
+                                <a href="">by <?php echo $data->username ?></a>
                             </div>
                             <ul class="product-post-list">
                                 <li><a href="<?php echo base_url('index.php/AlatBayi/index'); ?>"><i class="fa fa-pencil"></i></a></li>
-                                <li><a href="#"><i class="fa fa-ban"></i></a></li>
+                                <li><a href="<?php echo base_url('index.php/SewaAlatBayi/prosesHapus').'?id='.$data->id_alat?>"><i class="fa fa-ban"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="product-post">
-                            <div class="product-gal">
-                                <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                <div class="hover-product">
-                                    <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3>Great Shoes</h3>
-                                <p class="price">Rp.  250.00</p>
-                            </div>
-                            <ul class="product-post-list">
-                                <li><a href="<?php echo base_url('index.php/AlatBayi/index'); ?>"><i class="fa fa-pencil"></i></a></li>
-                                <li><a href="#"><i class="fa fa-ban"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="product-post">
-                            <div class="product-gal">
-                                <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                <div class="hover-product">
-                                    <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3>Great Shoes</h3>
-                                <p class="price">Rp.  250.00</p>
-                            </div>
-                            <ul class="product-post-list">
-                                <li><a href="<?php echo base_url('index.php/AlatBayi/index'); ?>"><i class="fa fa-pencil"></i></a></li>
-                                <li><a href="#"><i class="fa fa-ban"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="product-post">
-                            <div class="product-gal">
-                                <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                <div class="hover-product">
-                                    <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <h3>Great Shoes</h3>
-                                <p class="price">Rp.  250.00</p>
-                            </div>
-                            <ul class="product-post-list">
-                                <li><a href="<?php echo base_url('index.php/AlatBayi/index'); ?>"><i class="fa fa-pencil"></i></a></li>
-                                <li><a href="#"><i class="fa fa-ban"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -186,19 +136,19 @@
 <!-- End content -->
 <!-- footer
 ================================================== -->
-<footer>
-<div class="footer-line">
-<div class="container">
-    <p><span class="span-one">BABYLAND 2016.</span></p>
-    <ul class="footer-social-icons">
-        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-    </ul>
-</div>
+<footer style="position: absolute;bottom:0;left:0;right:0;">
+<div class="footer-line" >
+    <div class="container">
+        <p><span class="span-one">BABYLAND 2016.</span></p>
+        <ul class="footer-social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+    </div>
 </div>
 </footer>
 <!-- End footer -->

@@ -23,14 +23,14 @@
             <header class="clearfix">
                 <!-- Static navbar -->
                 <div class="navbar navbar-default navbar-static-top">
-                     <div class="top-line" style="padding:0;margin:0;">
+                    <div class="top-line" style="padding:0;margin:0;">
                         <div class="container">
                             <ul class="top-menu" style="margin-left: -30px">
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, yudistira</a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -38,9 +38,9 @@
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="navbar-collapse collapse">
@@ -48,219 +48,215 @@
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
-                                </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- End Header -->
-            <!-- content
-            ================================================== -->
-            <div id="content">
-                <!-- shop section -->
-                <div class="section-content shop-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="shop-row">
-                                    <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel" >
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-                                                <div class="single-product">
-                                                    <div class="row">
-                                                        <div class="col-md-4 col-sm-4">
-                                                            <div class="product-visibility">
-                                                                <div class="image-holder" >
-                                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                                    <span>Newest</span>
-                                                                    <a href="<?php echo base_url() ?>/images/alatbayi.jpg"class="zoom"><i class="fa fa-search"></i></a>
-                                                                </div>
-                                                                <ul class="other-products">
-                                                                    <li>
-                                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                            </li>
+                            <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
+                            <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
+                        </li>
+                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
+                    </li>
+                    <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+<!-- End Header -->
+<!-- content
+================================================== -->
+<div id="content">
+<!-- shop section -->
+<div class="section-content shop-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="shop-row">
+                    <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel" >
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="single-product">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="product-visibility">
+                                                <div class="image-holder" >
+                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
+                                                    <span>Newest</span>
+                                                    <a href="<?php echo base_url() ?>/images/alatbayi.jpg"class="zoom"><i class="fa fa-search"></i></a>
+                                                </div>
+                                                <ul class="other-products">
+                                                    <li>
+                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="single-product-content">
+                                                <div class="product-price-section">
+                                                    <div class="left-section">
+                                                        <p style="font-weight: bold">Nama alat : alat bayi</p>
+                                                        <p style="font-weight: bold">tersedia : 5 barang</p>
+                                                        <p style="font-weight: bold">by : <a href="">yudistira</a></p>
+                                                    </div>
+                                                    <div class="right-section">
+                                                        <h1 class="price">Harga: Rp 50.000</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="bying-section">
+                                                    <div class="left-section">
+                                                        <span>Jumlah:</span>
+                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
+                                                        <div class="quantity-buttons">
+                                                            <button class="increase">+</button>
+                                                            <button class="decrease">-</button>
                                                         </div>
-                                                        <div class="col-md-8 col-sm-8">
-                                                            <div class="single-product-content">
-                                                                <div class="product-price-section">
-                                                                    <div class="left-section">
-                                                                        <p style="font-weight: bold">Nama alat : alat bayi</p>
-                                                                        <p style="font-weight: bold">tersedia : 5 barang</p>
-                                                                        <p style="font-weight: bold">by : <a href="">yudistira</a></p>
-                                                                    </div>
-                                                                    <div class="right-section">
-                                                                        <h1 class="price">Harga: Rp 50.000</h1>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="bying-section">
-                                                                    <div class="left-section">
-                                                                        <span>Jumlah:</span>
-                                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
-                                                                        <div class="quantity-buttons">
-                                                                            <button class="increase">+</button>
-                                                                            <button class="decrease">-</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="left-section" style="margin-left: 15px">
-                                                                        <span>Lama Sewa:</span>
-                                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
-                                                                        <div class="quantity-buttons">
-                                                                            <button class="increase">+</button>
-                                                                            <button class="decrease">-</button>
-                                                                        </div>
-                                                                        <span><p style="margin-left: 5px">Minggu</p></span>
-                                                                    </div>
-                                                                     <div class="right-section">
-                                                                        <ul class="product-post-list">
-                                                                            <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="left-section">
-                                                                        <span>tanggal mulai:</span>
-                                                                        <input type="text" id="datepicker" name="date"  style="width: 60%"/>
-                                                                    </div>
-                                                                   
-
-                                                                </div>
-                                                                <div class="vertical-tabs-box triggerAnimation animated" data-animate="bounceIn">
-                                                                    <!-- Nav tabs -->
-                                                                    <ul class="nav nav-tabs" id="myTab">
-                                                                    </ul>
-                                                                    <div class="tab-content" style=" margin-left: 0px">
-                                                                        <div class="tab-pane active" id="home-tab">
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad inim veniam, quis nostrud exercitation ullamco laboris nisi ut liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ptate velit.</p>
-                                                                            <p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </span></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="left-section" style="margin-left: 15px">
+                                                        <span>Lama Sewa:</span>
+                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
+                                                        <div class="quantity-buttons">
+                                                            <button class="increase">+</button>
+                                                            <button class="decrease">-</button>
+                                                        </div>
+                                                        <span><p style="margin-left: 5px">Minggu</p></span>
+                                                    </div>
+                                                    <div class="right-section">
+                                                        <ul class="product-post-list">
+                                                            <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="left-section">
+                                                        <span>tanggal mulai:</span>
+                                                        <input type="text" id="datepicker" name="date"  style="width: 60%"/>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="vertical-tabs-box triggerAnimation animated" data-animate="bounceIn">
+                                                    <!-- Nav tabs -->
+                                                    <ul class="nav nav-tabs" id="myTab">
+                                                    </ul>
+                                                    <div class="tab-content" style=" margin-left: 0px">
+                                                        <div class="tab-pane active" id="home-tab">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad inim veniam, quis nostrud exercitation ullamco laboris nisi ut liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ptate velit.</p>
+                                                            <p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </span></p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Controls -->
-
                                     </div>
                                 </div>
                             </div>
-                            <!-- comment -->
-
-                            <div class="container" style="margin-top: 50px">
-
-                                <div class="col-sm-12">
-                                    <div class="panel panel-white post panel-shadow">
-                                        <h3>Komentar</h3>
-                                        <div class="post-footer">
-                                            <div class="input-group">
-                                                <input class="form-control" placeholder="Write your comment here..." type="text">
-                                                <span class="input-group-addon">
-                                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                                </span>
-                                            </div>
-                                            <ul class="comments-list">
-                                                <li class="comment">
-                                                    <a class="pull-left" href="#">
-                                                        <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
-                                                    </a>
-                                                    <div class="comment-body">
-                                                        <div class="comment-heading">
-                                                            <h4 class="user">Gavino Free</h4>
-                                                            <h5 class="time">5 minutes ago</h5>
-                                                        </div>
-                                                        <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
-                                                    </div>
-                                                    <ul class="comments-list">
-                                                        <div class="input-group">
-                                                            <input class="form-control" placeholder="Write your comment here..." type="text">
-                                                            <span class="input-group-addon">
-                                                                <a href="#"><i class="fa fa-edit"></i></a>
-                                                            </span>
-                                                        </div>
-                                                        <li class="comment">
-                                                            <a class="pull-left" href="#">
-                                                                <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
-                                                            </a>
-                                                            <div class="comment-body">
-                                                                <div class="comment-heading">
-                                                                    <h4 class="user">Ryan Haywood</h4>
-                                                                    <h5 class="time">3 minutes ago</h5>
-                                                                </div>
-                                                                <p>Relax my friend</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="comment">
-                                                            <a class="pull-left" href="#">
-                                                                <img class="avatar" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
-                                                            </a>
-                                                            <div class="comment-body">
-                                                                <div class="comment-heading">
-                                                                    <h4 class="user">Gavino Free</h4>
-                                                                    <h5 class="time">3 minutes ago</h5>
-                                                                </div>
-                                                                <p>Ok, cool.</p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                        </div>
+                        <!-- Controls -->
+                    </div>
+                </div>
+            </div>
+            <!-- comment -->
+            <div class="container" style="margin-top: 50px">
+                <div class="col-sm-12">
+                    <div class="panel panel-white post panel-shadow">
+                        <h3>Komentar</h3>
+                        <div class="post-footer">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Write your comment here..." type="text">
+                                <span class="input-group-addon">
+                                    <a href="#"><i class="fa fa-edit"></i></a>
+                                </span>
+                            </div>
+                            <ul class="comments-list">
+                                <li class="comment">
+                                    <a class="pull-left" href="#">
+                                        <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                                    </a>
+                                    <div class="comment-body">
+                                        <div class="comment-heading">
+                                            <h4 class="user">Gavino Free</h4>
+                                            <h5 class="time">5 minutes ago</h5>
                                         </div>
+                                        <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- end comment -->
+                                    <ul class="comments-list">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Write your comment here..." type="text">
+                                            <span class="input-group-addon">
+                                                <a href="#"><i class="fa fa-edit"></i></a>
+                                            </span>
+                                        </div>
+                                        <li class="comment">
+                                            <a class="pull-left" href="#">
+                                                <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
+                                            </a>
+                                            <div class="comment-body">
+                                                <div class="comment-heading">
+                                                    <h4 class="user">Ryan Haywood</h4>
+                                                    <h5 class="time">3 minutes ago</h5>
+                                                </div>
+                                                <p>Relax my friend</p>
+                                            </div>
+                                        </li>
+                                        <li class="comment">
+                                            <a class="pull-left" href="#">
+                                                <img class="avatar" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
+                                            </a>
+                                            <div class="comment-body">
+                                                <div class="comment-heading">
+                                                    <h4 class="user">Gavino Free</h4>
+                                                    <h5 class="time">3 minutes ago</h5>
+                                                </div>
+                                                <p>Ok, cool.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End content -->
-            <!-- footer
-            ================================================== -->
-            <footer>
-                <div class="footer-line">
-                    <div class="container">
-                        <p><span class="span-one">BABYLAND 2016</span></p>
-                        <ul class="footer-social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-            <!-- End footer -->
+            <!-- end comment -->
         </div>
-        <!-- End Container -->
-        
-         <!-- datetimepicker -->
-         <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/datetimepicker.js"></script>
-        <!--  end-->
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
-    </body>
+    </div>
+</div>
+</div>
+<!-- End content -->
+<!-- footer
+================================================== -->
+<footer>
+<div class="footer-line">
+    <div class="container">
+        <p><span class="span-one">BABYLAND 2016</span></p>
+        <ul class="footer-social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+    </div>
+</div>
+</footer>
+<!-- End footer -->
+</div>
+<!-- End Container -->
+
+<!-- datetimepicker -->
+<script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/js/datetimepicker.js"></script>
+<!--  end-->
+<script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
+</body>
 </html>

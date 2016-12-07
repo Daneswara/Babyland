@@ -64,7 +64,7 @@
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a  href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                             </li>
-                            <li><a href="<?php echo base_url('index.php/Daftar/index') ?>" class="active">Daftar</a>
+                            <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
                         </li>
                     </ul>
                 </div>
@@ -79,22 +79,22 @@
             <h2>Profile <a href=""><i class="fa fa-pencil" style="font-size: 22px" title="edit profile"></a></i></h2>
             <div class="col-sm-12" style="border-bottom: 1px solid #e7e7e7;margin: 45px 0 30px 0">
                 <div class="profile">
-                     <img  href="" src="<?php echo base_url() ?>/images/arietty.png" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
+                    <img  href="" src="<?php echo base_url() ?>/images/arietty.png" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
                 </div>
                 <div class="profile">
-                     <h3 style="color:#000;opacity: 0.7;font-weight: bold">Yudistira Sugandi</h3>
-                     <p style="margin: 20px 20px 2px 0;font-size: 16px">yudistira96@gmail.com</p>
+                    <h3 style="color:#000;opacity: 0.7;font-weight: bold">Yudistira Sugandi</h3>
+                    <p style="margin: 20px 20px 2px 0;font-size: 16px">yudistira96@gmail.com</p>
                     <a href="#">change profile picture</a>
-                     <ul class="social-icons">
+                    <ul class="social-icons">
                         <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>                   
+                        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div>
-            <form action="<?php base_url('index.php/Login/prosesMasuk'); ?>" method="POST" >
-                <div class="pull-left" style="width: 45%;margin-left: 20px;">
+                <form action="<?php base_url('index.php/Login/prosesMasuk'); ?>" method="POST" >
+                    <div class="pull-left" style="width: 45%;margin-left: 20px;">
                         <div class="form-group inputan">
                             <p>Username<span>*</span></p>
                             <span class="icon-case"><i class="fa fa-male"></i></span>
@@ -118,10 +118,10 @@
                             <span class="icon-case"><i class="fa fa-lock"></i></span>
                             <input type="password" name="password" id="pasword" required="required" />
                             <div class="validation"></div>
-                        </div>  
+                        </div>
                     </div>
                     <div class="pull-right" style="width: 45%;margin-right: 20px" style="clear:both">
-                       <div class="form-group inputan">
+                        <div class="form-group inputan">
                             <p>Kota <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-user"></i></span>
                             <input type="text" name="kota" id="kota" required="required"/>
@@ -140,8 +140,8 @@
                             <div class="validation"></div>
                         </div>
                     </div>
-                <span class="clearfix"></span>
-            </form>
+                    <span class="clearfix"></span>
+                </form>
             </div>
         </div>
     </div>
@@ -150,21 +150,20 @@
     <!-- footer
     ================================================== -->
     <footer style="position: absolute;bottom:0;left:0;right:0;">
-            <div class="footer-line" >
-                <div class="container">
-                    <p><span class="span-one">BABYLAND 2016.</span></p>
-                    <ul class="footer-social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>                      
-                    </ul>
-                </div>
+        <div class="footer-line" >
+            <div class="container">
+                <p><span class="span-one">BABYLAND 2016.</span></p>
+                <ul class="footer-social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
             </div>
-
-        </footer>
+        </div>
+    </footer>
     <!-- End footer -->
 </div>
 <!-- End Container -->
