@@ -46,7 +46,7 @@
                 <div class="navbar navbar-default navbar-static-top">
                     <div class="top-line" style="padding:0;margin:0;">
                         <div class="container">
-                            <ul class="top-menu" style="margin-left: -30px">
+                            <ul class="top-menu" style="margin-top: 25px;">
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
