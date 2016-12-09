@@ -47,7 +47,7 @@
                 <div class="navbar navbar-default navbar-static-top">
                     <div class="top-line" style="padding:0;margin:0;">
                         <div class="container">
-                            <ul class="top-menu" style="margin-left: -30px">
+                            <ul class="top-menu" style="margin-top: 25px;">
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
@@ -77,7 +77,7 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
                             </li>
