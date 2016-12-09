@@ -31,7 +31,7 @@
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                             </li>
                             <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
@@ -54,7 +54,7 @@
                         </li>
                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                     </li>
-                    <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                    <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                 </li>
             </ul>
         </div>
@@ -79,34 +79,26 @@
                                     <div class="row">
                                         <div class="col-md-4 col-sm-4">
                                             <div class="product-visibility">
+                                            <?php foreach ($nama as $data){ ?>
                                                 <div class="image-holder" >
-                                                    <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                                                    <span>Newest</span>
+                                                    <img alt="" src="<?php echo base_url().'uploads/thumbs/'.$data->foto;?>"/>
                                                     <a href="<?php echo base_url() ?>/images/alatbayi.jpg"class="zoom"><i class="fa fa-search"></i></a>
+                                                    <p></p>
                                                 </div>
-                                                <ul class="other-products">
-                                                    <li>
-                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg"></a>
-                                                    </li>
-                                                </ul>
+
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-sm-8">
                                             <div class="single-product-content">
                                                 <div class="product-price-section">
                                                     <div class="left-section">
-                                                        <p style="font-weight: bold">Nama alat : alat bayi</p>
-                                                        <p style="font-weight: bold">tersedia : 5 barang</p>
-                                                        <p style="font-weight: bold">by : <a href="">yudistira</a></p>
+                                                        <p style="font-weight: bold">Nama alat :<?php echo $data->nama_alat; ?></p>
+                                                        <p style="font-weight: bold">tersedia :  <?php echo $data->jumlah; ?></p>
+                                                        <p style="font-weight: bold">by : <a href=""> <?php echo $data->username; ?></a></p>
                                                     </div>
                                                     <div class="right-section">
-                                                        <h1 class="price">Harga: Rp 50.000</h1>
+                                                        <h1 class="price">Harga: <?php echo "Rp. ".$data->harga; ?></h1>
+                                                        <p></p>
                                                     </div>
                                                 </div>
                                                 <div class="bying-section">
@@ -144,14 +136,16 @@
                                                     </ul>
                                                     <div class="tab-content" style=" margin-left: 0px">
                                                         <div class="tab-pane active" id="home-tab">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do smod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad inim veniam, quis nostrud exercitation ullamco laboris nisi ut liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ptate velit.</p>
-                                                            <p><span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </span></p>
+                                                            <p><b>DESKRIPSI</b></p><br>
+                                                            <p> <?php echo $data->deskripsi; ?>.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
+
                                 </div>
                             </div>
                         </div>
@@ -165,12 +159,14 @@
                     <div class="panel panel-white post panel-shadow">
                         <h3>Komentar</h3>
                         <div class="post-footer">
-                            <div class="input-group">
-                                <input class="form-control" placeholder="Write your comment here..." type="text">
-                                <span class="input-group-addon">
-                                    <a href="#"><i class="fa fa-edit"></i></a>
+                            <form class="input-group" action="<?php echo base_url('index.php/Controller_komentar/prosesKomentar') ?>" method="POST">
+                                <input class="form-control" name="komen" placeholder="Write your comment here..." type="text">
+                                <input type="hidden" name="hidden" value="<?php echo $this->uri->segment(3); ?>">
+                                <span class="input-group-addon" style="padding:0">
+                                    <input type="submit" value="tambah" style="height:30px;width:75px;border: 1px solid transparent">
                                 </span>
-                            </div>
+                            </form>
+                            <?php foreach($nama as $data){ ?>
                             <ul class="comments-list">
                                 <li class="comment">
                                     <a class="pull-left" href="#">
@@ -178,12 +174,12 @@
                                     </a>
                                     <div class="comment-body">
                                         <div class="comment-heading">
-                                            <h4 class="user">Gavino Free</h4>
-                                            <h5 class="time">5 minutes ago</h5>
+                                            <h4 class="user"><?php echo $data->username ?></h4>
+                                            <h5 class="time"><?php echo $data->tanggal ?></h5>
                                         </div>
-                                        <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
+                                        <p><?php echo $data->komentar ?></p>
                                     </div>
-                                    <ul class="comments-list">
+                                    <!-- <ul class="comments-list">
                                         <div class="input-group">
                                             <input class="form-control" placeholder="Write your comment here..." type="text">
                                             <span class="input-group-addon">
@@ -214,9 +210,10 @@
                                                 <p>Ok, cool.</p>
                                             </div>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                             </ul>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

@@ -25,19 +25,13 @@ class Controller_Masuk extends CI_Controller {
                 'username' => $username,
                 'status' => "login"
                 );
-            $this->session->set_userdata($data_session);
-                redirect(base_url("index.php"));
+            $this->model_pengguna->simpanSession($data_session);
+                redirect(base_url("index.php/Controller_Pengguna/menampilkanHalamanProfil"));
             
         }
         else{
             redirect('Controller_Masuk/index');
         }
     }
-    function logout(){
-        $this->session->sess_destroy();
-        redirect(base_url("index.php/Profil/index"));
-    }
-
-    
 
 }

@@ -52,7 +52,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li><a href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                             </li>
                             <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
@@ -60,7 +60,7 @@
                         </li>
                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                     </li>
-                    <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                    <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                     
                 </li>
             </ul>

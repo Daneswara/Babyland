@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/bootstrap.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/login.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/settinggambar.css" media="screen">
         <!-- REVOLUTION BANNER CSS SETTINGS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fullwidth.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/settings.css" media="screen" />
@@ -62,7 +63,7 @@
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Keluar/keluar') ?>" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,13 +79,13 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
                             </li>
                             <?php if($this->session->userdata('username')=="admin"){?>
-                            <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index'); ?>">Pengguna</a>
+                            <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
                         </li>
                         <?php } else{?>
-                        <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
+                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                     </li><?php } ?>
                     
                     <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
@@ -92,7 +93,7 @@
                 </li>
                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
             </li>
-            <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+            <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
         </li>
     </ul>
 </div>
@@ -113,91 +114,27 @@
         <div class="item active">
             <div class="row">
         
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
+                <?php foreach($user as $data){ ?>
+                    <div class="col-sm-3" >
+                        <div class="product-post">
+                            <div class="product-gal item-image">
+                                <img alt="" src="<?php echo base_url().'uploads/thumbs/'.$data->foto ;?>"/>
+                                <div class="hover-product">
+                                    <a href="<?php echo base_url('index.php/Controller_AlatBayi/index').'/'.$data->id_alat ?>"><i class="fa fa-search"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
+                            <div class="product-content item-content">
+                                <h3><?php echo $data->nama_alat; ?></h3>
+                                <p class="price">Rp.  <?php echo $data->harga; ?></p>
+                                <a href="">by <?php echo $data->username ?></a>
                             </div>
+                            <ul class="product-post-list">
+                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
                         </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="product-post">
-                        <div class="product-gal">
-                            <img alt="" src="<?php echo base_url() ?>/images/alatbayi.jpg">
-                            <div class="hover-product">
-                                <a href="<?php echo base_url('index.php/Page/index') ?>"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3>Great Shoes</h3>
-                            <p class="price">Rp.  250.00</p>
-                        </div>
-                        <ul class="product-post-list">
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                    <?php } ?>
+               
             </div>
         </div>
     </div>

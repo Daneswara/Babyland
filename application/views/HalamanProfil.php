@@ -47,7 +47,7 @@
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Keluar/logout') ?>" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a  href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                             </li>
-                            <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                            <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                         </li>
                     </ul>
                 </div>
@@ -75,11 +75,12 @@
     <!-- content
     ================================================== -->
     <div id="content" style="margin-bottom: 120px">
+            <?php foreach($data as $profil){ ?>
         <div class="login-wrap" style="width: 60%" >
             <h2>Profile <a href=""><i class="fa fa-pencil" style="font-size: 22px" title="edit profile"></a></i></h2>
             <div class="col-sm-12" style="border-bottom: 1px solid #e7e7e7;margin: 45px 0 30px 0">
                 <div class="profile">
-                    <img  href="" src="<?php echo base_url() ?>/images/arietty.png" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
+                    <img  href="" src="<?php echo base_url().'uploads/thumbs/'.$profil->foto ?>" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
                 </div>
                 <div class="profile">
                     <h3 style="color:#000;opacity: 0.7;font-weight: bold">Yudistira Sugandi</h3>
@@ -98,25 +99,25 @@
                         <div class="form-group inputan">
                             <p>Username<span>*</span></p>
                             <span class="icon-case"><i class="fa fa-male"></i></span>
-                            <input type="text" name="username" id="username" required="required"/>
+                            <input type="text" name="username" id="username" required="required" value="<?php echo $profil->username ?>"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
                             <p>Nama <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="name" id="name" required="required"/>
+                            <input type="text" name="name" id="name" required="required" value="<?php echo $profil->nama ?>"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
                             <p>E-mail <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" name="email" id="email" required="required" />
+                            <input type="text" name="email" id="email" required="required" value="<?php echo $profil->email ?>"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
                             <p>Password <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-lock"></i></span>
-                            <input type="password" name="password" id="pasword" required="required" />
+                            <input type="text" name="password" id="pasword" required="required" value="<?php echo $profil->password ?>"/>
                             <div class="validation"></div>
                         </div>
                     </div>
@@ -124,19 +125,19 @@
                         <div class="form-group inputan">
                             <p>Kota <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="kota" id="kota" required="required"/>
+                            <input type="text" name="kota" id="kota" required="required" value="<?php echo $profil->kota?>"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
                             <p>Nomor Telepon <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-phone"></i></span>
-                            <input type="text" name="notelp" id="notelp" required="required"/>
+                            <input type="text" name="notelp" id="notelp" required="required" value="<?php echo $profil->notelp ?>"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
                             <p>Alamat <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                            <textarea name="alamat" id="alamat" rows="4" cols="40" required="required"></textarea>
+                            <textarea name="alamat" id="alamat" rows="4" cols="40" required="required"><?php echo $profil->alamat ?></textarea>
                             <div class="validation"></div>
                         </div>
                     </div>
@@ -144,6 +145,8 @@
                 </form>
             </div>
         </div>
+                <?php } ?>
+
     </div>
     <span class="clearfix"></span>
     <!-- End content -->

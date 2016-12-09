@@ -61,7 +61,7 @@
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                         </li>
                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index')?>">Masuk</a>
                     </li>
-                    <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                    <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                 </li>
                 <li><a href="<?php echo base_url('index.php')?>">Transaksi</a></li>
             </ul>
@@ -115,8 +115,7 @@
                         <?php foreach($user as $data){ ?>
                         <tr>
                             <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a class="btn btn-danger" href="<?php echo base_url('index.php/pengguna/prosesHapus').'?id='.$data->id_user?>"><em class="fa fa-trash-o"></em></a>
+                                <a class="btn btn-danger" href="<?php echo base_url('index.php/Controller_Pengguna/prosesHapus').'?id='.$data->id_user?>"><em class="fa fa-trash-o"></em></a>
                             </td>
                             <td class="hidden-xs">1</td>
                             <td><?php echo $data->username; ?></td>

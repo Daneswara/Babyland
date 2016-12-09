@@ -47,7 +47,7 @@
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Keluar/logout') ?>" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
                             </li>
-                            <li><a href="<?php echo base_url('index.php/Daftar/index') ?>">Daftar</a>
+                            <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                         </li>
                     </ul>
                 </div>

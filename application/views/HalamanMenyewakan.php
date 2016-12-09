@@ -48,7 +48,7 @@
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a> </li>
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a> </li>
                                 <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
@@ -79,7 +79,7 @@
                 <div class="login-wrap" style="width: 40%" >
                     <h2>Tambah Alat Bayi</h2>
                     <div style="">
-                        <form action="<?php echo base_url('index.php/SewaAlatBayi/tambahAlatBayi'); ?>" method="POST" enctype="multipart/form-data">
+                        <form action="<?php echo base_url('index.php/Controller_SewaAlatBayi/tambahAlatBayi'); ?>" method="POST" enctype="multipart/form-data">
                             <div class="pull-left" style="width: 90%;margin-left: 20px">
                                 <div class="form-group inputan">
                                     <p>Nama Alat</p>
