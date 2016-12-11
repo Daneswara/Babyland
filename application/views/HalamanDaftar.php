@@ -78,7 +78,7 @@
         <div class="login-wrap" style="width: 40%" >
             <h2>Register</h2>
             
-            <form action="<?php echo base_url('index.php/Daftar/prosesDaftar') ?>" method="POST">
+            <form action="<?php echo base_url('index.php/Controller_Daftar/prosesDaftar') ?>" method="POST">
                 <div class="" style="width: 90%;margin-left: 20px;">
                         <div class="form-group inputan">
                             <p>Username<span>*</span></p>
@@ -104,8 +104,12 @@
                             <input type="password" name="password" id="password" required="required" />
                             <div class="validation"></div>
                         </div>  
-                    </div>
-                    <div class="" style="width: 90%;margin-left: 20px;clear:both">
+                        <div class="form-group inputan">
+                            <p>Nomor Telepon <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-phone"></i></span>
+                            <input type="text" name="notelp" id="notelp" required="required"/>
+                            <div class="validation"></div>
+                        </div>
                        <div class="form-group inputan">
                             <p>Kota <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-user"></i></span>
@@ -113,15 +117,9 @@
                             <div class="validation"></div>
                         </div>
                         <div class="form-group inputan">
-                            <p>Nomor Telepon <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-phone"></i></span>
-                            <input type="text" name="notelp" id="notelp" required="required"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
                             <p>Alamat <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                            <textarea name="alamat" id="alamat" rows="4" cols="50" required="required"></textarea>
+                            <textarea name="alamat" id="alamat" rows="4" cols="53" required="required"></textarea>
                             <div class="validation"></div>
                         </div>
                     </div>
