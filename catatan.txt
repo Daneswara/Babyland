@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 1. kurang halaman transaksi
 2. kurang halaman pemberitahuan
 3. kurang foto di halaman profile(database foto belum ada) + edit profil belum
 4. calender(datetimepicker) belum
 5. bingung menampilkan komentar
+=======
+1. melihatalatbayidisewakan dan komentar=> gak sinkron, database di pisah saja???
+2. mengelola alat bayi=>waktu update, jika misal field nama diganti, tapi field foto tidak, maka foto jadi NULL/kosong
+3.halaman profil=>edit data, foto profil belum ada
+>>>>>>> 68e12233321de9597788bdc5309239a292d7187a
