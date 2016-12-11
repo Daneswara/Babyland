@@ -1,0 +1,5 @@
+1. kurang halaman transaksi
+2. kurang halaman pemberitahuan
+3. kurang foto di halaman profile(database foto belum ada) + edit profil belum
+4. calender(datetimepicker) belum
+5. bingung menampilkan komentar
