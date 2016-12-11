@@ -49,7 +49,7 @@ html .login-wrap form input[type="password"],ul.top-list li form div.inputan inp
 
 }
 html .login-wrap form input[type="text"]:focus,
-html .login-wrap form input[type="number"],:focus,
+html .login-wrap form input[type="number"]:focus,
 html .login-wrap form input[type="password"]:focus,html .login-wrap form input[type="email"]:focus,ul.toplist li form div.inputan input:focus {
   border: 1px solid #3498db;
 }
@@ -104,11 +104,12 @@ html .login-wrap:after {
   border-right: 1px solid transparent
 }
 img.img{
-width: 200px;min-height: 200px;border-radius: 100%;
+width: 200px;min-height: 200px;
 margin:0 20px 20px 0;
 }
 div.profile{
   float: left;
+  margin-bottom: -20px;
 }
 i {
   color: #2f3133;
@@ -212,4 +213,7 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+#imageupload:hover{
+  cursor: pointer;
 }

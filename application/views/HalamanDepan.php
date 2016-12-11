@@ -52,16 +52,16 @@
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li class="search" style="padding: 0">
-                                    <form style="width: 450px;padding:0">
+                                    <form style="width: 450px;padding:0" action="<?php echo base_url('index.php/Controller_Cari/index'); ?>" method="POST">
                                         <div class="form-group inputan" style="margin: 0;">
                                             
-                                            <input type="text" name="username" id="username" required="required" placeholder="Username..." style="margin:0;width: 350px;border: 1px solid transparent;border-radius: 5px 0 0 5px"/>
-                                            <span><a href="" style="width: 45px;padding: 11px 12px 12px 12px;margin:-1px 0 0 -4px;border-radius: 0 5px 5px 0;border: 1px solid transparent;background: #e8e9e9;color: black;font-weight: bold"><i class="fa fa-search"></i></a></span>
+                                            <input type="text" name="search" id="search" required="required" placeholder="search..." style="margin:0;width: 350px;border: 1px solid transparent;border-radius: 5px 0 0 5px"/>
+                                            <span><input type="submit" value="cari" style="width: 50px;padding: 11px 12px 12px 12px;margin:-1px 0 0 -4px;border-radius: 0 5px 5px 0;border: 1px solid transparent;background: #e8e9e9;color: black;font-weight: bold"/></span>
                                             
                                         </div>
                                     </form>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
@@ -78,24 +78,26 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                
+                                <?php if($this->session->userdata('status')=="login"){ ?>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
                             </li>
                             <?php if($this->session->userdata('username')=="admin"){?>
                             <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
                         </li>
                         <?php } else{?>
+                        
                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                     </li><?php } ?>
                     
                     <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                     <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
-                </li>
+                </li><?php } ?>
+                <?php if($this->session->userdata('status')!='login'){ ?>
                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
             </li>
             <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
         </li>
-    </ul>
+    </ul><?php } ?>
 </div>
 </div>
 </div>
@@ -129,7 +131,7 @@
                                 <a href="">by <?php echo $data->username ?></a>
                             </div>
                             <ul class="product-post-list">
-                                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_AlatBayi/index') ?>"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                     </div>

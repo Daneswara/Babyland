@@ -45,7 +45,7 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
@@ -112,12 +112,6 @@
                             <p>E-mail <span>*</span></p>
                             <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
                             <input type="text" name="email" id="email" required="required" value="<?php echo $profil->email ?>"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Password <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-lock"></i></span>
-                            <input type="text" name="password" id="pasword" required="required" value="<?php echo $profil->password ?>"/>
                             <div class="validation"></div>
                         </div>
                     </div>

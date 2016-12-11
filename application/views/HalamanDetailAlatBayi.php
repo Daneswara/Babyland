@@ -14,6 +14,15 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/font-awesome.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/animate.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/style.css" media="screen">
+        <script>
+    $(document).ready(function(){
+        $('button.increase1').click(function(i, oldva) {
+            $('input#jumlah').val( function(i, oldval) {
+                return parseInt( oldval, 10) + 1;
+});
+        });
+    });
+</script>
     </head>
     <body>
         <!-- Container -->
@@ -29,7 +38,7 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
@@ -45,13 +54,8 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-=======
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
->>>>>>> f6a347ec2035b23c62c32c40941b347f42039301
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                             </li>
                             <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
@@ -107,33 +111,34 @@
                                                     </div>
                                                 </div>
                                                 <div class="bying-section">
+                                                <form action="<?php echo base_url('index.php/Controller_Keranjang/prosesKeranjang') ?>" method="POST">
                                                     <div class="left-section">
                                                         <span>Jumlah:</span>
-                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
+                                                        <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0"/>
                                                         <div class="quantity-buttons">
-                                                            <button class="increase">+</button>
-                                                            <button class="decrease">-</button>
                                                         </div>
                                                     </div>
                                                     <div class="left-section" style="margin-left: 15px">
                                                         <span>Lama Sewa:</span>
-                                                        <input type="text" id="quantity-number" name="quantity-number" value="0"/>
-                                                        <div class="quantity-buttons">
-                                                            <button class="increase">+</button>
-                                                            <button class="decrease">-</button>
-                                                        </div>
+                                                        <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" id="lama" name="lama" value="0"/>
                                                         <span><p style="margin-left: 5px">Minggu</p></span>
+
+                                                        <input type="hidden" name="nama_alat" value="<?php echo $data->nama_alat?>">
+                                                        <input type="hidden" name="harga" value="<?php echo $data->harga?>">
+                                                        <input type="hidden" name="hidden" value="<?php echo $this->uri->segment(3); ?>">
+                                                        <div class="quantity-buttons">
+                                                        </div>
                                                     </div>
                                                     <div class="right-section">
                                                         <ul class="product-post-list">
-                                                            <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>"><i class="fa fa-shopping-cart"></i>Add to Cart</a></li>
+                                                            <li><input type="submit" class="btn btn-info" style="padding: 10px 20px" value="Add to Cart"></li>
                                                         </ul>
                                                     </div>
                                                     <div class="left-section">
                                                         <span>tanggal mulai:</span>
                                                         <input type="text" id="datepicker" name="date"  style="width: 60%"/>
                                                     </div>
-                                                    
+                                                    </form>
                                                 </div>
                                                 <div class="vertical-tabs-box triggerAnimation animated" data-animate="bounceIn">
                                                     <!-- Nav tabs -->
@@ -260,5 +265,6 @@
 <!--  end-->
 <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
+
 </body>
 </html>

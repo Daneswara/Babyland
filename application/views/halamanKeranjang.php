@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" style="height: 100%">
     <head>
         <title>Baby Land</title>
         <meta charset="utf-8">
@@ -16,8 +16,20 @@
         
         <script type="text/javascript" src="<?php echo base_url() ?>/js/bootstrap.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/js/keranjang.js"></script>
+          <script type="text/javascript">
+            // To conform clear all data in cart.
+            function clear_all() {
+                var result = confirm('Are you sure want to clear all bookings?');
+
+                if (result) {
+                    window.location = "<?php echo base_url('index.php/Controller_Keranjang/prosesHapusAlatBayi/all'); ?>";
+                } else {
+                    return false; // cancel button
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body style="position: relative;border: 1px solid transparent;min-height: 100%">
         <!-- Container -->
         <div id="container">
             <!-- Header
@@ -31,7 +43,7 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="" class="nav-bar">Keluar</a></li>
                             </ul>
@@ -47,13 +59,9 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                                <li><a href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-=======
                                 <li><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
->>>>>>> f6a347ec2035b23c62c32c40941b347f42039301
+
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                             </li>
                             <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
@@ -79,16 +87,17 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <!-- <div class="pull-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
-                            <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
-                            <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
-                            <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
-                        </div>
-                    </div> -->
                     <div class="table-container">
+                        <div id="text"> 
+                            <?php  $cart_check = $this->cart->contents();
+                            
+                            // If cart is empty, this will show below message.
+                             if(empty($cart_check)) {
+                             echo '<h4 style="text-align:center;opacity: 0.6">'.'halaman keranjang kosong, pilih alat bayi terlebih dahulu'.'<h4>'; 
+                             } else{ ?> 
+                        </div>
                         <table class="table table-filter">
+                        <?php if ($cart = $this->cart->contents()){ ?>
                             <thead>
                                 <tr>
                                     <td width="5%"><h4>Jumlah</h4></td>
@@ -100,140 +109,42 @@
                                 </tr>
                             </thead>
                             <tbody>
+                             <?php
+                              $total =0;
+                              $grand_total = 0;
+                              foreach($cart as $keranjang){ ?>
+
                                 <tr data-status="pagado">
                                     <td>
-                                        <p>1</p>
+                                        <?php echo $keranjang['qty'] ?>
                                     </td>
                                     <td>
                                         <div class="media">
-                                            <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                            </a>
                                             <div class="media-body">
                                                 
                                                 <h4 class="title">
-                                                KeranjangBelanja1
+                                                <?php echo $keranjang['name']; ?>
                                                 </h4>
                                             </div>
                                         </div>
                                     </td>
-                                    <td>2 Minggu</td>
-                                    <td>Rp 50.000</td>
-                                    <td>Rp 200.000</td>
+                                    <td><?php echo $keranjang['lama']; ?> Minggu</td>
+                                    <td>Rp. <?php echo $keranjang['price']; ?></td>
+                                    <td>Rp <?php $total = ($keranjang['lama']*$keranjang['price']*$keranjang['qty']);echo $total;  ?></td>
                                     <td>
-                                        <a href=""><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
+                                        <a href="<?php echo base_url('index.php/Controller_Keranjang/prosesHapusAlatBayi/'.$keranjang['rowid']) ?>"><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
                                     </td>
                                 </tr>
-                                <tr data-status="pendiente">
-                                    <td>
-                                        <p>2</p>
-                                    </td>
-                                    <td>
-                                        <div class="media">
-                                            <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                            </a>
-                                            <div class="media-body">
-                                                
-                                                <h4 class="title">
-                                                KeranjangBelanja2
-                                                </h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2 Minggu</td>
-                                    <td>Rp 50.000</td>
-                                    <td>Rp 200.000</td>
-                                    <td>
-                                        <a href=""><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
-                                    </td>
-                                </tr>
-                                <tr data-status="cancelado">
-                                    <td>
-                                        <p>1</p>
-                                    </td>
-                                    <td>
-                                        <div class="media">
-                                            <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                            </a>
-                                            <div class="media-body">
-                                                
-                                                <h4 class="title">
-                                                KeranjangBelanja3
-                                                </h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>4 Minggu</td>
-                                    <td>Rp 50.000</td>
-                                    <td>Rp 200.000</td>
-                                    <td>
-                                        <a href=""><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
-                                    </td>
-                                </tr>
-                                <tr data-status="pagado">
-                                    <td>
-                                        <p>4</p>
-                                    </td>
-                                    <td>
-                                        <div class="media">
-                                            <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                            </a>
-                                            <div class="media-body">
-                                                
-                                                <h4 class="title">
-                                                KeranjangBelanja4
-                                                </h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2 Minggu</td>
-                                    <td>Rp 50.000</td>
-                                    <td>Rp 200.000</td>
-                                    <td>
-                                        <a href=""><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
-                                    </td>
-                                </tr>
-                                <tr data-status="pendiente">
-                                    <td>
-                                        <p>3</p>
-                                    </td>
-                                    <td>
-                                        <div class="media">
-                                            <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
-                                            </a>
-                                            <div class="media-body">
-                                                
-                                                <h4 class="title">
-                                                KeranjangBelanja5
-                                                </h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>2 Minggu</td>
-                                    <td>Rp 50.000</td>
-                                    <td>Rp 200.000</td>
-                                    <td>
-                                        <a href=""><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td style="font-weight: bold;font-size: 23px">Total</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td style="font-weight: bold;font-size: 23px">RP 1.000.000</td>
-                                </tr>
+                        <?php } ?>
+
                             </tbody>
+                        <?php }?>
                         </table>
+
                         <button type="button" class="btn btn-filter pull-right" data-target="pagado" style="background:#2f3133;color: white;font-weight: bold">SEWA</button>
+                    <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
+
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -245,7 +156,7 @@
 <!-- End content -->
 <!-- footer
 ================================================== -->
-<footer>
+<footer style="position: absolute;bottom:0;left:0;right:0;">
 <div class="footer-line">
     <div class="container">
         <p><span class="span-one">BABYLAND 2016.</span></p>

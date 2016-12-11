@@ -56,7 +56,7 @@
                                         </div>
                                     </form>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/halamanKeranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
@@ -72,13 +72,8 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a></li>
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
-=======
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
->>>>>>> f6a347ec2035b23c62c32c40941b347f42039301
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
                             </li>
                             <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                         </li>
@@ -111,12 +106,12 @@
             <div class="item active">
                 <div class="row">
                 <?php foreach($user as $data){ ?>
-                    <div class="col-sm-4" style="margin-bottom: 20px">
+                    <div class="col-sm-3" style="margin-bottom: 20px">
                         <div class="product-post">
                             <div class="product-gal item-image">
                                 <img alt="" src="<?php echo base_url().'uploads/thumbs/'.$data->foto ;?>"/>
                                 <div class="hover-product">
-                                    <a href="<?php echo base_url('index.php/Page/index').'/'.$data->id_alat ?>"><i class="fa fa-search"></i></a>
+                                    <a href="<?php echo base_url('index.php/Controller_AlatBayi/index').'/'.$data->id_alat ?>"><i class="fa fa-search"></i></a>
                                 </div>
                             </div>
                             <div class="product-content item-content">

@@ -26,6 +26,16 @@ class Model_Sewa extends CI_Model{
 		// $this->db->where('user_id', $id);
 		// return $this->db->get('sewa')->result();
 }
+	function cariAlatBayi($id){
+	$this->db->select('*');
+	$this->db->from('sewa');
+	$this->db->join('pengguna', 'sewa.user_id = pengguna.id_user','left');
+	$this->db->like('sewa.nama_alat',$id);
+ 
+	return $this->db->get()->result();
+		// $this->db->where('user_id', $id);
+		// return $this->db->get('sewa')->result();
+}
 	public function getId(){
 		if($this->session->userdata('status')=='login'){
 			$this->db->where('username', $this->session->userdata('username'));

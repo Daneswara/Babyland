@@ -64,11 +64,12 @@ public function __construct()
         $config1['allowed_types'] = 'jpg|png|gif|jpeg';
         $config1['max_size'] = '5058';
         $this->load->library('upload',$config1);
-        if(empty($_FILES['userfile']['name'][0])){
-            $data['upload_data']['file_name'] = $this->input->post('id');
-        }
+        
             $this->upload->do_upload();
             $data=  array('upload_data' => $this->upload->data());
+            if(empty($_FILES['userfile']['name'][0])){
+            $data['upload_data']['file_name'] = $this->input->post('nama_alat');
+        }   
             $uploaddata = array(
                 'user_id' =>$this->model_sewa->getId()[0]['id_user'],
                 'nama_alat' => $this->input->post('alatbayi'),
@@ -97,7 +98,7 @@ public function __construct()
     public function menghapusAlatBayi(){
         $where = array('id_alat'=>$this->input->get('id'));
         $this->model_sewa->menghapusDataAlatBayi($where,'sewa');
-        redirect(base_url('index.php/SewaAlatBayi?i=alatbayi'));
+        redirect(base_url('index.php/Controller_SewaAlatBayi?i=alatbayi'));
     }
 
     
