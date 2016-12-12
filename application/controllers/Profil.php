@@ -19,8 +19,15 @@ class Profil extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('model_pengguna');
+    }
     public function index() {
-        $this->load->view('HalamanProfil');
+        $user_id = array("username" => $this->session->userdata('username'));
+        $id = $this->model_sewa->getId()[0]['id_user']; //mengakses model sewa==>tambahan
+        $data = array("data" => $this->model_pengguna->mendapatkanDataPengguna($id));
+        $this->load->view('HalamanProfil', $data);
     }
 
     

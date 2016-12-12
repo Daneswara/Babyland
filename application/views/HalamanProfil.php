@@ -62,9 +62,11 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a  href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
+                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
                                 </li>
                             </ul>
                         </div>
@@ -77,29 +79,30 @@
             <div id="content" style="margin-bottom: 120px">
                 <?php foreach ($data as $profil) { ?>
                     <div class="login-wrap" style="width: 60%" >
-                        <h2>Profile <a href=""><i class="fa fa-pencil" style="font-size: 22px" title="edit profile"></a></i></h2>
-                        <div class="col-sm-12" style="border-bottom: 1px solid #e7e7e7;margin: 45px 0 30px 0">
-                            <div class="profile">
-                                <img  href="" src="<?php echo base_url() . 'uploads/thumbs/' . $profil->foto ?>" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
-                            </div>
-                            <div class="profile">
-                                <h3 style="color:#000;opacity: 0.7;font-weight: bold"><?php echo $profil->nama ?></h3>
-                                <p style="margin: 20px 20px 2px 0;font-size: 16px"><?php echo $profil->email ?></p>
-                                <a href="#">change profile picture</a>
-                                <ul class="social-icons">
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                        <h2>Profile</h2>
+
+                        <div class="profile" style="padding-top: 20px; padding-left: 30px">
+                            <img  href="" src="<?php
+                            if (isset($profil->foto)) {
+                                echo base_url() . 'uploads/thumbs/' . $profil->foto;
+                            } else {
+                                echo base_url() . 'images/avatar.png';
+                            }
+                            ?>" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
                         </div>
                         <div>
-                            <form action="<?php base_url('index.php/Login/prosesMasuk'); ?>" method="POST" >
-                                <div class="pull-left" style="width: 45%;margin-left: 20px;">
+                            <form action="<?php echo base_url('index.php/Controller_Pengguna/prosesMasuk');?>" method="POST">
+                                <div class="pull-left" style="width: 60%;margin-left: 20px;">
                                     <div class="form-group inputan">
                                         <p>Username<span>*</span></p>
                                         <span class="icon-case"><i class="fa fa-male"></i></span>
                                         <input type="text" name="username" id="username" required="required" value="<?php echo $profil->username ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Password<span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                                        <input type="password" name="password" id="password" required="required" value=""/>
                                         <div class="validation"></div>
                                     </div>
                                     <div class="form-group inputan">
@@ -114,8 +117,6 @@
                                         <input type="text" name="email" id="email" required="required" value="<?php echo $profil->email ?>"/>
                                         <div class="validation"></div>
                                     </div>
-                                </div>
-                                <div class="pull-right" style="width: 45%;margin-right: 20px" style="clear:both">
                                     <div class="form-group inputan">
                                         <p>Kota <span>*</span></p>
                                         <span class="icon-case"><i class="fa fa-user"></i></span>
@@ -131,9 +132,10 @@
                                     <div class="form-group inputan">
                                         <p>Alamat <span>*</span></p>
                                         <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                                        <textarea name="alamat" id="alamat" rows="4" cols="40" required="required"><?php echo $profil->alamat ?></textarea>
+                                        <textarea name="alamat" id="alamat" rows="4" cols="55" required="required"><?php echo $profil->alamat ?></textarea>
                                         <div class="validation"></div>
                                     </div>
+                                    <input type="submit" value="Perbarui Profil">
                                 </div>
                                 <span class="clearfix"></span>
                             </form>
@@ -144,6 +146,5 @@
             </div>
             <span class="clearfix"></span>
         </div>
-        <!-- End Container -->
     </body>
 </html>

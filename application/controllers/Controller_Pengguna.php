@@ -31,5 +31,32 @@ class Controller_Pengguna extends CI_Controller {
         $data = array("data" => $this->model_pengguna->mendapatkanDataPengguna($id));
         $this->load->view('HalamanProfil', $data);
     }
+    
+    function prosesPerbaruiProfil(){
+        $username = $this->input->post('username');
+        $nama = $this->input->post('nama');
+        $email = $this->input->post('email');
+        $notelp = $this->input->post('notelp');
+        $password = $this->input->post('password');
+        $alamat = $this->input->post('alamat');
+        $kota = $this->input->post('kota');
+        $data = array(
+            'username' => $username,
+            'nama' => $nama,
+            'email' => $email,
+            'notelp' => $notelp,
+            'password' => md5($password),
+            'alamat' => $alamat,
+            'kota' => $kota
+        );
+        $hasil = $this->model_pengguna->menambahPengguna($data, 'pengguna');
+        if ($hasil) {
+            redirect(base_url('index.php/Controller_Masuk/index'));
+        } else {
+            $this->pesan = "Mohon maaf username / email yang anda gunakan telah terdaftar";
+            ?><script>alert("<?php echo $this->pesan?>")</script><?php
+            redirect('/Controller_Daftar/index', 'refresh');
+        }
+    }
 
 }

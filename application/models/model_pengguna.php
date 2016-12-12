@@ -24,6 +24,10 @@ class Model_Pengguna extends CI_Model {
             return true;
         }
     }
+    
+    function updatePengguna($data, $table) {
+        
+    }
 
     function cekPengguna($table, $where) {
         return $this->db->get_where($table, $where);
