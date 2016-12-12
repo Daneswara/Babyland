@@ -46,7 +46,7 @@
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -54,115 +54,96 @@
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 <li class="drop"><a  href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                            </li>
-                            <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- End Header -->
-    <!-- content
-    ================================================== -->
-    <div id="content" style="margin-bottom: 120px">
-            <?php foreach($data as $profil){ ?>
-        <div class="login-wrap" style="width: 60%" >
-            <h2>Profile <a href=""><i class="fa fa-pencil" style="font-size: 22px" title="edit profile"></a></i></h2>
-            <div class="col-sm-12" style="border-bottom: 1px solid #e7e7e7;margin: 45px 0 30px 0">
-                <div class="profile">
-                    <img  href="" src="<?php echo base_url().'uploads/thumbs/'.$profil->foto ?>" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
-                </div>
-                <div class="profile">
-                    <h3 style="color:#000;opacity: 0.7;font-weight: bold">Yudistira Sugandi</h3>
-                    <p style="margin: 20px 20px 2px 0;font-size: 16px">yudistira96@gmail.com</p>
-                    <a href="#">change profile picture</a>
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <form action="<?php base_url('index.php/Login/prosesMasuk'); ?>" method="POST" >
-                    <div class="pull-left" style="width: 45%;margin-left: 20px;">
-                        <div class="form-group inputan">
-                            <p>Username<span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-male"></i></span>
-                            <input type="text" name="username" id="username" required="required" value="<?php echo $profil->username ?>"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Nama <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="name" id="name" required="required" value="<?php echo $profil->nama ?>"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>E-mail <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" name="email" id="email" required="required" value="<?php echo $profil->email ?>"/>
-                            <div class="validation"></div>
+                                </li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="pull-right" style="width: 45%;margin-right: 20px" style="clear:both">
-                        <div class="form-group inputan">
-                            <p>Kota <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="kota" id="kota" required="required" value="<?php echo $profil->kota?>"/>
-                            <div class="validation"></div>
+                </div>
+            </header>
+            <!-- End Header -->
+            <!-- content
+            ================================================== -->
+            <div id="content" style="margin-bottom: 120px">
+                <?php foreach ($data as $profil) { ?>
+                    <div class="login-wrap" style="width: 60%" >
+                        <h2>Profile <a href=""><i class="fa fa-pencil" style="font-size: 22px" title="edit profile"></a></i></h2>
+                        <div class="col-sm-12" style="border-bottom: 1px solid #e7e7e7;margin: 45px 0 30px 0">
+                            <div class="profile">
+                                <img  href="" src="<?php echo base_url() . 'uploads/thumbs/' . $profil->foto ?>" class="img-responsive img" style="border: 5px solid #bbcbe5"/>
+                            </div>
+                            <div class="profile">
+                                <h3 style="color:#000;opacity: 0.7;font-weight: bold"><?php echo $profil->nama ?></h3>
+                                <p style="margin: 20px 20px 2px 0;font-size: 16px"><?php echo $profil->email ?></p>
+                                <a href="#">change profile picture</a>
+                                <ul class="social-icons">
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="form-group inputan">
-                            <p>Nomor Telepon <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-phone"></i></span>
-                            <input type="text" name="notelp" id="notelp" required="required" value="<?php echo $profil->notelp ?>"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Alamat <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                            <textarea name="alamat" id="alamat" rows="4" cols="40" required="required"><?php echo $profil->alamat ?></textarea>
-                            <div class="validation"></div>
+                        <div>
+                            <form action="<?php base_url('index.php/Login/prosesMasuk'); ?>" method="POST" >
+                                <div class="pull-left" style="width: 45%;margin-left: 20px;">
+                                    <div class="form-group inputan">
+                                        <p>Username<span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                                        <input type="text" name="username" id="username" required="required" value="<?php echo $profil->username ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Nama <span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="name" id="name" required="required" value="<?php echo $profil->nama ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>E-mail <span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                        <input type="text" name="email" id="email" required="required" value="<?php echo $profil->email ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <div class="pull-right" style="width: 45%;margin-right: 20px" style="clear:both">
+                                    <div class="form-group inputan">
+                                        <p>Kota <span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                                        <input type="text" name="kota" id="kota" required="required" value="<?php echo $profil->kota ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Nomor Telepon <span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-phone"></i></span>
+                                        <input type="text" name="notelp" id="notelp" required="required" value="<?php echo $profil->notelp ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Alamat <span>*</span></p>
+                                        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                                        <textarea name="alamat" id="alamat" rows="4" cols="40" required="required"><?php echo $profil->alamat ?></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                </div>
+                                <span class="clearfix"></span>
+                            </form>
                         </div>
                     </div>
-                    <span class="clearfix"></span>
-                </form>
-            </div>
-        </div>
                 <?php } ?>
 
-    </div>
-    <span class="clearfix"></span>
-    <!-- End content -->
-    <!-- footer
-    ================================================== -->
-    <footer style="position: absolute;bottom:0;left:0;right:0;">
-        <div class="footer-line" >
-            <div class="container">
-                <p><span class="span-one">BABYLAND 2016.</span></p>
-                <ul class="footer-social-icons">
-                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
             </div>
+            <span class="clearfix"></span>
         </div>
-    </footer>
-    <!-- End footer -->
-</div>
-<!-- End Container -->
-</body>
+        <!-- End Container -->
+    </body>
 </html>

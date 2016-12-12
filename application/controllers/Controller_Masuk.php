@@ -12,12 +12,7 @@ class Controller_Masuk extends CI_Controller {
     }
 
     public function index() {
-        if (isset($this->pesan)) {
-            ?><script>alert("<?php echo $this->pesan?>")</script><?php
-            redirect('/Controller_Masuk/index', 'refresh');
-        } else {
-            $this->load->view('HalamanMasuk');
-        }
+        $this->load->view('HalamanMasuk');
     }
 
     function prosesMasuk() {
@@ -37,7 +32,8 @@ class Controller_Masuk extends CI_Controller {
             redirect(base_url("index.php/Controller_Pengguna/menampilkanHalamanProfil"));
         } else {
             $this->pesan = "Mohon maaf username dan password anda salah!";
-            $this->index();
+            ?><script>alert("<?php echo $this->pesan?>")</script><?php
+            redirect('/Controller_Masuk/index', 'refresh');
         }
     }
 

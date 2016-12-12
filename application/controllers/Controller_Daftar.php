@@ -3,20 +3,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Daftar extends CI_Controller {
-    public function __construct()
-    {
+
+    private $pesan;
+
+    public function __construct() {
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('model_pengguna');
     }
-    public function menampilkan() {
-        
-        $this->load->view('HalamanDepan');
+
+    public function index() {
+        $this->load->view('HalamanDaftar');
     }
-    public function index(){
-       $this->load->view('HalamanDaftar');
-    }
-    public function prosesDaftar(){
+
+    public function prosesDaftar() {
         $username = $this->input->post('username');
         $nama = $this->input->post('nama');
         $email = $this->input->post('email');
@@ -25,19 +25,22 @@ class Controller_Daftar extends CI_Controller {
         $alamat = $this->input->post('alamat');
         $kota = $this->input->post('kota');
         $data = array(
-            'username'=> $username,
+            'username' => $username,
             'nama' => $nama,
             'email' => $email,
             'notelp' => $notelp,
             'password' => md5($password),
             'alamat' => $alamat,
             'kota' => $kota
-            );
-        $this->model_pengguna->menambahPengguna($data,'pengguna');
+        );
+        $hasil = $this->model_pengguna->menambahPengguna($data, 'pengguna');
+        if ($hasil) {
             redirect(base_url('index.php/Controller_Masuk/index'));
-
+        } else {
+            $this->pesan = "Mohon maaf username / email yang anda gunakan telah terdaftar";
+            ?><script>alert("<?php echo $this->pesan?>")</script><?php
+            redirect('/Controller_Daftar/index', 'refresh');
+        }
     }
-
-    
 
 }
