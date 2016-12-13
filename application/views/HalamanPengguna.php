@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-roboto.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/bootstrap.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/css/login.css" media="screen">
         <!-- REVOLUTION BANNER CSS SETTINGS -->
@@ -46,14 +48,6 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li class="search">
-                                    <form style="margin-right: 20px">
-                                        <input type="search" placeholder="Search..."/ style="width: 400px">
-                                               <span>
-                                            <a href="<?php echo base_url('index.php/Pencarian/index') ?>"><i class="fa fa-search" style="color:white;margin-left: 10px;font-size: 23px"></i></a>
-                                        </span>
-                                    </form>
-                                </li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
@@ -75,8 +69,8 @@
                                 </li>
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php') ?>">Transaksi</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Pengguna/index') ?>">Pemberitahuan</a>
+                                <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                                 </li>
                             </ul>
                         </div>
@@ -154,14 +148,6 @@
                 <div class="footer-line" >
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>
-                        <ul class="footer-social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </footer>

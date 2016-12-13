@@ -46,16 +46,6 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li class="search" style="padding: 0">
-                                    <form style="width: 450px;padding:0">
-                                        <div class="form-group inputan" style="margin: 0;">
-
-                                            <input type="text" name="username" id="username" required="required" placeholder="Username..." style="margin:0;width: 350px;border: 1px solid transparent;border-radius: 5px 0 0 5px"/>
-                                            <span><a href="" style="width: 45px;padding: 11px 12px 12px 12px;margin:-1px 0 0 -4px;border-radius: 0 5px 5px 0;border: 1px solid transparent;background: #e8e9e9;color: black;font-weight: bold"><i class="fa fa-search"></i></a></span>
-
-                                        </div>
-                                    </form>
-                                </li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
@@ -75,14 +65,15 @@
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index'); ?>">Sewa</a>
                                 </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
-                                </li>
+                                <?php if ($this->session->userdata('username') == "admin") { ?>
+                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
+                                        </li>
+    <?php } else { ?>
+
+                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
+                                        </li><?php } ?>
                                 <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
-                                </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
                                 </li>
                             </ul>
                         </div>

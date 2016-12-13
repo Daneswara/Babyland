@@ -47,7 +47,7 @@
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi</a></li>
-                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -55,17 +55,23 @@
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a> </li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil') ?>">Profil</a> </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
+                                    <?php if ($this->session->userdata('username') == "admin") { ?>
+                                    <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
+                                    </li>
+                                <?php } else { ?>
+
+                                    <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
+                                    </li><?php } ?>
+                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>
                         </div>
@@ -78,66 +84,66 @@
             <div id="content" style="margin-bottom: 120px">
                 <div class="login-wrap" style="width: 80%" >
                     <h2>Edit Data Alat Bayi</h2>
-                    <?php foreach ($data as $alatbayi){ ?>
+                    <?php foreach ($data as $alatbayi) { ?>
 
-                    <div class="col-sm-6" style="border-right: 1px solid #bbcbe5;margin: 45px 0 30px 0">
-                        <div class="profile">
-                            <img  href="" src="<?php echo base_url().'/uploads/thumbs/'.$alatbayi->foto ?>" class="img-responsive img" style="border: 3px solid #bbcbe5;width: 80%"/>
-                        </div>
-                        <div class="profile">
-                            <h3 style="color:#000;opacity: 0.7;font-weight: bold"><?php echo $alatbayi->nama_alat ?></h3>
-                        </div>
-                    </div>
-                    <div style="">
-                        <form action="<?php echo base_url('index.php/Controller_SewaAlatBayi/perbaruiAlatBayi').'/'.$alatbayi->id_alat ?>" method="POST" enctype="multipart/form-data">
-                            <div class="pull-left" style="width: 45%;margin-left: 20px;">
-                                <div class="form-group inputan">
-                                    <p>Nama Alat</p>
-                                    <span class="icon-case"><i class="fa fa-male"></i></span>
-                                    <input type="text" name="alatbayi" id="alatbayi" value="<?php echo $alatbayi->nama_alat ?>"/>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group inputan" style="display:hidden">
-                                    <p>Upload Foto</p>
-                                    <div class="input-group image-preview">
-                                        <input type="text" class="form-control image-preview-filename" name="id" value="<?php echo $alatbayi->foto ?>" disabled="disabled" >
-                                         <input type="hidden" name="nama_alat" value="<?php echo $alatbayi->foto?>">
-                                        <span class="input-group-btn">
-                                            <span><i class="fa fa-cross-o"></i></span> Clear
-                                            </button>
-                                            <div class="btn btn-default image-preview-input">
-                                                <span><i class="fa fa-folder-open"></i></span>
-                                                <span class="image-preview-input-title">Browse</span>
-                                                <input type="file" name="userfile" id="userfile"/>
-                                            </div>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-group inputan">
-                                    <p>Jumlah Alat</p>
-                                    <span class="icon-case"><i class="fa fa-user"></i></span>
-                                    <input type="number" name="jumlah" id="jumlah" value="<?php echo $alatbayi->jumlah ?>"/>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group inputan">
-                                    <p>Harga</p>
-                                    <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                                    <input type="number" name="harga" id="harga" value="<?php echo $alatbayi->harga ?>" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group inputan">
-                                    <p>Deskripsi Alat</p>
-                                    <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                                    <textarea name="deskripsi" id="deskripsi" rows="4" cols="50"><?php echo $alatbayi->deskripsi?></textarea>
-                                    <div class="validation"></div>
-                                </div>
-                                <input type="submit" value="submit" class="btn btn-default" style="background: #000;opacity: 0.6">
-                                
+                        <div class="col-sm-6" style="border-right: 1px solid #bbcbe5;margin: 45px 0 30px 0">
+                            <div class="profile">
+                                <img  href="" src="<?php echo base_url() . '/uploads/thumbs/' . $alatbayi->foto ?>" class="img-responsive img" style="border: 3px solid #bbcbe5;width: 80%"/>
                             </div>
-                            <span class="clearfix"></span>
-                            
-                            
-                        </form>
+                            <div class="profile">
+                                <h3 style="color:#000;opacity: 0.7;font-weight: bold"><?php echo $alatbayi->nama_alat ?></h3>
+                            </div>
+                        </div>
+                        <div style="">
+                            <form action="<?php echo base_url('index.php/Controller_SewaAlatBayi/perbaruiAlatBayi') . '/' . $alatbayi->id_alat ?>" method="POST" enctype="multipart/form-data">
+                                <div class="pull-left" style="width: 45%;margin-left: 20px;">
+                                    <div class="form-group inputan">
+                                        <p>Nama Alat</p>
+                                        <span class="icon-case"><i class="fa fa-male"></i></span>
+                                        <input type="text" name="alatbayi" id="alatbayi" value="<?php echo $alatbayi->nama_alat ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan" style="display:hidden">
+                                        <p>Upload Foto</p>
+                                        <div class="input-group image-preview">
+                                            <input type="text" class="form-control image-preview-filename" name="id" value="<?php echo $alatbayi->foto ?>" disabled="disabled" >
+                                            <input type="hidden" name="nama_alat" value="<?php echo $alatbayi->foto ?>">
+                                            <span class="input-group-btn">
+                                                <span><i class="fa fa-cross-o"></i></span> Clear
+                                                </button>
+                                                <div class="btn btn-default image-preview-input">
+                                                    <span><i class="fa fa-folder-open"></i></span>
+                                                    <span class="image-preview-input-title">Browse</span>
+                                                    <input type="file" name="userfile" id="userfile"/>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Jumlah Alat</p>
+                                        <span class="icon-case"><i class="fa fa-user"></i></span>
+                                        <input type="number" name="jumlah" id="jumlah" value="<?php echo $alatbayi->jumlah ?>"/>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Harga</p>
+                                        <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                        <input type="number" name="harga" id="harga" value="<?php echo $alatbayi->harga ?>" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group inputan">
+                                        <p>Deskripsi Alat</p>
+                                        <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                                        <textarea name="deskripsi" id="deskripsi" rows="4" cols="50"><?php echo $alatbayi->deskripsi ?></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <input type="submit" value="submit" class="btn btn-default" style="background: #000;opacity: 0.6">
+
+                                </div>
+                                <span class="clearfix"></span>
+
+
+                            </form>
                         <?php } ?>
                     </div>
                 </div>
@@ -150,14 +156,6 @@
                 <div class="footer-line" >
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>
-                        <ul class="footer-social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </footer>
@@ -165,7 +163,7 @@
         </div>
         <!-- End Container -->
         <script>
-          
+
         </script>
     </body>
 </html>
