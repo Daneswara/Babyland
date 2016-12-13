@@ -185,7 +185,7 @@
                                                     <input type="submit" value="tambah" style="height:30px;width:75px;border: 1px solid transparent">
                                                 </span>
                                             </form>
-                                            <?php foreach ($nama as $data) { ?>
+                                            <?php foreach ($user as $data) { ?>
                                                 <ul class="comments-list">
                                                     <li class="comment">
                                                         <a class="pull-left" href="#">
