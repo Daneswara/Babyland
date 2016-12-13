@@ -61,7 +61,7 @@
                                         </div>
                                     </form>
                                 </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi <span>(23)</span> </a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php
                                         if ($this->session->userdata('username')) {
                                             echo $this->session->userdata('username')."</a></li>";
