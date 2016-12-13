@@ -8,6 +8,11 @@ class Controller_SewaAlatBayi extends CI_Controller {
         parent::__construct();
         $this->load->model('model_sewa');
         $this->load->helper('url');
+        if($this->session->userdata('username')){
+            
+        } else {
+            redirect('', 'refresh');
+        }
     }
 
     public function index() {

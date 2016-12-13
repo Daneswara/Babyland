@@ -19,6 +19,16 @@ class Pemberitahuan extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('model_sewa');
+        $this->load->helper('url');
+        if($this->session->userdata('username')){
+            
+        } else {
+            redirect('', 'refresh');
+        }
+    }
     public function index() {
         $this->load->view('HalamanPemberitahuan');
     }
