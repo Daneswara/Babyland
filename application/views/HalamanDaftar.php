@@ -45,110 +45,118 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi <span>(23)</span> </a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php
+                                        if ($this->session->userdata('username')) {
+                                            echo $this->session->userdata('username') . "</a></li>";
+                                            echo "<li><a href='";
+                                            echo base_url('index.php/Controller_Rumah/keluar');
+                                            echo "' class='nav-bar'>Keluar</a></li>";
+                                        } else {
+                                            echo "Tamu</a></li>";
+                                        }
+                                        ?>
                             </ul>
                         </div>
                     </div>
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 <li class="drop"><a  href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                            </li>
-                            <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>" class="active">Daftar</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- End Header -->
-    <!-- content
-    ================================================== -->
-    <div id="content" style="margin-bottom: 120px">
-        <div class="login-wrap" style="width: 40%" >
-            <h2>Register</h2>
-            
-            <form action="<?php echo base_url('index.php/Controller_Daftar/prosesDaftar') ?>" method="POST">
-                <div class="" style="width: 90%;margin-left: 20px;">
-                        <div class="form-group inputan">
-                            <p>Username<span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-male"></i></span>
-                            <input type="text" name="username" id="username" required="required"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Nama <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="nama" id="nama" required="required"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>E-mail <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" name="email" id="email" required="required" />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Password <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-lock"></i></span>
-                            <input type="password" name="password" id="password" required="required" />
-                            <div class="validation"></div>
-                        </div>  
-                        <div class="form-group inputan">
-                            <p>Nomor Telepon <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-phone"></i></span>
-                            <input type="text" name="notelp" id="notelp" required="required"/>
-                            <div class="validation"></div>
-                        </div>
-                       <div class="form-group inputan">
-                            <p>Kota <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-user"></i></span>
-                            <input type="text" name="kota" id="kota" required="required"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group inputan">
-                            <p>Alamat <span>*</span></p>
-                            <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                            <textarea name="alamat" id="alamat" rows="4" cols="53" required="required"></textarea>
-                            <div class="validation"></div>
+                                </li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>" class="active">Daftar</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                <input type="submit" value="Daftar" class="clearfix">
-            </form>
-        </div>
-    </div>
-    <span class="clearfix"></span>
-    <!-- End content -->
-    <!-- footer
-    ================================================== -->
-    <footer style="position: absolute;bottom:0;left:0;right:0;">
-            <div class="footer-line" >
-                <div class="container">
-                    <p><span class="span-one">BABYLAND 2016.</span></p>
-                    <ul class="footer-social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>                      
-                    </ul>
+                </div>
+            </header>
+            <!-- End Header -->
+            <!-- content
+            ================================================== -->
+            <div id="content" style="margin-bottom: 120px">
+                <div class="login-wrap" style="width: 40%" >
+                    <h2>Register</h2>
+
+                    <form action="<?php echo base_url('index.php/Controller_Daftar/prosesDaftar') ?>" method="POST">
+                        <div class="" style="width: 90%;margin-left: 20px;">
+                            <div class="form-group inputan">
+                                <p>Username<span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-male"></i></span>
+                                <input type="text" name="username" id="username" required="required"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group inputan">
+                                <p>Nama <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-user"></i></span>
+                                <input type="text" name="nama" id="nama" required="required"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group inputan">
+                                <p>E-mail <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                                <input type="text" name="email" id="email" required="required" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group inputan">
+                                <p>Password <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-lock"></i></span>
+                                <input type="password" name="password" id="password" required="required" />
+                                <div class="validation"></div>
+                            </div>  
+                            <div class="form-group inputan">
+                                <p>Nomor Telepon <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-phone"></i></span>
+                                <input type="text" name="notelp" id="notelp" required="required"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group inputan">
+                                <p>Kota <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-user"></i></span>
+                                <input type="text" name="kota" id="kota" required="required"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group inputan">
+                                <p>Alamat <span>*</span></p>
+                                <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                                <textarea name="alamat" id="alamat" rows="4" cols="53" required="required"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Daftar" class="clearfix">
+                    </form>
                 </div>
             </div>
+            <span class="clearfix"></span>
+            <!-- End content -->
+            <!-- footer
+            ================================================== -->
+            <footer style="position: absolute;bottom:0;left:0;right:0;">
+                <div class="footer-line" >
+                    <div class="container">
+                        <p><span class="span-one">BABYLAND 2016.</span></p>
+                        <ul class="footer-social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>                      
+                        </ul>
+                    </div>
+                </div>
 
-        </footer>
-    <!-- End footer -->
-</div>
-<!-- End Container -->
-</body>
+            </footer>
+            <!-- End footer -->
+        </div>
+        <!-- End Container -->
+    </body>
 </html>

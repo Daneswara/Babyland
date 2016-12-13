@@ -9,7 +9,7 @@ class Controller_Cari extends CI_Controller {
         $this->load->model('model_sewa');
     }
     public function index() {
-        $search = $this->input->post('search');
+        $search = $this->input->get('search');
         $user = array("user" => $this->model_sewa->cariAlatBayi($search));
         $this->load->view('HalamanPencarian',$user);
     }

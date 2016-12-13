@@ -38,9 +38,17 @@
                                 <li style="font-size: 25px; color: white">BabyLand</li>
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
-                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi <span>(23)</span> </a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php
+                                        if ($this->session->userdata('username')) {
+                                            echo $this->session->userdata('username')."</a></li>";
+                                            echo "<li><a href='";
+                                            echo base_url('index.php/Controller_Rumah/keluar');
+                                            echo "' class='nav-bar'>Keluar</a></li>";
+                                        } else {
+                                            echo "Tamu</a></li>";
+                                        }
+                                        ?>
                             </ul>
                         </div>
                     </div>
