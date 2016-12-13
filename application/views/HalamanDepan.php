@@ -118,107 +118,101 @@
 
                                         <?php foreach ($user as $data) { ?>
                                             <div class="col-sm-3" >
-                                                <div class="product-post">
-                                                    <div class="product-gal item-image">
-                                                        <img alt="" src="<?php echo base_url() . 'uploads/thumbs/' . $data->foto; ?>"/>
-                                                        <div class="hover-product">
-                                                            <a href="<?php echo base_url('index.php/Controller_AlatBayi/index') . '/' . $data->id_alat ?>"><i class="fa fa-search"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-content item-content">
-                                                        <h3><?php echo $data->nama_alat; ?></h3>
-                                                        <p class="price">Rp.  <?php echo $data->harga; ?></p>
-                                                        <a href="">by <?php echo $data->username ?></a>
-                                                    </div>
-                                                    <ul class="product-post-list">
-                                                        <li><a href="<?php echo base_url('index.php/Controller_AlatBayi/index') ?>"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        <?php } ?>
+                                                <a href="<?php echo base_url('index.php/Controller_AlatBayi/index') . '/' . $data->id_alat ?>"><div class="product-post">
+                                                        <div class="product-gal item-image">
+                                                            <img alt="" src="<?php echo base_url() . 'uploads/thumbs/' . $data->foto; ?>"/>
 
-                                    </div>
+                                                        </div>
+                                                        <div class="product-content item-content">
+                                                            <h3><?php echo $data->nama_alat; ?></h3>
+                                                            <p class="price">Rp.  <?php echo $data->harga; ?></p>
+                                                        </div>
+                                            </div></a>
+                                        </div>
+                                    <?php } ?>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End content -->
-            <!-- footer
-            ================================================== -->
-            <footer>
-                <div class="footer-line">
-                    <div class="container">
-                        <p><span class="span-one">BABYLAND 2016.</span></p>
-                    </div>
-                </div>
-            </footer>
-            <!-- End footer -->
         </div>
-        <!-- End Container -->
-        <script type="text/javascript">
-            var tpj = jQuery;
-            tpj.noConflict();
-            tpj(document).ready(function() {
-                if (tpj.fn.cssOriginal != undefined)
-                    tpj.fn.css = tpj.fn.cssOriginal;
-                var api = tpj('.fullwidthbanner').revolution(
-                        {
-                            delay: 8000,
-                            startwidth: 1170,
-                            startheight: 864,
-                            onHoverStop: "off", // Stop Banner Timet at Hover on Slide on/off
-                            thumbWidth: 100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
-                            thumbHeight: 50,
-                            thumbAmount: 3,
-                            hideThumbs: 0,
-                            navigationType: "bullet", // bullet, thumb, none
-                            navigationArrows: "solo", // nexttobullets, solo (old name verticalcentered), none
-                            navigationStyle: "round", // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
-                            navigationHAlign: "center", // Vertical Align top,center,bottom
-                            navigationVAlign: "bottom", // Horizontal Align left,center,right
-                            navigationHOffset: 30,
-                            navigationVOffset: 40,
-                            soloArrowLeftHalign: "left",
-                            soloArrowLeftValign: "center",
-                            soloArrowLeftHOffset: 40,
-                            soloArrowLeftVOffset: 0,
-                            soloArrowRightHalign: "right",
-                            soloArrowRightValign: "center",
-                            soloArrowRightHOffset: 40,
-                            soloArrowRightVOffset: 0,
-                            touchenabled: "on", // Enable Swipe Function : on/off
-                            stopAtSlide: -1, // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
-                            stopAfterLoops: -1, // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
-                            hideCaptionAtLimit: 0, // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
-                            hideAllCaptionAtLilmit: 0, // Hide all The Captions if Width of Browser is less then this value
-                            hideSliderAtLimit: 0, // Hide the whole slider, and stop also functions if Width of Browser is less than this value
-                            fullWidth: "on",
-                            shadow: 1                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
-                        });
-                // TO HIDE THE ARROWS SEPERATLY FROM THE BULLETS, SOME TRICK HERE:
-                // YOU CAN REMOVE IT FROM HERE TILL THE END OF THIS SECTION IF YOU DONT NEED THIS !
-                api.bind("revolution.slide.onloaded", function(e) {
-                    jQuery('.tparrows').each(function() {
-                        var arrows = jQuery(this);
-                        var timer = setInterval(function() {
-                            if (arrows.css('opacity') == 1 && !jQuery('.tp-simpleresponsive').hasClass("mouseisover"))
-                                arrows.fadeOut(300);
-                        }, 3000);
-                    })
-                    jQuery('.tp-simpleresponsive, .tparrows').hover(function() {
-                        jQuery('.tp-simpleresponsive').addClass("mouseisover");
-                        jQuery('body').find('.tparrows').each(function() {
-                            jQuery(this).fadeIn(300);
-                        });
-                    }, function() {
-                        if (!jQuery(this).hasClass("tparrows"))
-                            jQuery('.tp-simpleresponsive').removeClass("mouseisover");
-                    })
-                });
-                // END OF THE SECTION, HIDE MY ARROWS SEPERATLY FROM THE BULLETS
+        <!-- End content -->
+        <!-- footer
+        ================================================== -->
+        <footer>
+            <div class="footer-line">
+                <div class="container">
+                    <p><span class="span-one">BABYLAND 2016.</span></p>
+                </div>
+            </div>
+        </footer>
+        <!-- End footer -->
+    </div>
+    <!-- End Container -->
+    <script type="text/javascript">
+        var tpj = jQuery;
+        tpj.noConflict();
+        tpj(document).ready(function() {
+            if (tpj.fn.cssOriginal != undefined)
+                tpj.fn.css = tpj.fn.cssOriginal;
+            var api = tpj('.fullwidthbanner').revolution(
+                    {
+                        delay: 8000,
+                        startwidth: 1170,
+                        startheight: 864,
+                        onHoverStop: "off", // Stop Banner Timet at Hover on Slide on/off
+                        thumbWidth: 100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                        thumbHeight: 50,
+                        thumbAmount: 3,
+                        hideThumbs: 0,
+                        navigationType: "bullet", // bullet, thumb, none
+                        navigationArrows: "solo", // nexttobullets, solo (old name verticalcentered), none
+                        navigationStyle: "round", // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+                        navigationHAlign: "center", // Vertical Align top,center,bottom
+                        navigationVAlign: "bottom", // Horizontal Align left,center,right
+                        navigationHOffset: 30,
+                        navigationVOffset: 40,
+                        soloArrowLeftHalign: "left",
+                        soloArrowLeftValign: "center",
+                        soloArrowLeftHOffset: 40,
+                        soloArrowLeftVOffset: 0,
+                        soloArrowRightHalign: "right",
+                        soloArrowRightValign: "center",
+                        soloArrowRightHOffset: 40,
+                        soloArrowRightVOffset: 0,
+                        touchenabled: "on", // Enable Swipe Function : on/off
+                        stopAtSlide: -1, // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+                        stopAfterLoops: -1, // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+                        hideCaptionAtLimit: 0, // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+                        hideAllCaptionAtLilmit: 0, // Hide all The Captions if Width of Browser is less then this value
+                        hideSliderAtLimit: 0, // Hide the whole slider, and stop also functions if Width of Browser is less than this value
+                        fullWidth: "on",
+                        shadow: 1                               //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+                    });
+            // TO HIDE THE ARROWS SEPERATLY FROM THE BULLETS, SOME TRICK HERE:
+            // YOU CAN REMOVE IT FROM HERE TILL THE END OF THIS SECTION IF YOU DONT NEED THIS !
+            api.bind("revolution.slide.onloaded", function(e) {
+                jQuery('.tparrows').each(function() {
+                    var arrows = jQuery(this);
+                    var timer = setInterval(function() {
+                        if (arrows.css('opacity') == 1 && !jQuery('.tp-simpleresponsive').hasClass("mouseisover"))
+                            arrows.fadeOut(300);
+                    }, 3000);
+                })
+                jQuery('.tp-simpleresponsive, .tparrows').hover(function() {
+                    jQuery('.tp-simpleresponsive').addClass("mouseisover");
+                    jQuery('body').find('.tparrows').each(function() {
+                        jQuery(this).fadeIn(300);
+                    });
+                }, function() {
+                    if (!jQuery(this).hasClass("tparrows"))
+                        jQuery('.tp-simpleresponsive').removeClass("mouseisover");
+                })
             });
-        </script>
-    </body>
+            // END OF THE SECTION, HIDE MY ARROWS SEPERATLY FROM THE BULLETS
+        });
+    </script>
+</body>
 </html>
