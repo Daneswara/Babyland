@@ -5,13 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		{
 			parent::__construct();
 			$this->load->model('model_komentar');
-			$this->load->model('mymodel');
+			$this->load->model('model_sewa');
 			date_default_timezone_set('Asia/Jakarta');
 		}
 
 		public function prosesKomentar(){
 			$date= date('Y-m-d h:i:sa');
-			$user_id = $this->mymodel->getId()[0]['id_user'];
+			$user_id = $this->model_sewa->getId()[0]['id_user'];
 			$komentar = $this->input->post('komen');
 			$alat_id = $this->input->post('hidden');
 			$data = array(
