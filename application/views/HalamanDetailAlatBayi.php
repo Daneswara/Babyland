@@ -55,16 +55,25 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
-                                </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
-                                </li>
+                                <?php
+                                if ($this->session->userdata('status') == "login") {
+                                    echo "<li><a href ='";
+                                    echo base_url('index.php/Controller_SewaAlatBayi/index');
+                                    echo "'>Sewa</a><li><a href ='";
+                                    echo base_url('index.php/Profil/index');
+                                    echo "'>Profil</a></li><li><a href ='";
+                                    echo base_url('index.php/Transaksi/index');
+                                    echo "'>Transaksi</a></li><li><a href ='";
+                                    echo base_url('index.php/Pemberitahuan/index');
+                                    echo "'>Pemberitahuan</a></li>";
+                                } else {
+                                    echo "<li><a href='";
+                                    echo base_url('index.php/Controller_Masuk/index');
+                                    echo "'>Masuk</a></li><li><a href='";
+                                    echo base_url('index.php/Controller_Daftar/index');
+                                    echo "'>Daftar</a></li>";
+                                }
+                                ?>
                             </ul>
                         </div>
                     </div>
