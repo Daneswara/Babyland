@@ -8,10 +8,8 @@ class Controller_Rumah extends CI_Controller {
         parent::__construct();
     }
     function keluar(){
-        $this->session->sess_destroy();
+        $this->session->unset_userdata('status');
+        $this->session->unset_userdata('username');
         redirect(base_url("index.php"));
     }
-
-    
-
 }

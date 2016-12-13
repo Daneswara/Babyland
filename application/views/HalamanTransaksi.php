@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-roboto.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/fonts/font-opensans.css">
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/bootstrap.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/register.css" media="screen">
         <!-- REVOLUTION BANNER CSS SETTINGS -->
@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/magnific-popup.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/font-awesome.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/animate.css" media="screen">
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/style.css" media="screen">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>css/pengguna.css" media="screen">
         <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.min.js"></script>
@@ -49,7 +49,7 @@
                             </ul>
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
-                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username');?></a></li>
+                                <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
@@ -57,22 +57,17 @@
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                                <li class="drop"><a href="<?php echo base_url('index.php') ?>">Home</a> </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-=======
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a> </li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/SewaAlatBayi/index') ?>">Sewa</a>
->>>>>>> f6a347ec2035b23c62c32c40941b347f42039301
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a> </li>
-                                <li><a class="active" href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
+                                <li><a class="active" href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>
                         </div>
@@ -125,8 +120,8 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                
-                                
+
+
                             </div>
                             <div class="panel-footer" >
                             </div>

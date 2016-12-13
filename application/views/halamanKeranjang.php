@@ -45,7 +45,7 @@
                             <ul class="top-list" style="margin-right:-60px;">
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Your Cart <span>(23)</span> Items</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php echo $this->session->userdata('username'); ?></a></li>
-                                <li><a href="" class="nav-bar">Keluar</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Rumah/keluar') ?>" class="nav-bar">Keluar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,17 +61,28 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
 
-                                <li><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-                                <li><a href="<?php echo base_url('index.php/Profil/index'); ?>">Profil</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                <li><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>
-                                </li>
-                                <li><a href="<?php echo base_url('index.php/Controller_Daftar/index') ?>">Daftar</a>
 
-                                </li>
+
+                                <?php
+                                if ($this->session->userdata('status') == "login") {
+                                    echo "<li><a href ='";
+                                    echo base_url('index.php/Controller_SewaAlatBayi/index');
+                                    echo "'>Sewa</a><li><a href ='";
+                                    echo base_url('index.php/Profil/index');
+                                    echo "'>Profil</a></li><li><a href ='";
+                                    echo base_url('index.php/Transaksi/index');
+                                    echo "'>Transaksi</a></li><li><a href ='";
+                                    echo base_url('index.php/Pemberitahuan/index');
+                                    echo "'>Pemberitahuan</a></li>";
+                                } else {
+                                    echo "<li><a href='";
+                                    echo base_url('index.php/Controller_Masuk/index');
+                                    echo "'>Masuk</a></li><li><a href='";
+                                    echo base_url('index.php/Controller_Daftar/index');
+                                    echo "'>Daftar</a></li>";
+                                }
+                                ?>
+
                             </ul>
                         </div>
                     </div>
@@ -99,7 +110,7 @@
                                                 ?> 
                                             </div>
                                             <table class="table table-filter">
-    <?php if ($cart = $this->cart->contents()) { ?>
+                                                <?php if ($cart = $this->cart->contents()) { ?>
                                                     <thead>
                                                         <tr>
                                                             <td width="5%"><h4>Jumlah</h4></td>
@@ -119,36 +130,38 @@
 
                                                             <tr data-status="pagado">
                                                                 <td>
-            <?php echo $keranjang['qty'] ?>
+                                                                    <?php echo $keranjang['qty'] ?>
                                                                 </td>
                                                                 <td>
                                                                     <div class="media">
                                                                         <div class="media-body">
 
                                                                             <h4 class="title">
-            <?php echo $keranjang['name']; ?>
+                                                                                <?php echo $keranjang['name']; ?>
                                                                             </h4>
                                                                         </div>
                                                                     </div>
                                                                 </td>
                                                                 <td><?php echo $keranjang['lama']; ?> Minggu</td>
                                                                 <td>Rp. <?php echo $keranjang['price']; ?></td>
-                                                                <td>Rp <?php $total = ($keranjang['lama'] * $keranjang['price'] * $keranjang['qty']);
-            echo $total; ?></td>
+                                                                <td>Rp <?php
+                                                                    $total = ($keranjang['lama'] * $keranjang['price'] * $keranjang['qty']);
+                                                                    echo $total;
+                                                                    ?></td>
                                                                 <td>
                                                                     <a href="<?php echo base_url('index.php/Controller_Keranjang/prosesHapusAlatBayi/' . $keranjang['rowid']) ?>"><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
                                                                 </td>
                                                             </tr>
-        <?php } ?>
+                                                        <?php } ?>
 
                                                     </tbody>
-    <?php } ?>
+                                                <?php } ?>
                                             </table>
 
                                             <button type="button" class="btn btn-filter pull-right" data-target="pagado" style="background:#2f3133;color: white;font-weight: bold">SEWA</button>
                                             <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
 
-<?php } ?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
