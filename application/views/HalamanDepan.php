@@ -79,7 +79,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 <?php if ($this->session->userdata('status') == "login") { ?>
-                                    <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
+                                    <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index'); ?>">Sewa</a>
                                     </li>
                                     <?php if ($this->session->userdata('username') == "admin") { ?>
                                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>

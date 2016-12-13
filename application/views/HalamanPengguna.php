@@ -71,7 +71,7 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=alatbayi'); ?>">Sewa</a>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index'); ?>">Sewa</a>
                                 </li>
                                 <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_Pengguna/index'); ?>">Pengguna</a>
                                 </li>
