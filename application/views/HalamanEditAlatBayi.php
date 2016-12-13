@@ -64,7 +64,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a> </li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Profil/index') ?>">Profil</a> </li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil') ?>">Profil</a> </li>
                                 <li><a href="<?php echo base_url('index.php/Transaksi/index')?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>

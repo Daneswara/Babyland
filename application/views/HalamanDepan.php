@@ -86,7 +86,7 @@
                                         </li>
                                     <?php } else { ?>
 
-                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
+                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                                         </li><?php } ?>
 
                                     <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>

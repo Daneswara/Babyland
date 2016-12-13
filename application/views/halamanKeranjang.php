@@ -68,7 +68,7 @@
                                     echo "<li><a href ='";
                                     echo base_url('index.php/Controller_SewaAlatBayi/index');
                                     echo "'>Sewa</a><li><a href ='";
-                                    echo base_url('index.php/Profil/index');
+                                    echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil');
                                     echo "'>Profil</a></li><li><a href ='";
                                     echo base_url('index.php/Transaksi/index');
                                     echo "'>Transaksi</a></li><li><a href ='";
