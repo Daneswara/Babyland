@@ -102,7 +102,7 @@
                                 <!-- upload photo -->
                                 <div class="form-group inputan">
                                     <p>Upload Foto</p>
-                                    <div class="input-group image-preview">
+                                    <div class="input-group image-preview" style="padding-right: 10px">
                                         <input type="text" class="form-control image-preview-filename" disabled="disabled" >
                                         <span class="input-group-btn">
                                             <span><i class="fa fa-cross-o"></i></span> Clear
@@ -124,7 +124,7 @@
                                 <div class="form-group inputan">
                                     <p>Deskripsi Alat</p>
                                     <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                                    <textarea name="deskripsi" id="deskripsi" rows="4" cols="40" required="required"></textarea>
+                                    <textarea name="deskripsi" id="deskripsi" rows="4" cols="53" required="required"></textarea>
                                     <div class="validation"></div>
                                 </div>
                                 <!-- end of upload photo -->
