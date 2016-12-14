@@ -103,7 +103,7 @@
                                         <input type="text" name="alatbayi" id="alatbayi" value="<?php echo $alatbayi->nama_alat ?>"/>
                                         <div class="validation"></div>
                                     </div>
-                                    <div class="form-group inputan" style="display:hidden">
+                                    <div class="form-group inputan" style="display:hidden; padding-right: 10px">
                                         <p>Upload Foto</p>
                                         <div class="input-group image-preview">
                                             <input type="text" class="form-control image-preview-filename" name="id" value="<?php echo $alatbayi->foto ?>" disabled="disabled" >
@@ -134,7 +134,7 @@
                                     <div class="form-group inputan">
                                         <p>Deskripsi Alat</p>
                                         <span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                                        <textarea name="deskripsi" id="deskripsi" rows="4" cols="50"><?php echo $alatbayi->deskripsi ?></textarea>
+                                        <textarea name="deskripsi" id="deskripsi" rows="4" cols="55"><?php echo $alatbayi->deskripsi ?></textarea>
                                         <div class="validation"></div>
                                     </div>
                                     <input type="submit" value="submit" class="btn btn-default" style="background: #000;opacity: 0.6">
