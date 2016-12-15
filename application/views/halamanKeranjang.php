@@ -130,8 +130,9 @@
                                                     <thead>
                                                         <tr>
                                                             <td width="5%"><h4>Jumlah</h4></td>
-                                                            <td width="30%"><h4>Nama Alat Bayi</h4></td>
-                                                            <td width="20%"><h4>Waktu Sewa</h4></td>
+                                                            <td width="20%"><h4>Nama Alat Bayi</h4></td>
+                                                            <td width="15%"><h4>Mulai sewa</h4></td>
+                                                            <td width="15%"><h4>Akhir sewa</h4></td>
                                                             <td width="20%"><h4>Harga</h4></td>
                                                             <td width="20%"><h4>Total</h4></td>
                                                             <td width="5%"><h4>Delete</h4></td>
@@ -158,7 +159,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </td>
-                                                                <td><?php echo $keranjang['lama']; ?> Minggu</td>
+                                                                <td><?php echo $keranjang['start']; ?></td>
+                                                                <td><?php echo $keranjang['end']; ?></td>
                                                                 <td>Rp. <?php echo $keranjang['price']; ?></td>
                                                                 <td>Rp <?php
                                                                     $total = ($keranjang['lama'] * $keranjang['price'] * $keranjang['qty']);
@@ -168,13 +170,15 @@
                                                                     <a href="<?php echo base_url('index.php/Controller_Keranjang/prosesHapusAlatBayi/' . $keranjang['rowid']) ?>"><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
                                                                 </td>
                                                             </tr>
+                                                            <?php $grand_total += $total ?>
                                                         <?php } ?>
+                                                        <tr><p class="pull-right" style="font-weight: bold;font-size: 25px">Total Harga: Rp. <?php echo $grand_total ?></p></tr>
 
                                                     </tbody>
                                                 <?php } ?>
                                             </table>
 
-                                            <button type="button" class="btn btn-filter pull-right" data-target="pagado" style="background:#2f3133;color: white;font-weight: bold">SEWA</button>
+                                            <a href="<?php echo base_url('index.php/Transaksi/prosesSewa') ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
                                             <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
 
                                         <?php } ?>

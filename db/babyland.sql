@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2016 at 05:51 AM
+-- Generation Time: Dec 15, 2016 at 08:46 AM
 -- Server version: 5.6.25-log
 -- PHP Version: 7.0.2
 
@@ -45,20 +45,11 @@ INSERT INTO `komentar` (`id_komentar`, `alat_id`, `user_id`, `komentar`, `tangga
 (5, 72, 20, 'hkjhh', '2016-12-08 07:46:32'),
 (6, 72, 20, 'suree??', '2016-12-08 07:48:58'),
 (7, 72, 20, 'kjhjhjh', '2016-12-08 07:49:12'),
-(8, 72, 20, 'ini idnya beda??', '2016-12-08 07:49:56'),
-(15, 72, 20, '', '2016-12-08 10:26:17'),
-(18, 74, 20, '', '2016-12-09 04:44:17'),
-(19, 0, 20, '', '2016-12-09 04:44:34'),
-(20, 0, 20, 'bisa??', '2016-12-09 05:31:12'),
-(21, 0, 20, '', '2016-12-09 05:31:46'),
-(22, 0, 20, 'jlkjljk', '2016-12-09 05:32:38'),
-(23, 0, 20, 'j', '2016-12-09 05:33:36'),
-(24, 0, 20, '', '2016-12-09 05:40:27'),
-(25, 0, 20, 'jkjljlk', '2016-12-09 05:41:49'),
-(26, 0, 20, 'hjkhjhkjh', '2016-12-09 05:46:11'),
-(27, 75, 20, 'hahaha???', '2016-12-09 05:58:23'),
 (28, 75, 22, 'such a good thing', '2016-12-09 12:40:17'),
-(29, 75, 22, '????', '2016-12-09 12:40:31');
+(29, 75, 22, '????', '2016-12-09 12:40:31'),
+(30, 75, 22, 'haloo', '2016-12-13 12:41:22'),
+(31, 75, 22, 'a?', '2016-12-13 12:41:48'),
+(32, 75, 22, 'bagusbagus', '2016-12-13 12:57:05');
 
 -- --------------------------------------------------------
 
@@ -110,6 +101,35 @@ INSERT INTO `sewa` (`id_alat`, `user_id`, `nama_alat`, `jumlah`, `deskripsi`, `h
 (75, 22, 'Alat Gendong Bayi', 4, 'alat gendong bayi masih bagus dab mulus', 100000, 'bayi18.jpg'),
 (77, 22, 'jklkj', 8, 'nnnknklklnkln', 90000, 'bayi53.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_order` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `tanggal_mulai` date NOT NULL,
+  `tanggal_akhir` date NOT NULL,
+  `alat_id` int(20) UNSIGNED NOT NULL,
+  `jumlah` int(10) UNSIGNED NOT NULL,
+  `nama_alat` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `status` enum('0','1','2') CHARACTER SET latin1 NOT NULL,
+  `lama` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_order`, `user_id`, `tanggal_mulai`, `tanggal_akhir`, `alat_id`, `jumlah`, `nama_alat`, `status`, `lama`) VALUES
+(3, 22, '2016-12-26', '2016-12-31', 77, 1, 'jklkj', '0', 5),
+(4, 22, '2016-12-27', '2016-12-31', 75, 1, 'Alat Gendong Bayi', '0', 4),
+(5, 22, '2016-12-15', '2016-12-17', 77, 1, 'jklkj', '0', 2),
+(6, 22, '2016-12-26', '2016-12-30', 77, 1, 'jklkj', '0', 4),
+(7, 22, '2016-12-27', '2016-12-30', 77, 1, 'jklkj', '0', 3);
+
 --
 -- Indexes for dumped tables
 --
@@ -118,7 +138,11 @@ INSERT INTO `sewa` (`id_alat`, `user_id`, `nama_alat`, `jumlah`, `deskripsi`, `h
 -- Indexes for table `komentar`
 --
 ALTER TABLE `komentar`
-  ADD PRIMARY KEY (`id_komentar`);
+  ADD PRIMARY KEY (`id_komentar`),
+  ADD KEY `alat_id` (`alat_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `alat_id_2` (`alat_id`),
+  ADD KEY `user_id_2` (`user_id`);
 
 --
 -- Indexes for table `pengguna`
@@ -134,6 +158,14 @@ ALTER TABLE `sewa`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_order`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `alat_id` (`alat_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -141,7 +173,7 @@ ALTER TABLE `sewa`
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_komentar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
@@ -152,6 +184,11 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `sewa`
   MODIFY `id_alat` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --
@@ -167,6 +204,13 @@ ALTER TABLE `sewa`
   ADD CONSTRAINT `sewa_ibfk_5` FOREIGN KEY (`user_id`) REFERENCES `pengguna` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sewa_ibfk_6` FOREIGN KEY (`user_id`) REFERENCES `pengguna` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sewa_ibfk_7` FOREIGN KEY (`user_id`) REFERENCES `pengguna` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `pengguna` (`id_user`),
+  ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`alat_id`) REFERENCES `sewa` (`id_alat`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

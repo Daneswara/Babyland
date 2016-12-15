@@ -142,6 +142,7 @@
                                                                                 <input type="hidden" name="nama_alat" value="<?php echo $data->nama_alat ?>">
                                                                                 <input type="hidden" name="harga" value="<?php echo $data->harga ?>">
                                                                                 <input type="hidden" name="hidden" value="<?php echo $this->uri->segment(3); ?>">
+                                                                                <input type="hidden" name="id_user" value="<?php echo $data->id_user; ?>">
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
                                                                             </div>
@@ -152,9 +153,9 @@
                                                                             </div>
                                                                             <div class="left-section">
                                                                                 <span>Tanggal mulai:</span>
-                                                                                <input type="text" id="datepicker" name="date"  style="width: 20%"/>
+                                                                                <input type="text" id="start_date" name="date_start"  style="width: 20%"/>
                                                                                 <span style="padding-left: 10px">Tanggal berakhir:</span>
-                                                                                <input readonly type="text" id="datepicker" name="date"  style="width: 20%"/>
+                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%"/>
                                                                             </div>
                                                                             
                                                                         </form>
@@ -276,6 +277,101 @@
         <!--  end-->
         <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
+        <?php
+            $date = "2016-12-20";
+            $date1 = "2016-12-25";
+            $begin = new DateTime($date);
+            $end   = new DateTime($date1);
+            $data = [];
+            for($i = $begin; $begin <= $end; $i->modify('+1 day')){
+                $data []=  $i->format("d-m-Y");
+            }
+?>
 
+        <script>
+            // To set mindate in enddate
+function unavailable(date) {
+    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    if ($.inArray(dmy, unavailableDates) == -1) {
+        return [true, ""];
+    } else {
+        return [false, "", "Unavailable"];
+    }
+}
+
+function customRange(input) 
+{ 
+return {
+        minDate: (input.id == "end_date" ? $("#start_date").datepicker("getDate") : new Date())
+      }; 
+}
+var unavailableDates = <?php echo json_encode($data); ?>;
+var unavailableDateObjects= convertDisabledFieldToDateObject(unavailableDates);
+
+// To set maxdate in startdate
+function customRangeStart(input) 
+{ 
+return {
+        maxDate:(input.id == "start_date" ? $("#end_date").datepicker("getDate") : null)
+      }; 
+}
+
+$(document).ready(function() {
+
+   $('#start_date').datepicker(
+   {
+       beforeShow: customRangeStart,
+       beforeShowDay: unavailable,
+       minDate: 0,
+       dateFormat: "yy-mm-dd",
+       changeYear: true,
+       onSelect: function() {
+           triggerOnStartSelect();
+        }
+   });
+
+   $('#end_date').datepicker(
+   {
+       beforeShow: customRange,
+       beforeShowDay: unavailable,
+       dateFormat: "yy-mm-dd",
+       changeYear: true,
+   });
+});
+
+//Convert String Date List to Date object List
+function convertDisabledFieldToDateObject(diabledList) {
+    var dateList = [];
+    $.each(diabledList, function (i, singleDate) {
+       var parsedDate = $.datepicker.parseDate("dd-mm-yy",singleDate);
+        dateList.push(parsedDate);
+    });
+    //Sort date if the diabled date sets are in jumbled order
+    dateList.sort(function(date1, date2){
+    return date1 - date2;
+      });
+    return dateList;
+}
+
+//Trigger upon change event of either start or end date
+function triggerOnStartSelect(){
+    var startDate = new Date($("#start_date").datepicker("getDate"));
+    var endDate = new Date($("#end_date").datepicker("getDate"));    
+    //if required you could reset all of the default setting here //
+    //And can also validate the date objects 
+    
+    //Holds to be set maxdate of end_date datepicker
+    var tempEndDate=null;
+      $.each(unavailableDateObjects, function(i, disabledRangeDate) {
+       if (startDate < disabledRangeDate) {
+           tempEndDate=new Date(disabledRangeDate);
+           //subtracts one day from the nearest disabled range date 
+           tempEndDate.setDate(tempEndDate.getDate() - 1);
+           return false;
+        }
+    }); 
+    $( "#end_date" ).datepicker( "option", "maxDate", tempEndDate);
+}
+        </script>
     </body>
 </html>

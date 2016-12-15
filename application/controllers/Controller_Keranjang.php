@@ -15,14 +15,18 @@ class Controller_Keranjang extends CI_Controller {
     }
     function prosesKeranjang(){
                 // Set array for send data.
-          echo 'aaaa';
-
+        $start = $this->input->post('date_start');
+        $end = $this->input->post('date_end');
+        $diff = (strtotime($end)- strtotime($start))/24/3600; 
         $insert_data = array(
             'name' => $this->input->post('nama_alat'),
             'price' => $this->input->post('harga'),
             'qty' => $this->input->post('jumlah'),
             'id' => $this->input->post('hidden'),
-            'lama' => $this->input->post('lama')
+            'start' => ($start),
+            'end' => ($end),
+            'id_user'=>$this->input->post('id_user'),
+            'lama' => ($diff)
         );   
         $id = $insert_data['id'];
                  // This function add items into cart.
