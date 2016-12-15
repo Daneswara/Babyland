@@ -119,25 +119,30 @@
                                                                         <div class="left-section">
                                                                             <p style="font-weight: bold">Nama Alat :<?php echo $data->nama_alat; ?></p>
                                                                             <p style="font-weight: bold">Tersedia :  <?php echo $data->jumlah; ?></p>
-                                                                            <p style="font-weight: bold">Oleh : <a href=""> <?php echo $data->username; ?></a></p>
                                                                         </div>
                                                                         <div class="right-section">
-                                                                            <h1 class="price">Harga: <?php echo "Rp. " . $data->harga; ?></h1>
+                                                                            <h1 class="price"><?php echo "Rp. " . $data->harga ." / Hari"; ?></h1>
                                                                             <p></p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="bying-section">
                                                                         <form action="<?php echo base_url('index.php/Controller_Keranjang/prosesKeranjang') ?>" method="POST">
                                                                             <div class="left-section">
-                                                                                <span>Jumlah:</span>
+                                                                                <span>Tanggal mulai sewa:</span>
+                                                                                <input type="text" id="start_date" name="date_start"  style="width: 20%"/>
+                                                                                <span style="padding-left: 10px">Sampai:</span>
+                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%"/>
+                                                                                <span style="padding-left: 10px">Jumlah:</span>
                                                                                 <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0"/>
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
+                                                                                
                                                                             </div>
                                                                             <div class="left-section" style="margin-left: 15px">
-                                                                                <span>Lama Sewa (Minggu):</span>
-                                                                                <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" id="lama" name="lama" value="0"/>
                                                                                 
+                                                                                <ul class="product-post-list">
+                                                                                    <li><input type="submit" class="btn btn-info" style="padding: 10px 20px" value="Tambah Ke Keranjang"></li>
+                                                                                </ul>
 
                                                                                 <input type="hidden" name="nama_alat" value="<?php echo $data->nama_alat ?>">
                                                                                 <input type="hidden" name="harga" value="<?php echo $data->harga ?>">
@@ -146,21 +151,10 @@
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="right-section">
-                                                                                <ul class="product-post-list">
-                                                                                    <li><input type="submit" class="btn btn-info" style="padding: 10px 20px" value="Tambah Ke Keranjang"></li>
-                                                                                </ul>
-                                                                            </div>
-                                                                            <div class="left-section">
-                                                                                <span>Tanggal mulai:</span>
-                                                                                <input type="text" id="start_date" name="date_start"  style="width: 20%"/>
-                                                                                <span style="padding-left: 10px">Tanggal berakhir:</span>
-                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%"/>
-                                                                            </div>
                                                                             
                                                                         </form>
                                                                     </div>
-                                                                    <div class="vertical-tabs-box triggerAnimation animated" data-animate="bounceIn">
+                                                                    <div class="vertical-tabs-box triggerAnimation animated">
                                                                         <!-- Nav tabs -->
                                                                         <ul class="nav nav-tabs" id="myTab">
                                                                         </ul>

@@ -131,8 +131,8 @@
                                                         <tr>
                                                             <td width="5%"><h4>Jumlah</h4></td>
                                                             <td width="20%"><h4>Nama Alat Bayi</h4></td>
-                                                            <td width="15%"><h4>Mulai sewa</h4></td>
-                                                            <td width="15%"><h4>Akhir sewa</h4></td>
+                                                            <td width="15%"><h4>Mulai Sewa</h4></td>
+                                                            <td width="15%"><h4>Akhir Sewa</h4></td>
                                                             <td width="20%"><h4>Harga</h4></td>
                                                             <td width="20%"><h4>Total</h4></td>
                                                             <td width="5%"><h4>Delete</h4></td>
@@ -193,7 +193,7 @@
             <!-- End content -->
             <!-- footer
             ================================================== -->
-            <footer style="position: absolute;bottom:0;left:0;right:0;">
+            <footer style="padding-top: 50px">
                 <div class="footer-line">
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>

@@ -26,7 +26,7 @@ class Controller_Keranjang extends CI_Controller {
             'start' => ($start),
             'end' => ($end),
             'id_user'=>$this->input->post('id_user'),
-            'lama' => ($diff)
+            'lama' => ($diff+1)
         );   
         $id = $insert_data['id'];
                  // This function add items into cart.
