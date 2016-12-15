@@ -105,7 +105,7 @@
                                                         </div>
                                                         <div class="product-content item-content">
                                                             <h3><?php echo $data->nama_alat; ?></h3>
-                                                            <p class="price">Rp.  <?php echo $data->harga; ?></p>
+                                                            <p class="price">Rp.  <?php echo $data->harga. " / Hari"; ?></p>
                                                         </div></a>
                                                     <ul class="product-post-list">
                                                         <li><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index/' . $data->id_alat); ?>"><i class="fa fa-pencil"></i></a></li>
