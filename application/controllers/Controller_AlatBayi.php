@@ -9,9 +9,10 @@ class Controller_AlatBayi extends CI_Controller {
         $this->load->helper('url');
         $this->load->model('model_komentar');
         $this->load->model('model_sewa');
+        $this->load->model('model_transaksi');
     }
     public function index($id) {
-        $nama = array("nama"=>$this->model_sewa->mendapatkanDataAlatBayi($id),"user" => $this->model_komentar->menampilkan($id));
+        $nama = array("nama"=>$this->model_sewa->mendapatkanDataAlatBayi($id),"user" => $this->model_komentar->menampilkan($id),"tanggal"=>$this->model_transaksi->mendapatkanDataTanggal($id));
         $this->load->view("HalamanDetailAlatBayi",$nama);
     }
 

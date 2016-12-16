@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2016 at 08:46 AM
+-- Generation Time: Dec 17, 2016 at 06:05 AM
 -- Server version: 5.6.25-log
 -- PHP Version: 7.0.2
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `babyland`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_transaksi`
+--
+
+CREATE TABLE `data_transaksi` (
+  `id_order` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `total` int(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `data_transaksi`
+--
+
+INSERT INTO `data_transaksi` (`id_order`, `user_id`, `total`) VALUES
+(71, 24, 360000),
+(72, 24, 1260000),
+(73, 24, 200000),
+(74, 24, 200000),
+(75, 24, 800000),
+(76, 24, 630000);
 
 -- --------------------------------------------------------
 
@@ -49,7 +73,9 @@ INSERT INTO `komentar` (`id_komentar`, `alat_id`, `user_id`, `komentar`, `tangga
 (29, 75, 22, '????', '2016-12-09 12:40:31'),
 (30, 75, 22, 'haloo', '2016-12-13 12:41:22'),
 (31, 75, 22, 'a?', '2016-12-13 12:41:48'),
-(32, 75, 22, 'bagusbagus', '2016-12-13 12:57:05');
+(32, 75, 22, 'bagusbagus', '2016-12-13 12:57:05'),
+(33, 78, 24, 'hahaha', '2016-12-17 12:16:09'),
+(34, 79, 24, 'haloo', '2016-12-17 06:04:16');
 
 -- --------------------------------------------------------
 
@@ -65,17 +91,19 @@ CREATE TABLE `pengguna` (
   `notelp` varchar(20) CHARACTER SET latin1 NOT NULL,
   `password` varchar(255) CHARACTER SET latin1 NOT NULL,
   `alamat` varchar(266) CHARACTER SET latin1 NOT NULL,
-  `kota` varchar(20) CHARACTER SET latin1 NOT NULL
+  `kota` varchar(20) CHARACTER SET latin1 NOT NULL,
+  `fotoprofil` varchar(20) CHARACTER SET latin1 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`id_user`, `username`, `nama`, `email`, `notelp`, `password`, `alamat`, `kota`) VALUES
-(21, 'admin', 'admin', 'admin@gmail.com', '085746921137', '21232f297a57a5a743894a0e4a801fc3', 'dinoyo', 'Malang'),
-(22, 'yudis', 'yudis', 'yudistira96@gmail.com', '085746921137', 'd7d17b035a7a428d8441c744710eda59', 'Gajayana Malang', 'Malang'),
-(23, 'bondan', 'yudistira', 'sugandi031@gmail.com', '085746921137', 'b98f89b0d3875fc4249d1afb38dcf35a', 'gajayana 1', 'Malang');
+INSERT INTO `pengguna` (`id_user`, `username`, `nama`, `email`, `notelp`, `password`, `alamat`, `kota`, `fotoprofil`) VALUES
+(21, 'admin', 'admin', 'admin@gmail.com', '085746921137', '21232f297a57a5a743894a0e4a801fc3', 'dinoyo', 'Malang', NULL),
+(22, 'yudis', 'yudis', 'yudistira96@gmail.com', '085746921137', 'd7d17b035a7a428d8441c744710eda59', 'Gajayana Malang', 'jepang', 'tokyo22.jpg'),
+(23, 'bondan', 'yudistira', 'sugandi031@gmail.com', '085746921137', 'b98f89b0d3875fc4249d1afb38dcf35a', 'gajayana 1', 'Malang', NULL),
+(24, 'ochi', 'ochi', 'ochi@gmail.com', '085746927986', '1c9953396f24eeea2f8f1d387388cd5b', 'sumbersari', 'malang', 'tokyo23.jpg');
 
 -- --------------------------------------------------------
 
@@ -98,8 +126,9 @@ CREATE TABLE `sewa` (
 --
 
 INSERT INTO `sewa` (`id_alat`, `user_id`, `nama_alat`, `jumlah`, `deskripsi`, `harga`, `foto`) VALUES
-(75, 22, 'Alat Gendong Bayi', 4, 'alat gendong bayi masih bagus dab mulus', 100000, 'bayi18.jpg'),
-(77, 22, 'jklkj', 8, 'nnnknklklnkln', 90000, 'bayi53.jpg');
+(75, 22, 'Alat Gendong', 21, 'alat gendong bayi masih bagus dab mulus', 100000, 'erikasawajiri2.png'),
+(78, 22, 'barang', 0, 'bagus banget', 90000, 'tokyo21.jpg'),
+(79, 24, 'alat', 5, 'barang bagus', 90000, 'tokyo24.jpg');
 
 -- --------------------------------------------------------
 
@@ -108,8 +137,8 @@ INSERT INTO `sewa` (`id_alat`, `user_id`, `nama_alat`, `jumlah`, `deskripsi`, `h
 --
 
 CREATE TABLE `transaksi` (
-  `id_order` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL,
+  `id_data_transaksi` int(10) UNSIGNED NOT NULL,
+  `order_id` int(10) UNSIGNED NOT NULL,
   `tanggal_mulai` date NOT NULL,
   `tanggal_akhir` date NOT NULL,
   `alat_id` int(20) UNSIGNED NOT NULL,
@@ -123,16 +152,24 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_order`, `user_id`, `tanggal_mulai`, `tanggal_akhir`, `alat_id`, `jumlah`, `nama_alat`, `status`, `lama`) VALUES
-(3, 22, '2016-12-26', '2016-12-31', 77, 1, 'jklkj', '0', 5),
-(4, 22, '2016-12-27', '2016-12-31', 75, 1, 'Alat Gendong Bayi', '0', 4),
-(5, 22, '2016-12-15', '2016-12-17', 77, 1, 'jklkj', '0', 2),
-(6, 22, '2016-12-26', '2016-12-30', 77, 1, 'jklkj', '0', 4),
-(7, 22, '2016-12-27', '2016-12-30', 77, 1, 'jklkj', '0', 3);
+INSERT INTO `transaksi` (`id_data_transaksi`, `order_id`, `tanggal_mulai`, `tanggal_akhir`, `alat_id`, `jumlah`, `nama_alat`, `status`, `lama`) VALUES
+(22, 71, '2016-12-18', '2016-12-21', 78, 1, 'barang', '0', 4),
+(23, 72, '2016-12-28', '2017-01-03', 78, 2, 'barang', '0', 7),
+(24, 73, '2016-12-20', '2016-12-20', 75, 2, 'Alat Gendong', '0', 1),
+(25, 74, '2016-12-21', '2016-12-22', 75, 1, 'Alat Gendong', '0', 2),
+(26, 75, '2016-12-23', '2016-12-26', 75, 2, 'Alat Gendong', '0', 4),
+(27, 76, '2016-12-18', '2016-12-24', 79, 1, 'alat', '0', 7);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `data_transaksi`
+--
+ALTER TABLE `data_transaksi`
+  ADD PRIMARY KEY (`id_order`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `komentar`
@@ -161,34 +198,39 @@ ALTER TABLE `sewa`
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`id_order`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `alat_id` (`alat_id`);
+  ADD PRIMARY KEY (`id_data_transaksi`),
+  ADD KEY `alat_id` (`alat_id`),
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `data_transaksi`
+--
+ALTER TABLE `data_transaksi`
+  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+--
 -- AUTO_INCREMENT for table `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komentar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_komentar` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `sewa`
 --
 ALTER TABLE `sewa`
-  MODIFY `id_alat` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id_alat` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_data_transaksi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- Constraints for dumped tables
 --
@@ -209,8 +251,7 @@ ALTER TABLE `sewa`
 -- Constraints for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `pengguna` (`id_user`),
-  ADD CONSTRAINT `transaksi_ibfk_2` FOREIGN KEY (`alat_id`) REFERENCES `sewa` (`id_alat`);
+  ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `data_transaksi` (`id_order`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

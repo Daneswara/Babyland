@@ -25,6 +25,7 @@
         </script>
     </head>
     <body>
+    <?php error_reporting(0); ?>
         <!-- Container -->
         <div id="container">
             <!-- Header
@@ -131,7 +132,7 @@
                                                                                 <span>Tanggal mulai sewa:</span>
                                                                                 <input type="text" id="start_date" name="date_start"  style="width: 20%"/>
                                                                                 <span style="padding-left: 10px">Sampai:</span>
-                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%"/>
+                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%" />
                                                                                 <span style="padding-left: 10px">Jumlah:</span>
                                                                                 <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0"/>
                                                                                 <div class="quantity-buttons">
@@ -272,17 +273,24 @@
         <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
         <?php
-            $date = "2016-12-20";
-            $date1 = "2016-12-25";
-            $begin = new DateTime($date);
-            $end   = new DateTime($date1);
+        foreach($tanggal as $tanggal){
+            $date []= $tanggal->tanggal_mulai;
+            $date1 []=  $tanggal->tanggal_akhir;
+        }
+            for($i=0;$i<count($date);$i++){
+            $begin[] = new DateTime($date[$i]);
+            $end  [] = new DateTime($date1[$i]);
+        }
             $data = [];
-            for($i = $begin; $begin <= $end; $i->modify('+1 day')){
-                $data []=  $i->format("d-m-Y");
+            for($j=0;$j<count($date);$j++){
+            for($i = $begin[$j]; $begin[$j] <= $end[$j]; $i->modify('+1 day')){
+                $data []=  $i->format("j-n-Y");
             }
+        }
 ?>
 
         <script>
+
             // To set mindate in enddate
 function unavailable(date) {
     dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
@@ -311,7 +319,6 @@ return {
 }
 
 $(document).ready(function() {
-
    $('#start_date').datepicker(
    {
        beforeShow: customRangeStart,
@@ -323,14 +330,15 @@ $(document).ready(function() {
            triggerOnStartSelect();
         }
    });
-
    $('#end_date').datepicker(
    {
        beforeShow: customRange,
        beforeShowDay: unavailable,
        dateFormat: "yy-mm-dd",
        changeYear: true,
+
    });
+
 });
 
 //Convert String Date List to Date object List

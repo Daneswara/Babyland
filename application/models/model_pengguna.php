@@ -25,8 +25,10 @@ class Model_Pengguna extends CI_Model {
         }
     }
     
-    function updatePengguna($data, $table) {
-        
+    public function perbaruiProfilPengguna($where,$data){
+        $this->db->where('id_user',$where);
+        $this->db->update('pengguna',$data);
+
     }
 
     function cekPengguna($table, $where) {

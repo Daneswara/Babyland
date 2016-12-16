@@ -170,7 +170,7 @@
                                                                     <a href="<?php echo base_url('index.php/Controller_Keranjang/prosesHapusAlatBayi/' . $keranjang['rowid']) ?>"><i class="fa fa-trash-o" style="font-size: 23px"></i></a>
                                                                 </td>
                                                             </tr>
-                                                            <?php $grand_total += $total ?>
+                                                            <?php $grand_total += $total;$user_id=$keranjang['id_user'] ?>
                                                         <?php } ?>
                                                         <tr><p class="pull-right" style="font-weight: bold;font-size: 25px">Total Harga: Rp. <?php echo $grand_total ?></p></tr>
 
@@ -178,7 +178,7 @@
                                                 <?php } ?>
                                             </table>
 
-                                            <a href="<?php echo base_url('index.php/Transaksi/prosesSewa') ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
+                                            <a href="<?php echo base_url('index.php/Transaksi/prosesSewa/')."$grand_total" ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
                                             <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
 
                                         <?php } ?>
@@ -193,7 +193,7 @@
             <!-- End content -->
             <!-- footer
             ================================================== -->
-            <footer style="padding-top: 50px">
+            <footer style="padding-top: 50px;position: absolute;bottom:0;left:0;right:0;">
                 <div class="footer-line">
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>

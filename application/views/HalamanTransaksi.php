@@ -93,37 +93,30 @@
                                         <tr>
                                             <th class="hidden-xs">ID</th>
                                             <th width="180px" >Pesanan</th>
-                                            <th width="180px">Tanggal Sewa</th>
+                                            <th width="180px">Tanggal Mulai</th>
+                                            <th width="180px">Tanggal Akhir</th>
                                             <th width="150px">Waktu Sewa</th>
                                             <th width="150px">Harga</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $count=1; ?>
+                                    <?php foreach($nama as $transaksi){ ?>
                                         <tr>
-                                            <td class="hidden-xs">1</td>
-                                            <td>BABYLAND-201</td>
-                                            <td>29 November 2016</td>
-                                            <td>2 Minggu</td>
-                                            <td>Rp. 100.000</td>
-                                            <td>Selesai</td>
+                                            <td class="hidden-xs"><?php echo $count++ ?></td>
+                                            <td>BabyLand-<?php echo $transaksi->id_data_transaksi ?></td>
+                                            <td><?php echo $transaksi->tanggal_mulai ?></td>
+                                            <td><?php echo $transaksi->tanggal_akhir ?></td>
+                                            <td><?php echo $transaksi->lama ?></td>
+                                            <td><?php echo $transaksi->total ?></td>
+                                            <td><?php 
+                                                if($transaksi->status==0){echo "dalam proses";}
+                                                elseif($transaksi->status==1){echo "pengiriman";}
+                                                else{echo "selesai";}
+                                             ?></td>
                                         </tr>
-                                        <tr>
-                                            <td class="hidden-xs">2</td>
-                                            <td>BABYLAND-202</td>
-                                            <td>29 November 2016</td>
-                                            <td>2 Minggu</td>
-                                            <td>Rp. 100.000</td>
-                                            <td>Berjalan 1 Minggu</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="hidden-xs">3</td>
-                                            <td>BABYLAND-203</td>
-                                            <td>29 November 2016</td>
-                                            <td>2 Minggu</td>
-                                            <td>Rp. 100.000</td>
-                                            <td>Menunggu Pembayaran</td>
-                                        </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
 
