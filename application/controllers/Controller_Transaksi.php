@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Transaksi extends CI_Controller {
-
+    private $alatBayi;
     public function __construct() {
         parent::__construct();
         $this->load->model('model_sewa');
@@ -27,7 +27,7 @@ class Controller_Transaksi extends CI_Controller {
         $this->load->helper(array('url'));
         $grand_total = $this->uri->segment(3);
         $user_id = $this->model_sewa->getId()[0]['id_user'];
-        $cart = $this->cart->contents();
+        $this->alatBayi = $this->cart->contents();
         $date= date('Y-m-d h:i:sa');
 
         $data2 = array(
@@ -37,7 +37,7 @@ class Controller_Transaksi extends CI_Controller {
         );
 
         $this->model_transaksi->tambahTransaksi($data2);
-        foreach ($cart as $keranjang) {
+        foreach ($this->alatBayi as $keranjang) {
             $data = array(
                 "tanggal_mulai" => $keranjang['start'],
                 "tanggal_akhir" => $keranjang['end'],
