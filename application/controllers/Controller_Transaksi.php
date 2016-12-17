@@ -47,6 +47,7 @@ class Controller_Transaksi extends CI_Controller {
                 "lama" => $keranjang['lama']
             );
             $this->model_transaksi->tambahDataTransaksi($data);
+            
         }
         redirect(base_url('index.php/Controller_Transaksi/index'));
     }

@@ -3,19 +3,32 @@
 class Model_Transaksi extends CI_Model {
 
     public function tambahDataTransaksi($data) {
+        log_message('debug',print_r($data['alat_id'],TRUE));
+        print_r($data['alat_id']);
+        $this->updateJml($data['alat_id']);
         $order_id = $this->getIdOrder()[0];
         $data = $order_id + $data;
         $this->db->insert('transaksi', $data);
-        // 
-        // $this->db->set('jumlah', "'jumlah-$data['jumlah']'", FALSE);
-        // $this->db->where('id_alat', $data['alat_id']);
-        // $this->db->update('sewa');
-        // 
+
         $this->cart->destroy();
     }
 
     public function tambahTransaksi($data2) {
+
         $this->db->insert('data_transaksi', $data2);
+    }
+
+    public function updateJml($data) {
+        $this->db->set('jumlah', (($this->getJmlAlat($data)['jumlah'])+100));
+        $this->db->where('id_alat', $data);
+        $this->db->update('sewa');
+    }
+    
+    public function getJmlAlat($data){
+        $this->db->select('*');
+        $this->db->from('sewa');
+        $this->db->where('id_alat', $data);
+        return $this->db->get()->result_array();
     }
 
     public function getIdOrder() {

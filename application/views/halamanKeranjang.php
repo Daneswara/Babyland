@@ -178,7 +178,7 @@
                                                 <?php } ?>
                                             </table>
 
-                                            <a href="<?php echo base_url('index.php/Transaksi/prosesSewa/')."$grand_total" ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
+                                            <a href="<?php echo base_url('index.php/Controller_Transaksi/prosesSewa/')."$grand_total" ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
                                             <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
 
                                         <?php } ?>
