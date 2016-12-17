@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Pemberitahuan extends CI_Controller {
-
+    private $pemberitahuan;
     /**
      * Index Page for this controller.
      *
@@ -31,9 +31,9 @@ class Controller_Pemberitahuan extends CI_Controller {
         }
     }
     public function index() {
-        $sewa = array("sewa" => $this->model_pemberitahuan->tampilMenyewaAlatBayi($this->model_sewa->getId()[0]['id_user']),
+        $this->pemberitahuan = array("sewa" => $this->model_pemberitahuan->tampilMenyewaAlatBayi($this->model_sewa->getId()[0]['id_user']),
             "disewakan" => $this->model_pemberitahuan->tampilAlatBayiDisewakan($this->model_sewa->getId()[0]['id_user']));
-        $this->load->view('HalamanPemberitahuan', $sewa);
+        $this->load->view('HalamanPemberitahuan', $this->pemberitahuan);
     }
 
     
