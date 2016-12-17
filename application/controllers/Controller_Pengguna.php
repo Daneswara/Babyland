@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Pengguna extends CI_Controller {
-
+    private $pengguna;
     public function __construct() {
         parent::__construct();
         $this->load->model('model_pengguna');
@@ -16,8 +16,8 @@ class Controller_Pengguna extends CI_Controller {
     }
 
     public function index() {
-        $data = array("user" => $this->model_pengguna->mendapatkanDaftarPengguna());
-        $this->load->view('HalamanPengguna', $data);
+        $this->pengguna = array("user" => $this->model_pengguna->mendapatkanDaftarPengguna());
+        $this->load->view('HalamanPengguna', $this->pengguna);
     }
 
     function prosesHapus() {
