@@ -98,8 +98,8 @@
                                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                                         </li><?php } ?>
 
-                                    <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                    <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a>
+                                    <li><a href="<?php echo base_url('index.php/Controller_Transaksi/index') ?>">Transaksi</a></li>
+                                    <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pemberitahuan/index') ?>">Pemberitahuan</a>
                                     </li><?php } ?>
 <?php if ($this->session->userdata('status') != 'login') { ?>
                                     <li class="drop"><a href="<?php echo base_url('index.php/Controller_Masuk/index') ?>">Masuk</a>

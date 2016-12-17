@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pemberitahuan extends CI_Controller {
+class Controller_Pemberitahuan extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -21,6 +21,7 @@ class Pemberitahuan extends CI_Controller {
      */
     public function __construct() {
         parent::__construct();
+        $this->load->model('model_pemberitahuan');
         $this->load->model('model_sewa');
         $this->load->helper('url');
         if($this->session->userdata('username')){
@@ -30,7 +31,8 @@ class Pemberitahuan extends CI_Controller {
         }
     }
     public function index() {
-        $this->load->view('HalamanPemberitahuan');
+        $nama = array("nama" => $this->model_pemberitahuan->tampilPemberitahuan($this->model_sewa->getId()[0]['id_user']));
+        $this->load->view('HalamanPemberitahuan', $nama);
     }
 
     

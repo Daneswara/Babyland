@@ -86,9 +86,9 @@
                                         </li><?php } ?>
                                 <?php
                                     echo "</li><li><a href ='";
-                                    echo base_url('index.php/Transaksi/index');
+                                    echo base_url('index.php/Controller_Transaksi/index');
                                     echo "'>Transaksi</a></li><li><a href ='";
-                                    echo base_url('index.php/Pemberitahuan/index');
+                                    echo base_url('index.php/Controller_Pemberitahuan/index');
                                     echo "'>Pemberitahuan</a></li>";
                                 } else {
                                     echo "<li><a href='";

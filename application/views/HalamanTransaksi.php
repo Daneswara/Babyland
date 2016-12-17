@@ -73,8 +73,8 @@
 
                                         <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                                         </li><?php } ?>
-                                <li><a class="active" href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
+                                <li><a class="active" href="<?php echo base_url('index.php/Controller_Transaksi/index') ?>">Transaksi</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>
                         </div>
                     </div>
@@ -92,11 +92,12 @@
                                     <thead>
                                         <tr>
                                             <th class="hidden-xs">ID</th>
-                                            <th width="180px" >Pesanan</th>
-                                            <th width="180px">Tanggal Mulai</th>
-                                            <th width="180px">Tanggal Akhir</th>
-                                            <th width="150px">Waktu Sewa</th>
-                                            <th width="150px">Harga</th>
+                                            <th width="180px" >Alat Bayi</th>
+                                            <th width="180px" >Tanggal Transaksi</th>
+                                            <th width="150px">Tanggal Mulai</th>
+                                            <th width="150px">Tanggal Akhir</th>
+                                            <th width="120px">Waktu Sewa</th>
+                                            <th width="120px">Harga</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -105,11 +106,12 @@
                                     <?php foreach($nama as $transaksi){ ?>
                                         <tr>
                                             <td class="hidden-xs"><?php echo $count++ ?></td>
-                                            <td>BabyLand-<?php echo $transaksi->id_data_transaksi ?></td>
+                                            <td><?php echo $transaksi->nama_alat ?></td>
+                                            <td><?php echo $transaksi->tanggal ?></td>
                                             <td><?php echo $transaksi->tanggal_mulai ?></td>
                                             <td><?php echo $transaksi->tanggal_akhir ?></td>
-                                            <td><?php echo $transaksi->lama ?></td>
-                                            <td><?php echo $transaksi->total ?></td>
+                                            <td><?php echo $transaksi->lama . " Hari";?></td>
+                                            <td><?php echo ($transaksi->harga*$transaksi->lama) ?></td>
                                             <td><?php 
                                                 if($transaksi->status==0){echo "dalam proses";}
                                                 elseif($transaksi->status==1){echo "pengiriman";}

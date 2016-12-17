@@ -71,8 +71,8 @@
 
                                     <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
                                     </li><?php } ?>
-                                <li><a href="<?php echo base_url('index.php/Transaksi/index') ?>">Transaksi</a></li>
-                                <li class="drop"><a href="<?php echo base_url('index.php/Pemberitahuan/index') ?>">Pemberitahuan</a></li>
+                                <li><a href="<?php echo base_url('index.php/Controller_Transaksi/index') ?>">Transaksi</a></li>
+                                <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pemberitahuan/index') ?>">Pemberitahuan</a></li>
                             </ul>
                         </div>
                     </div>
