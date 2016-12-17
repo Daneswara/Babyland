@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_SewaAlatBayi extends CI_Controller {
-
+    private $dataAlatBayi;
     public function __construct() {
         parent::__construct();
         $this->load->model('model_sewa');
@@ -42,7 +42,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
             $this->upload->do_upload();
 
             $data = array('upload_data' => $this->upload->data());
-            $uploaddata = array(
+            $this->dataAlatBayi = array(
                 'user_id' => $this->model_sewa->getId()[0]['id_user'],
                 'nama_alat' => $this->input->post('alatbayi'),
                 'jumlah' => $this->input->post('jumlah'),
@@ -50,8 +50,8 @@ class Controller_SewaAlatBayi extends CI_Controller {
                 'foto' => $data['upload_data']['file_name'],
                 'harga' => $this->input->post('harga')
             );
-            var_dump($uploaddata);
-            $this->model_sewa->tambahDataAlatBayi($uploaddata);
+            var_dump($this->dataAlatBayi);
+            $this->model_sewa->tambahDataAlatBayi($this->dataAlatBayi);
             $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
             redirect('Controller_SewaAlatBayi/index');
         } else {
@@ -73,7 +73,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
         if (empty($_FILES['userfile']['name'][0])) {
             $data['upload_data']['file_name'] = $this->input->post('nama_alat');
         }
-        $uploaddata = array(
+        $this->dataAlatBayi = array(
             'user_id' => $this->model_sewa->getId()[0]['id_user'],
             'nama_alat' => $this->input->post('alatbayi'),
             'jumlah' => $this->input->post('jumlah'),
@@ -81,7 +81,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
             'foto' => $data['upload_data']['file_name'],
             'harga' => $this->input->post('harga')
         );
-        $this->model_sewa->perbaruiDataAlatBayi($id_alat, $uploaddata);
+        $this->model_sewa->perbaruiDataAlatBayi($id_alat, $this->dataAlatBayi);
         $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
         redirect('Controller_SewaAlatBayi/index');
     }
