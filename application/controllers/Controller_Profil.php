@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profil extends CI_Controller {
+class Controller_Profil extends CI_Controller {
 
     /**
      * Index Page for this controller.
@@ -60,7 +60,7 @@ class Profil extends CI_Controller {
         
 
         $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
-        redirect('Profil/index');
+        redirect('Controller_Profil/index');
     }
      public function image_resize($path, $file) {
         $config_resize = array();

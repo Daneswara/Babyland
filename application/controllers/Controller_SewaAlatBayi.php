@@ -8,7 +8,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
         parent::__construct();
         $this->load->model('model_sewa');
         $this->load->helper('url');
-        if($this->session->userdata('username')){
+        if ($this->session->userdata('username')) {
             
         } else {
             redirect('', 'refresh');
@@ -53,9 +53,9 @@ class Controller_SewaAlatBayi extends CI_Controller {
             var_dump($uploaddata);
             $this->model_sewa->tambahDataAlatBayi($uploaddata);
             $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
-            redirect('Controller_SewaAlatBayi/index?i=alatbayi');
+            redirect('Controller_SewaAlatBayi/index');
         } else {
-            redirect(base_url("index.php"));
+            redirect('Controller_SewaAlatBayi/index');
         }
     }
 
@@ -83,7 +83,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
         );
         $this->model_sewa->perbaruiDataAlatBayi($id_alat, $uploaddata);
         $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
-        redirect('Controller_SewaAlatBayi/index?i=alatbayi');
+        redirect('Controller_SewaAlatBayi/index');
     }
 
     public function image_resize($path, $file) {
@@ -101,7 +101,7 @@ class Controller_SewaAlatBayi extends CI_Controller {
     public function menghapusAlatBayi() {
         $where = array('id_alat' => $this->input->get('id'));
         $this->model_sewa->menghapusDataAlatBayi($where, 'sewa');
-        redirect(base_url('index.php/Controller_SewaAlatBayi?i=alatbayi'));
+		redirect('Controller_SewaAlatBayi/index');
     }
 
 }

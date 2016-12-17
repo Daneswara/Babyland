@@ -82,7 +82,7 @@
                                         </li>
     <?php } else { ?>
 
-                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
+                                        <li class="drop"><a href="<?php echo base_url('index.php/Controller_Profil/index'); ?>">Profil</a>
                                         </li><?php } ?>
                                 <?php
                                     echo "</li><li><a href ='";

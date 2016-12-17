@@ -64,7 +64,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="drop"><a href="<?php echo base_url('index.php') ?>">Halaman Depan</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index') ?>">Sewa</a>
-                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_Pengguna/menampilkanHalamanProfil'); ?>">Profil</a>
+                                <li class="drop"><a class="active" href="<?php echo base_url('index.php/Controller_Profil/index'); ?>">Profil</a>
                                 </li>
                                 <li><a href="<?php echo base_url('index.php/Controller_Transaksi/index') ?>">Transaksi</a></li>
                                 <li class="drop"><a href="<?php echo base_url('index.php/Controller_Pemberitahuan/index') ?>">Pemberitahuan</a>
@@ -92,7 +92,7 @@
                             ?>" class="img-responsive img" style="border: 2px solid #bbcbe5"/>
                         </div>
                         <div>
-                            <form action="<?php echo base_url('index.php/Profil/prosesPerbaruiProfil');?>" method="POST" enctype="multipart/form-data">
+                            <form action="<?php echo base_url('index.php/Controller_Profil/prosesPerbaruiProfil');?>" method="POST" enctype="multipart/form-data">
                                 <div class="pull-left" style="width: 60%;margin-left: 20px;">
                                    <!--  <div class="form-group inputan">
                                         <p>Username<span>*</span></p>
