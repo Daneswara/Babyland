@@ -83,6 +83,50 @@
             <!-- End Header -->
             <!-- content
             ================================================== -->
+            <h1 style="color: black; padding-bottom: 20px; margin-top: 0px">Menyewa Alat Bayi</h1>
+            <!-- End content -->
+            <div id="content" style="margin-bottom: 68px">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default panel-table" >
+                            <div class="panel-body">
+                                <table class="table table-striped table-bordered table-list">
+                                    <thead>
+                                        <tr>
+                                            <th class="hidden-xs">ID</th>
+                                            <th width="200px" >Tanggal</th>
+                                            <th width="300px" >Penyewaan</th>
+                                            <th width="200px">Total Harga</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php $count=1; ?>
+                                    <?php foreach($sewa as $transaksi){ ?>
+                                        <tr>
+                                            <td class="hidden-xs"><?php echo $count++ ?></td>
+                                            <td><?php echo $transaksi->tanggal ?></td>
+                                            <td><?php echo "Babyland-".$transaksi->id_order ?></td>
+                                            <td><?php echo "Rp. ".$transaksi->total ?></td>
+                                            <td><?php 
+                                                if($transaksi->status==0){echo "dalam proses";}
+                                                elseif($transaksi->status==1){echo "pengiriman";}
+                                                else{echo "selesai";}
+                                             ?></td>
+                                        </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <div class="panel-footer" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 style="color: black; padding-bottom: 20px">Alat Bayi Disewakan</h1>
             <div id="content" style="margin-bottom: 68px">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
@@ -103,7 +147,7 @@
                                     </thead>
                                     <tbody>
                                     <?php $count=1; ?>
-                                    <?php foreach($nama as $transaksi){ ?>
+                                    <?php foreach($disewakan as $transaksi){ ?>
                                         <tr>
                                             <td class="hidden-xs"><?php echo $count++ ?></td>
                                             <td><?php echo $transaksi->nama_alat ?></td>
@@ -130,10 +174,10 @@
                     </div>
                 </div>
             </div>
-            <!-- End content -->
+            
             <!-- footer
             ================================================== -->
-            <footer style="position: absolute;bottom:0;left:0;right:0;">
+            <footer style="padding-top: 50px;">
                 <div class="footer-line" >
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>

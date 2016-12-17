@@ -31,8 +31,9 @@ class Controller_Pemberitahuan extends CI_Controller {
         }
     }
     public function index() {
-        $nama = array("nama" => $this->model_pemberitahuan->tampilPemberitahuan($this->model_sewa->getId()[0]['id_user']));
-        $this->load->view('HalamanPemberitahuan', $nama);
+        $sewa = array("sewa" => $this->model_pemberitahuan->tampilMenyewaAlatBayi($this->model_sewa->getId()[0]['id_user']),
+            "disewakan" => $this->model_pemberitahuan->tampilAlatBayiDisewakan($this->model_sewa->getId()[0]['id_user']));
+        $this->load->view('HalamanPemberitahuan', $sewa);
     }
 
     

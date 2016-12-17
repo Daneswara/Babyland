@@ -193,7 +193,7 @@
             <!-- End content -->
             <!-- footer
             ================================================== -->
-            <footer style="padding-top: 50px;position: absolute;bottom:0;left:0;right:0;">
+            <footer style="padding-top: 250px;">
                 <div class="footer-line">
                     <div class="container">
                         <p><span class="span-one">BABYLAND 2016.</span></p>
