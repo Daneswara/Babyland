@@ -29,7 +29,7 @@ class Controller_Masuk extends CI_Controller {
                 'status' => "login"
             );
             $this->model_pengguna->simpanSession($data_session);
-            redirect(base_url("index.php/Controller_Pengguna/menampilkanHalamanProfil"));
+            redirect(base_url("index.php/Controller_Profil/index"));
         } else {
             $this->pesan = "Mohon maaf username dan password anda salah!";
             ?><script>alert("<?php echo $this->pesan?>")</script><?php

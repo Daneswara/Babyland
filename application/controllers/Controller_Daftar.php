@@ -3,8 +3,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Daftar extends CI_Controller {
-
-    private $pesan;
+    
+    private $pesan, $username, $nama, $email, $notelp, $password, $alamat, $kota;
 
     public function __construct() {
         parent::__construct();
@@ -17,21 +17,21 @@ class Controller_Daftar extends CI_Controller {
     }
 
     public function prosesDaftar() {
-        $username = $this->input->post('username');
-        $nama = $this->input->post('nama');
-        $email = $this->input->post('email');
-        $notelp = $this->input->post('notelp');
-        $password = $this->input->post('password');
-        $alamat = $this->input->post('alamat');
-        $kota = $this->input->post('kota');
+        $this->username = $this->input->post('username');
+        $this->nama = $this->input->post('nama');
+        $this->email = $this->input->post('email');
+        $this->notelp = $this->input->post('notelp');
+        $this->password = $this->input->post('password');
+        $this->alamat = $this->input->post('alamat');
+        $this->kota = $this->input->post('kota');
         $data = array(
-            'username' => $username,
-            'nama' => $nama,
-            'email' => $email,
-            'notelp' => $notelp,
-            'password' => md5($password),
-            'alamat' => $alamat,
-            'kota' => $kota
+            'username' => $this->username,
+            'nama' => $this->nama,
+            'email' => $this->email,
+            'notelp' => $this->notelp,
+            'password' => md5($this->password),
+            'alamat' => $this->alamat,
+            'kota' => $this->kota
         );
         $hasil = $this->model_pengguna->menambahPengguna($data, 'pengguna');
         if ($hasil) {
