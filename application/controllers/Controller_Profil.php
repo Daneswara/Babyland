@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Profil extends CI_Controller {
-
+    private $dataprofil;
     /**
      * Index Page for this controller.
      *
@@ -44,7 +44,7 @@ class Controller_Profil extends CI_Controller {
         if (empty($_FILES['userfile']['name'][0])) {
             $data['upload_data']['file_name'] = $this->input->post('nama_alat');
         }
-        $uploaddata = array(
+        $this->dataprofil = array(
             // 'username'=>$this->input->post('username'),
             // 'password'=>$this->input->post('password'),
             'fotoprofil' => $data['upload_data']['file_name'],
@@ -56,7 +56,7 @@ class Controller_Profil extends CI_Controller {
         );
 
         $id_user = $this->model_sewa->getId()[0]['id_user'];
-        $this->model_pengguna->perbaruiProfilPengguna($id_user, $uploaddata);
+        $this->model_pengguna->perbaruiProfilPengguna($id_user, $this->dataprofil);
         
 
         $this->image_resize($data['upload_data']['full_path'], $data['upload_data']['file_name']);
