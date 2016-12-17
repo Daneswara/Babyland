@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_Keranjang extends CI_Controller {
-
+    private $alatBayi;
     public function __construct()
     {
         parent::__construct();
@@ -18,7 +18,7 @@ class Controller_Keranjang extends CI_Controller {
         $start = $this->input->post('date_start');
         $end = $this->input->post('date_end');
         $diff = (strtotime($end)- strtotime($start))/24/3600; 
-        $insert_data = array(
+        $this->alatBayi = array(
             'name' => $this->input->post('nama_alat'),
             'price' => $this->input->post('harga'),
             'qty' => $this->input->post('jumlah'),
@@ -28,11 +28,11 @@ class Controller_Keranjang extends CI_Controller {
             'id_user'=>$this->input->post('id_user'),
             'lama' => ($diff+1)
         );   
-        $id = $insert_data['id'];
+        $id = $this->alatBayi['id'];
                  // This function add items into cart.
                 // This will show insert data in cart.
         // $this->model_keranjang->tambahAlatBayi();
-        $this->model_keranjang->tambahAlatBayi($insert_data);
+        $this->model_keranjang->tambahAlatBayi($this->alatBayi);
         redirect(base_url('index.php/Controller_Keranjang/index'));
     }
     public function prosesHapusAlatBayi($rowid){
