@@ -128,7 +128,7 @@
                                     <div class="validation"></div>
                                 </div>
                                 <!-- end of upload photo -->
-                                <input type="submit" value="submit" class="btn btn-default" style="background: #b7bed0">
+                                <input type="submit" value="Buat Baru" class="btn btn-default" style="background: #b7bed0">
 
                             </div>
                             <span class="clearfix"></span>
