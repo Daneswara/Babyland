@@ -7,9 +7,9 @@ class Model_Transaksi extends CI_Model {
         $data = $order_id + $data;
         $this->db->insert('transaksi', $data);
 
-        $this->db->set('jumlah', 'jumlah+100');
-        $this->db->where('id_alat', $data['alat_id']);
-        $this->db->update('sewa');
+//        $this->db->set('jumlah', 'jumlah+100');
+//        $this->db->where('id_alat', $data['alat_id']);
+//        $this->db->update('sewa');
         
         $this->cart->destroy();
     }
