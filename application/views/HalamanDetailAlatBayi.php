@@ -127,14 +127,14 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="bying-section">
-                                                                        <form action="<?php echo base_url('index.php/Controller_Keranjang/prosesKeranjang') ?>" method="POST">
+                                                                        <form action="<?php echo base_url('index.php/Controller_Keranjang/prosesKeranjang/'.$data->jumlah) ?>" method="POST">
                                                                             <div class="left-section">
                                                                                 <span>Tanggal mulai sewa:</span>
-                                                                                <input type="text" id="start_date" name="date_start"  style="width: 20%"/>
+                                                                                <input type="text" id="start_date" name="date_start"  style="width: 20%" required="required"/>
                                                                                 <span style="padding-left: 10px">Sampai:</span>
-                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%" />
+                                                                                <input type="text" id="end_date" name="date_end"  style="width: 20%" required="required"/>
                                                                                 <span style="padding-left: 10px">Jumlah:</span>
-                                                                                <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0"/>
+                                                                                <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0" required="required"/>
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
                                                                                 

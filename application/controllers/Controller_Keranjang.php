@@ -15,6 +15,10 @@ class Controller_Keranjang extends CI_Controller {
     }
     function prosesKeranjang(){
                 // Set array for send data.
+        // penambahan variabel jumlah barang
+        $this->load->helper(array('url'));
+        $jumlah_alat_saat_ini = $this->uri->segment(3);
+        // 
         $start = $this->input->post('date_start');
         $end = $this->input->post('date_end');
         $diff = (strtotime($end)- strtotime($start))/24/3600; 
@@ -33,7 +37,7 @@ class Controller_Keranjang extends CI_Controller {
                 // This will show insert data in cart.
         // $this->model_keranjang->tambahAlatBayi();
         $this->model_keranjang->tambahAlatBayi($this->alatBayi);
-        redirect(base_url('index.php/Controller_Keranjang/index'));
+        redirect(base_url('index.php/Controller_Keranjang/index/'.$jumlah_alat_saat_ini));
     }
     public function prosesHapusAlatBayi($rowid){
         if ($rowid==="all"){

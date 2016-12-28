@@ -26,6 +26,9 @@ class Controller_Transaksi extends CI_Controller {
     public function prosesSewa() {
         $this->load->helper(array('url'));
         $grand_total = $this->uri->segment(3);
+        // variabel jumlah alat saat ini
+        $jumlah_alat_saat_ini = $this->uri->segment(4)
+        // 
         $user_id = $this->model_sewa->getId()[0]['id_user'];
         $this->alatBayi = $this->cart->contents();
         $date= date('Y-m-d h:i:sa');
