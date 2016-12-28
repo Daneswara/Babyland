@@ -19,7 +19,7 @@ class Controller_Transaksi extends CI_Controller {
     }
 
     public function index() {
-        $nama = array("nama" => $this->model_transaksi->tampilTransaksi($this->model_sewa->getId()[0]['id_user']));
+        $nama = array("alatbayi" => $this->model_transaksi->tampilTransaksi($this->model_sewa->getId()[0]['id_user']));
         $this->load->view('HalamanTransaksi', $nama);
     }
 

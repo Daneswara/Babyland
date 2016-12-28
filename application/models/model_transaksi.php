@@ -7,9 +7,21 @@ class Model_Transaksi extends CI_Model {
         $data = $order_id + $data;
         $this->db->insert('transaksi', $data);
 
+<<<<<<< HEAD
         // $this->db->set('jumlah', 'jumlah';
         // $this->db->where('id_alat', $data['alat_id']);
         // $this->db->update('sewa');
+=======
+        $this->db->select('jumlah');
+        $this->db->from('sewa');
+        $this->db->where('id_alat', $data['alat_id']);
+        $a = $this->db->get()->result_array();
+        
+        
+        $this->db->set('jumlah', $a['0']['jumlah']-$data['jumlah']);
+        $this->db->where('id_alat', $data['alat_id']);
+        $this->db->update('sewa');
+>>>>>>> 465bf71da79b1cae7e6eeb5794002273b2130299
         
         $this->cart->destroy();
     }

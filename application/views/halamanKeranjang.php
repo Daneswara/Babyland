@@ -177,10 +177,22 @@
                                                     </tbody>
                                                 <?php } ?>
                                             </table>
+<<<<<<< HEAD
                                             <!-- penambahan variable jumlah barang -->
                                             <?php $this->load->helper(array('url'));$jumlah = $this->uri->segment(3); ?>
                                             <!--  -->
                                             <a href="<?php echo base_url('index.php/Controller_Transaksi/prosesSewa/')."$grand_total"."/"."$jumlah" ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
+=======
+                                                
+                                            <a href="<?php 
+                                            if ($this->session->userdata('username')) {
+                                                echo base_url('index.php/Controller_Transaksi/prosesSewa/')."$grand_total";
+                                            } else {
+                                                echo base_url('index.php/Controller_Masuk/index');
+                                            }
+                                             
+                                                    ?>" class="btn btn-filter pull-right"  style="background:#2f3133;color: white;font-weight: bold">Sewa sekarang</a>
+>>>>>>> 465bf71da79b1cae7e6eeb5794002273b2130299
                                             <div class="" style="margin-bottom: 20px"><a onclick="clear_all()"><i class="fa fa-trash-o" style="margin-right: 10px;font-size:23px"></i>Hapus semua keranjang</a></div>
 
                                         <?php } ?>

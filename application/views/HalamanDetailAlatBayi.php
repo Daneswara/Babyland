@@ -25,7 +25,7 @@
         </script>
     </head>
     <body>
-    <?php error_reporting(0); ?>
+        <?php error_reporting(0); ?>
         <!-- Container -->
         <div id="container">
             <!-- Header
@@ -42,7 +42,7 @@
                                 <li><a href="<?php echo base_url('index.php/Controller_Keranjang/index') ?>" class="nav-bar"><i class="fa fa-shopping-cart"></i> Keranjang Alat Bayi</a></li>
                                 <li><a href="" class="nav-bar">Welcome, <?php
                                         if ($this->session->userdata('username')) {
-                                            echo $this->session->userdata('username')."</a></li>";
+                                            echo $this->session->userdata('username') . "</a></li>";
                                             echo "<li><a href='";
                                             echo base_url('index.php/Controller_Rumah/keluar');
                                             echo "' class='nav-bar'>Keluar</a></li>";
@@ -122,7 +122,7 @@
                                                                             <p style="font-weight: bold">Tersedia :  <?php echo $data->jumlah; ?></p>
                                                                         </div>
                                                                         <div class="right-section">
-                                                                            <h1 class="price"><?php echo "Rp. " . $data->harga ." / Hari"; ?></h1>
+                                                                            <h1 class="price"><?php echo "Rp. " . $data->harga . " / Hari"; ?></h1>
                                                                             <p></p>
                                                                         </div>
                                                                     </div>
@@ -137,10 +137,10 @@
                                                                                 <input type="number" style="width: 50px;height: 50px;text-align: center;font-size: 20px;border: 1px solid #e7e7e7" min="0" max="<?php echo $data->jumlah ?>" id="jumlah" name="jumlah" value="0" required="required"/>
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
-                                                                                
+
                                                                             </div>
                                                                             <div class="left-section" style="margin-left: 15px">
-                                                                                
+
                                                                                 <ul class="product-post-list">
                                                                                     <li><input type="submit" class="btn btn-info" style="padding: 10px 20px" value="Tambah Ke Keranjang"></li>
                                                                                 </ul>
@@ -152,7 +152,7 @@
                                                                                 <div class="quantity-buttons">
                                                                                 </div>
                                                                             </div>
-                                                                            
+
                                                                         </form>
                                                                     </div>
                                                                     <div class="vertical-tabs-box triggerAnimation animated">
@@ -188,7 +188,7 @@
                                                 <input class="form-control" name="komen" placeholder="Write your comment here..." type="text">
                                                 <input type="hidden" name="hidden" value="<?php echo $this->uri->segment(3); ?>">
                                                 <span class="input-group-addon" style="padding:0">
-                                                    <input type="submit" value="tambah" style="height:30px;width:75px;border: 1px solid transparent">
+                                                    <input type="submit" value="Komentar" style="height:30px;width:75px;border: 1px solid transparent">
                                                 </span>
                                             </form>
                                             <?php foreach ($user as $data) { ?>
@@ -204,38 +204,6 @@
                                                             </div>
                                                             <p><?php echo $data->komentar ?></p>
                                                         </div>
-                                                        <!-- <ul class="comments-list">
-                                                            <div class="input-group">
-                                                                <input class="form-control" placeholder="Write your comment here..." type="text">
-                                                                <span class="input-group-addon">
-                                                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                                                </span>
-                                                            </div>
-                                                            <li class="comment">
-                                                                <a class="pull-left" href="#">
-                                                                    <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
-                                                                </a>
-                                                                <div class="comment-body">
-                                                                    <div class="comment-heading">
-                                                                        <h4 class="user">Ryan Haywood</h4>
-                                                                        <h5 class="time">3 minutes ago</h5>
-                                                                    </div>
-                                                                    <p>Relax my friend</p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="comment">
-                                                                <a class="pull-left" href="#">
-                                                                    <img class="avatar" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
-                                                                </a>
-                                                                <div class="comment-body">
-                                                                    <div class="comment-heading">
-                                                                        <h4 class="user">Gavino Free</h4>
-                                                                        <h5 class="time">3 minutes ago</h5>
-                                                                    </div>
-                                                                    <p>Ok, cool.</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul> -->
                                                     </li>
                                                 </ul>
                                             <?php } ?>
@@ -273,107 +241,106 @@
         <script type="text/javascript" src="<?php echo base_url() ?>/js/waypoint.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url() ?>/js/script.js"></script>
         <?php
-        foreach($tanggal as $tanggal){
-            $date []= $tanggal->tanggal_mulai;
-            $date1 []=  $tanggal->tanggal_akhir;
+        foreach ($tanggal as $tanggal) {
+            $date [] = $tanggal->tanggal_mulai;
+            $date1 [] = $tanggal->tanggal_akhir;
         }
-            for($i=0;$i<count($date);$i++){
+        for ($i = 0; $i < count($date); $i++) {
             $begin[] = new DateTime($date[$i]);
-            $end  [] = new DateTime($date1[$i]);
+            $end [] = new DateTime($date1[$i]);
         }
-            $data = [];
-            for($j=0;$j<count($date);$j++){
-            for($i = $begin[$j]; $begin[$j] <= $end[$j]; $i->modify('+1 day')){
-                $data []=  $i->format("j-n-Y");
+        $data = [];
+        for ($j = 0; $j < count($date); $j++) {
+            for ($i = $begin[$j]; $begin[$j] <= $end[$j]; $i->modify('+1 day')) {
+                $data [] = $i->format("j-n-Y");
             }
         }
-?>
+        ?>
 
         <script>
 
             // To set mindate in enddate
-function unavailable(date) {
-    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-    if ($.inArray(dmy, unavailableDates) == -1) {
-        return [true, ""];
-    } else {
-        return [false, "", "Unavailable"];
-    }
-}
+            function unavailable(date) {
+                dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+                if ($.inArray(dmy, unavailableDates) == -1) {
+                    return [true, ""];
+                } else {
+                    return [false, "", "Unavailable"];
+                }
+            }
 
-function customRange(input) 
-{ 
-return {
-        minDate: (input.id == "end_date" ? $("#start_date").datepicker("getDate") : new Date())
-      }; 
-}
-var unavailableDates = <?php echo json_encode($data); ?>;
-var unavailableDateObjects= convertDisabledFieldToDateObject(unavailableDates);
+            function customRange(input)
+            {
+                return {
+                    minDate: (input.id == "end_date" ? $("#start_date").datepicker("getDate") : new Date())
+                };
+            }
+            var unavailableDates = <?php echo json_encode($data); ?>;
+            var unavailableDateObjects = convertDisabledFieldToDateObject(unavailableDates);
 
 // To set maxdate in startdate
-function customRangeStart(input) 
-{ 
-return {
-        maxDate:(input.id == "start_date" ? $("#end_date").datepicker("getDate") : null)
-      }; 
-}
+            function customRangeStart(input)
+            {
+                return {
+                    maxDate: (input.id == "start_date" ? $("#end_date").datepicker("getDate") : null)
+                };
+            }
 
-$(document).ready(function() {
-   $('#start_date').datepicker(
-   {
-       beforeShow: customRangeStart,
-       beforeShowDay: unavailable,
-       minDate: 0,
-       dateFormat: "yy-mm-dd",
-       changeYear: true,
-       onSelect: function() {
-           triggerOnStartSelect();
-        }
-   });
-   $('#end_date').datepicker(
-   {
-       beforeShow: customRange,
-       beforeShowDay: unavailable,
-       dateFormat: "yy-mm-dd",
-       changeYear: true,
+            $(document).ready(function() {
+                $('#start_date').datepicker(
+                        {
+                            beforeShow: customRangeStart,
+                            beforeShowDay: unavailable,
+                            minDate: 0,
+                            dateFormat: "yy-mm-dd",
+                            changeYear: true,
+                            onSelect: function() {
+                                triggerOnStartSelect();
+                            }
+                        });
+                $('#end_date').datepicker(
+                        {
+                            beforeShow: customRange,
+                            beforeShowDay: unavailable,
+                            dateFormat: "yy-mm-dd",
+                            changeYear: true,
+                        });
 
-   });
-
-});
+            });
 
 //Convert String Date List to Date object List
-function convertDisabledFieldToDateObject(diabledList) {
-    var dateList = [];
-    $.each(diabledList, function (i, singleDate) {
-       var parsedDate = $.datepicker.parseDate("dd-mm-yy",singleDate);
-        dateList.push(parsedDate);
-    });
-    //Sort date if the diabled date sets are in jumbled order
-    dateList.sort(function(date1, date2){
-    return date1 - date2;
-      });
-    return dateList;
-}
+            function convertDisabledFieldToDateObject(diabledList) {
+                var dateList = [];
+                $.each(diabledList, function(i, singleDate) {
+                    var parsedDate = $.datepicker.parseDate("dd-mm-yy", singleDate);
+                    dateList.push(parsedDate);
+                });
+                //Sort date if the diabled date sets are in jumbled order
+                dateList.sort(function(date1, date2) {
+                    return date1 - date2;
+                });
+                return dateList;
+            }
 
 //Trigger upon change event of either start or end date
-function triggerOnStartSelect(){
-    var startDate = new Date($("#start_date").datepicker("getDate"));
-    var endDate = new Date($("#end_date").datepicker("getDate"));    
-    //if required you could reset all of the default setting here //
-    //And can also validate the date objects 
-    
-    //Holds to be set maxdate of end_date datepicker
-    var tempEndDate=null;
-      $.each(unavailableDateObjects, function(i, disabledRangeDate) {
-       if (startDate < disabledRangeDate) {
-           tempEndDate=new Date(disabledRangeDate);
-           //subtracts one day from the nearest disabled range date 
-           tempEndDate.setDate(tempEndDate.getDate() - 1);
-           return false;
-        }
-    }); 
-    $( "#end_date" ).datepicker( "option", "maxDate", tempEndDate);
-}
+            function triggerOnStartSelect() {
+                var startDate = new Date($("#start_date").datepicker("getDate"));
+                var endDate = new Date($("#end_date").datepicker("getDate"));
+                //if required you could reset all of the default setting here //
+                //And can also validate the date objects 
+
+                //Holds to be set maxdate of end_date datepicker
+                var tempEndDate = null;
+                $.each(unavailableDateObjects, function(i, disabledRangeDate) {
+                    if (startDate < disabledRangeDate) {
+                        tempEndDate = new Date(disabledRangeDate);
+                        //subtracts one day from the nearest disabled range date 
+                        tempEndDate.setDate(tempEndDate.getDate() - 1);
+                        return false;
+                    }
+                });
+                $("#end_date").datepicker("option", "maxDate", tempEndDate);
+            }
         </script>
     </body>
 </html>

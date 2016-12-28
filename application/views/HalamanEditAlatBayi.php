@@ -137,7 +137,7 @@
                                         <textarea name="deskripsi" id="deskripsi" rows="4" cols="55"><?php echo $alatbayi->deskripsi ?></textarea>
                                         <div class="validation"></div>
                                     </div>
-                                    <input type="submit" value="submit" class="btn btn-default" style="background: #000;opacity: 0.6">
+                                    <input type="submit" value="Simpan" class="btn btn-default" style="background: #000;opacity: 0.6">
 
                                 </div>
                                 <span class="clearfix"></span>

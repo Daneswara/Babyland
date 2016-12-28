@@ -90,7 +90,7 @@
                         <div class="sewa-row">
                             <h1 style="color: black;margin:0">Daftar Alat Bayi Yang Disewakan</h1>
                             <div style="margin: 20px 0;font-size: 20px;">
-                                <span><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=tambah') ?>"><i class="fa fa-plus-circle" style="color: blue;margin-right: 3px"></i>Tambah Alat Bayi</a></span>
+                                <span><a href="<?php echo base_url('index.php/Controller_SewaAlatBayi/index?i=tambah') ?>"><i class="fa fa-plus-circle" style="color: blue;margin-right: 3px"></i> Buat Baru</a></span>
                             </div>
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">

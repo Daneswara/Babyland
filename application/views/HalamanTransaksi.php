@@ -103,7 +103,7 @@
                                     </thead>
                                     <tbody>
                                     <?php $count=1; ?>
-                                    <?php foreach($nama as $transaksi){ ?>
+                                    <?php foreach($alatbayi as $transaksi){ ?>
                                         <tr>
                                             <td class="hidden-xs"><?php echo $count++ ?></td>
                                             <td><?php echo $transaksi->nama_alat ?></td>
